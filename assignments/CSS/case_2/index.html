@@ -14,30 +14,55 @@
         /*    font-family: 'Ubuntu', sans-serif;*/
         /*}*/
         header{
-            border-bottom: 2px solid black;
+            width: 99.5vw;
+            height: 80px;
             position: relative;
-            box-shadow: 1px 2px 3px 3px black;
+            box-shadow: 1px 2px 2px 2px black;
         }
-        header>nav>ul{
+        header>nav{
             display: inline-block;
             position: absolute;
-            right: 10px;
-            top: 9px;
-            margin: 10px;
+            right: 20px;
+            top: 20px;
         }
         header>nav>ul>li{
             display: inline-block;
-            margin: 5px;
+            padding-left: 15px;
         }
+
         footer{
             background: #808080;
-            height: 45px;
             color: white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 99.5vw;
+            height: 65px;
         }
         footer>p{
             text-align: center;
+            position: relative;
+            top: 10px;
+        }
+
+        main{
+            width: 99.5vw;
+            height: 566px;
+            position: relative;
+        }
+        main>aside{
+            background: yellow;
+            height: 80vh;
+            width: 230px;
+        }
+        main>aside>nav>ul{
+            padding-left: 0;
             margin: 0;
-            padding-top: 12px;
+        }
+        main>aside>nav>ul>li{
+            padding-top: 20px;
+            margin-left: 5px;
         }
 
 
@@ -46,7 +71,6 @@
 </head>
 
 <body>
-
 <header>
     <img src="assets/image/favicon.png" alt="ijse-img">
     <nav>
@@ -61,7 +85,19 @@
 </header>
 
 <main>
-
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contacts</a></li>
+                <li><a href="">About Us</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <section>
+        <div></div>
+    </section>
 </main>
 
 <footer>
