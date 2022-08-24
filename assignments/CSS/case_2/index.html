@@ -3,91 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <title>Case_02</title>
-    <meta name="viewport" content="width=device-width initial-scale=1">
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="icon" href="assets/image/favicon.png">
-<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
-<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
-<!--    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">-->
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <meta content="width=device-width initial-scale=1" name="viewport">
+    <link href="assets/fonts/css/all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <style>
-        /**{*/
-        /*    font-family: 'Ubuntu', sans-serif;*/
-        /*}*/
-        header{
-            width: 99.5vw;
-            height: 80px;
-            position: relative;
-            box-shadow: 1px 2px 2px 2px black;
-        }
-        header>nav{
-            display: inline-block;
-            position: absolute;
-            right: 20px;
-            top: 20px;
-        }
-        header>nav>ul>li{
-            display: inline-block;
-            padding-left: 15px;
+        * {
+            font-family: 'Ubuntu', sans-serif;
         }
 
-        footer{
-            background: #808080;
-            color: white;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            width: 99.5vw;
-            height: 65px;
-        }
-        footer>p{
-            text-align: center;
-            position: relative;
-            top: 10px;
-        }
-
-        main{
-            width: 99.5vw;
-            height: 566px;
-            position: relative;
-        }
-        main>aside{
-            background: yellow;
-            height: 80vh;
-            width: 230px;
-        }
-        main>aside>nav{
-            width: 130px;
-            position: relative;
-            left: 35px;
-            top: 20px;
-        }
-        main>aside>nav>ul{
-            padding-left: 0;
-            margin: 0;
-        }
-        main>aside>nav>ul>li{
-            padding-top: 20px;
-            margin-left: 5px;
-        }
-        main>section{
-            border: 2px solid dodgerblue;
-            width: 1300px;
-            height: 37.5vw;
-            position: absolute;
+        header {
+            background: white;
+            position: fixed;
+            box-shadow: 2px 2px 2px 2px;
+            height: 73px;
+            width: 100%;
             top: 0;
-            left: 230px;
+            z-index: 1;
         }
-        main>section>div{
-            height: 235px;
-            width: 1290px;
+
+        header > nav {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        header > nav > ul > li {
+            display: inline-block;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 19px;
+            border-left: 2px solid black;
+        }
+
+        main {
             position: relative;
-            top: 10px;
-            left: 9px;
+            margin-top: 75px;
         }
-        main>section>div>img{
-            height: 227px;
-            width: 425px;
+
+        main > nav {
+            position: absolute;
+            background: #4C0182;
+            top: 0;
+            bottom: 0;
+            width: 270px;
+        }
+
+        main > nav > ul > li {
+            color: white;
+            list-style: none;
+            padding: 30px 10px 10px 10px;
+            font-size: 19px;
+            cursor: pointer;
+        }
+
+        main > section {
+            margin-left: 280px;
+            padding: 10px;
+        }
+
+        footer {
+            height: 60px;
+            background: dimgray;
+        }
+
+        footer > h4 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 20px;
+        }
+
+        i {
+            margin-right: 15px;
+        }
+
+        header > nav > ul > li > a {
+            color: black;
+            text-decoration: none;
+        }
+
+        main > nav > ul > li > a {
+            color: white;
+            text-decoration: none;
+        }
+
+        ul > li:hover a {
+            color: red;
+        }
+
+        ul > li:hover i {
+            color: red;
+        }
+
+        main > section > section:first-child {
+            height: 300px;
+            border: 1px solid black;
+            position: relative;
+        }
+
+        main > section > section:first-child > div {
+            border: 1px solid green;
+            height: 100%;
+            width: calc(100% / 3);
+            position: absolute;
+        }
+
+        main > section > section:first-child > div:nth-child(1) {
+            left: 0;
+        }
+
+        main > section > section:first-child > div:nth-child(2) {
+            left: calc(100%/3);
+        }
+
+        main > section > section:first-child > div:nth-child(3) {
+            right: 0;
+        }
+
+        main > section > section:first-child > div > img {
+            height: 100%;
+            width: 100%;
         }
 
 
@@ -96,41 +134,97 @@
 
 <body>
 <header>
-    <img src="assets/image/favicon.png" alt="ijse-img">
+    <img alt="ijse-img" src="assets/image/favicon.png">
     <nav>
         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">Contacts</a></li>
-            <li><a href="">About Us</a></li>
+            <li><i class="fa-solid fa-house"></i><a href="">Home</a></li>
+            <li><i class="fa-solid fa-earth-asia"></i><a href="">Services</a></li>
+            <li><i class="fa-solid fa-phone"></i><a href="">Contacts</a></li>
+            <li><i class="fa-solid fa-address-card"></i><a href="">About Us</a></li>
         </ul>
     </nav>
-
 </header>
 
 <main>
-    <aside>
-        <nav>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Contacts</a></li>
-                <li><a href="">About Us</a></li>
-            </ul>
-        </nav>
-    </aside>
+    <nav>
+        <ul>
+            <li><i class="fa-solid fa-house"></i><a href="">Home</a></li>
+            <li><i class="fa-solid fa-earth-asia"></i><a href="">Services</a></li>
+            <li><i class="fa-solid fa-phone"></i><a href="">Contacts</a></li>
+            <li><i class="fa-solid fa-address-card"></i><a href="">About Us</a></li>
+        </ul>
+    </nav>
     <section>
-        <div>
-            <img src="assets/image/giphy.gif" alt="gif">
-            <img src="assets/image/giphy.gif" alt="gif">
-            <img src="assets/image/giphy.gif" alt="gif">
-        </div>
+        <section>
+            <div>
+                <img src="assets/image/giphy.gif" alt="">
+            </div>
+            <div>
+                <img src="assets/image/giphy.gif" alt="">
+            </div>
+            <div>
+                <img src="assets/image/giphy.gif" alt="">
+            </div>
+        </section>
+        <section>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid atque consequatur cum cupiditate
+                deleniti dolore eius iusto, magnam maiores molestias quis quod repellendus, reprehenderit rerum sint
+                temporibus voluptatem voluptatum.</p>
+            <p>Accusamus animi architecto commodi debitis, eaque esse et ex facere fugiat illo illum ipsa laboriosam
+                molestias officia optio perspiciatis quas quisquam quos, ratione reiciendis sapiente sed sequi ut?
+                Dolore, illum!</p>
+            <p>Ab adipisci, aperiam, asperiores at aut blanditiis cumque cupiditate dolorem dolorum earum eveniet
+                incidunt ipsam non. A accusantium aliquid animi at facere incidunt, libero quidem, quisquam, ratione
+                temporibus vero voluptates!</p>
+            <p>A ab aperiam assumenda atque, consectetur dolores, earum eum fugit in magni nesciunt obcaecati pariatur
+                quas saepe sint. Asperiores assumenda consectetur ea earum eius expedita fugit laborum nesciunt quis
+                quod!</p>
+            <p>Explicabo facere inventore natus quam repellat sint! Aperiam autem cupiditate dolore esse eum, excepturi
+                iste nobis nostrum, pariatur quia repellat repellendus repudiandae sint sunt tempore! Delectus est nam
+                nesciunt nostrum?</p>
+            <p>Amet aut dicta illo labore placeat quas rerum voluptatibus. Accusantium at enim facere facilis libero
+                minima placeat. A ad dolorem quo reprehenderit sit? Aut earum exercitationem odio quam recusandae
+                unde.</p>
+            <p>A commodi eius esse, molestias nesciunt perspiciatis quasi quidem temporibus ut vero. Alias asperiores
+                blanditiis deserunt, ducimus eius ex exercitationem, facilis illum nulla quod, recusandae repudiandae
+                similique veniam vitae voluptatum!</p>
+            <p>At cumque doloremque, dolorum excepturi hic in iste iure laboriosam maxime nobis perspiciatis, qui quis
+                sed suscipit voluptas. Assumenda dolore ducimus ea in magnam officia, perspiciatis quis ratione sapiente
+                sed.</p>
+            <p>Ad architecto, autem consequatur dignissimos enim error esse eum excepturi fugit illum impedit ipsa ipsum
+                itaque iure libero molestiae nam nemo nobis officiis possimus quibusdam quidem ratione repellendus sequi
+                unde.</p>
+            <p>Aliquid asperiores eum in ipsum quibusdam quidem. Aut consequuntur deleniti dicta, dignissimos ea eaque
+                eos esse exercitationem incidunt labore maiores natus nesciunt placeat praesentium provident quasi
+                reprehenderit, ullam velit voluptatibus!</p>
+            <p>A ab aperiam assumenda atque, consectetur dolores, earum eum fugit in magni nesciunt obcaecati pariatur
+                quas saepe sint. Asperiores assumenda consectetur ea earum eius expedita fugit laborum nesciunt quis
+                quod!</p>
+            <p>Explicabo facere inventore natus quam repellat sint! Aperiam autem cupiditate dolore esse eum, excepturi
+                iste nobis nostrum, pariatur quia repellat repellendus repudiandae sint sunt tempore! Delectus est nam
+                nesciunt nostrum?</p>
+            <p>Amet aut dicta illo labore placeat quas rerum voluptatibus. Accusantium at enim facere facilis libero
+                minima placeat. A ad dolorem quo reprehenderit sit? Aut earum exercitationem odio quam recusandae
+                unde.</p>
+            <p>A commodi eius esse, molestias nesciunt perspiciatis quasi quidem temporibus ut vero. Alias asperiores
+                blanditiis deserunt, ducimus eius ex exercitationem, facilis illum nulla quod, recusandae repudiandae
+                similique veniam vitae voluptatum!</p>
+            <p>At cumque doloremque, dolorum excepturi hic in iste iure laboriosam maxime nobis perspiciatis, qui quis
+                sed suscipit voluptas. Assumenda dolore ducimus ea in magnam officia, perspiciatis quis ratione sapiente
+                sed.</p>
+            <p>Ad architecto, autem consequatur dignissimos enim error esse eum excepturi fugit illum impedit ipsa ipsum
+                itaque iure libero molestiae nam nemo nobis officiis possimus quibusdam quidem ratione repellendus sequi
+                unde.</p>
+            <p>Aliquid asperiores eum in ipsum quibusdam quidem. Aut consequuntur deleniti dicta, dignissimos ea eaque
+                eos esse exercitationem incidunt labore maiores natus nesciunt placeat praesentium provident quasi
+                reprehenderit, ullam velit voluptatibus!</p>
+        </section>
     </section>
 </main>
 
 <footer>
-    <p><small>Developed By IJSE</small></p>
+    <h4>Developed By IJSE</h4>
 </footer>
-</body>
 
+</body>
 </html>
