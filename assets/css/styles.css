@@ -2,7 +2,7 @@
     font-family: Ubuntu;
 }
 
-header{
+header{         /*header*/
     width: 100%;
     height: 65px;
     border-bottom: 5px solid #1DC789;    /*Line Color*/
@@ -34,4 +34,26 @@ header>nav>ul>li{
 header>nav>ul>li>a {
     color: #64FFDA;         /*Font Color*/
     text-decoration: none;
+}
+
+main>section:nth-child(1){ /*about section*/
+    position: relative;
+    border: 1px solid black;
+}
+
+main>section:nth-child(1)>img{
+    height: 400px;
+    width: 400px;
+    border-radius: 100%;
+    position: absolute;
+    top: 70px;
+    right: 110px;
+}
+
+main>section:nth-child(1)>div{
+    color: black;
+}
+
+main>section:nth-child(1)>div>h3>span{
+    color: #64FFDA;
 }
