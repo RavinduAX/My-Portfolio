@@ -306,3 +306,25 @@ main>section:nth-child(5)>div img{
     border-radius: 100%;
     margin-top: 20px;
 }
+
+main>section:nth-child(6){      /*ContactMe Section*/
+    background-color: #020C1B;
+    border-bottom: 4px solid #1DC789;
+    color: white;
+}
+
+main>section:nth-child(6)>h2{
+    color: #64FFDA;
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 26.76px;
+}
+
+main>section:nth-child(6) i{
+    color: #64FFDA;
+}
+
+main>section:nth-child(6)> div:nth-child(2)> ul> li{
+    list-style: none;
+}
