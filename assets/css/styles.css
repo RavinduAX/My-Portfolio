@@ -417,6 +417,13 @@ main>section:nth-child(6)> div:nth-child(4)>form> fieldset>textarea{
 footer{         /*footer*/
     background-color: #64FFDA;
     text-align: center;
+    /*position: relative;*/
+    /*top: -51px;*/
+    /*height: 139px*/
+}
+
+footer>div:nth-child(1)>nav{
+    padding-top: 5px;
 }
 
 footer li{
@@ -424,3 +431,18 @@ footer li{
     list-style: none;
 }
 
+footer a{
+    text-decoration: none;
+}
+
+#navList a{
+    color: black;
+}
+
+#socialList>li>i{
+    color: white;
+}
+
+footer>small{
+    color: gray;
+}
