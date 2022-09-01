@@ -354,10 +354,9 @@ main>section:nth-child(6)> div:nth-child(2)> ul> li:nth-child(4)>p:nth-child(2){
 }
 
 main>section:nth-child(6)> div:nth-child(4){      /*form area*/
-    border: 1px solid white;
     width: 650px;
     position: absolute;
-    top: 112px;
+    top: 85px;
     right: 100px;
 }
 
@@ -368,15 +367,49 @@ main>section:nth-child(6)> div:nth-child(4) fieldset{
 
 main>section:nth-child(6)> div:nth-child(4)>form> fieldset>input{
     border-radius: 6px;
-    margin: 20px;
+    margin: 15px;
     font-size: large;
     padding: 5px;
 }
 
 #subOptional{
-    width: 539px;
+    width: 530px;
 }
 
 main>section:nth-child(6)> div:nth-child(4)>form> fieldset>textarea{
+    width: 530px;
+    height: 125px;
+    border-radius: 6px;
+    margin: 15px;
+    font-size: large;
+    padding: 5px;
+}
 
+#hireMeBtn{
+    color: #FF4757;
+    border: 4px solid #FF4757;
+    background-color: #020C1B;
+    border-radius: 7.5px;
+    position: relative;
+    left: 150px;
+    top: 35px;
+    font-size: large;
+    padding: 12px;
+    width: 149px;
+    height: 51px;
+    margin-bottom: 100px;
+}
+
+#submitFormBtn{
+    color: #64FFDA;
+    border: 4px solid #64FFDA;
+    background-color: #020C1B;
+    border-radius: 7.5px;
+    position: relative;
+    left: 18px;
+    top: 23px;
+    font-size: large;
+    padding: 12px;
+    width: 140px;
+    height: 48px;
 }
