@@ -148,5 +148,8 @@ main>section:nth-child(2)>div>figure>img{
 
 main>section:nth-child(2)>hr{
     margin-top: 12px;
-
+    border: 0;
+    background-color: white;
+    height: 3px;
+    width: 90%;
 }
