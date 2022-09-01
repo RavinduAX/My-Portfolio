@@ -329,8 +329,8 @@ main>section:nth-child(6) i{
 
 main>section:nth-child(6)>div:nth-child(2) {
     position: relative;
-    left: 50px;
-    top: 20px;
+    left: 70px;
+    top: 25px;
     width: 700px;
 }
 
@@ -356,8 +356,8 @@ main>section:nth-child(6)> div:nth-child(2)> ul> li:nth-child(4)>p:nth-child(2){
 main>section:nth-child(6)> div:nth-child(4){      /*form area*/
     width: 650px;
     position: absolute;
-    top: 85px;
-    right: 100px;
+    top: 90px;
+    right: 45px;
 }
 
 main>section:nth-child(6)> div:nth-child(4) fieldset{
@@ -391,7 +391,7 @@ main>section:nth-child(6)> div:nth-child(4)>form> fieldset>textarea{
     background-color: #020C1B;
     border-radius: 7.5px;
     position: relative;
-    left: 150px;
+    left: 175px;
     top: 35px;
     font-size: large;
     padding: 12px;
