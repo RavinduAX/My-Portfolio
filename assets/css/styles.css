@@ -39,6 +39,7 @@ header>nav>ul>li>a {
 main>section:nth-child(1){ /*about section*/
     position: relative;
     border: 1px solid black;
+    background-color: #020C1B;
 }
 
 main>section:nth-child(1)>img{
@@ -51,9 +52,27 @@ main>section:nth-child(1)>img{
 }
 
 main>section:nth-child(1)>div{
-    color: black;
+    color: white;
 }
 
 main>section:nth-child(1)>div>h3>span{
     color: #64FFDA;
+}
+
+main>section:nth-child(1)>button{
+    color: #64FFDA;
+    background-color: #020C1B;
+    border: 3px solid #64FFDA;
+    border-radius: 5px;
+    font-family: Ubuntu;
+    padding: 5px 10px;
+}
+
+main>section:nth-child(1)>div:nth-child(4){
+
+}
+
+main>section:nth-child(1)>div:nth-child(4) i{
+    color: #64FFDA;
+    size: 5em;
 }
