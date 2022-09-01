@@ -226,3 +226,28 @@ main>section:nth-child(3)>div:nth-child(5){
     justify-content: space-evenly;
     margin: 60px 0;
 }
+
+main>section:nth-child(4){          /*My Works*/
+    background-color: #020C1B;
+    border-bottom: 4px solid #1DC789;
+    color: white;
+}
+
+main>section:nth-child(4) h2{
+    color: #64FFDA;
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 26.76px;
+}
+
+main>section:nth-child(4) img{
+    border-radius: 10%;
+}
+
+main>section:nth-child(4) div{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
