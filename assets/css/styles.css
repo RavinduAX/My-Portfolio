@@ -243,6 +243,8 @@ main>section:nth-child(4) h2{
 
 main>section:nth-child(4) img{
     border-radius: 10%;
+    height: 250px;
+    width: 300px;
 }
 
 main>section:nth-child(4) div{
@@ -250,4 +252,10 @@ main>section:nth-child(4) div{
     justify-content: space-evenly;
     margin-top: 10px;
     margin-bottom: 60px;
+}
+
+main>section:nth-child(4) a{
+    text-decoration: none;
+    color: white;
+    font-size: large;
 }
