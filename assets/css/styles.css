@@ -330,6 +330,11 @@ main>section:nth-child(6)>div:nth-child(2) {
     position: relative;
     left: 50px;
     top: 20px;
+    width: 700px;
+}
+
+main>section:nth-child(6)> div:nth-child(2)> ul{
+    width: 700px;
 }
 
 main>section:nth-child(6)> div:nth-child(2)> ul> li{
@@ -337,6 +342,7 @@ main>section:nth-child(6)> div:nth-child(2)> ul> li{
     margin-bottom: 40px;
     font-size: 19px;
     font-weight: normal;
+    width: 700px;
 }
 
 main>section:nth-child(6)> div:nth-child(2)> ul> li:nth-child(4)>p:nth-child(2){
@@ -344,4 +350,12 @@ main>section:nth-child(6)> div:nth-child(2)> ul> li:nth-child(4)>p:nth-child(2){
     left: 65px;
     bottom: 10px;
     margin-top: 5px;
+}
+
+main>section:nth-child(6)> div:nth-child(4){
+
+}
+
+main>section:nth-child(6)> div:nth-child(4)>fieldset{
+
 }
