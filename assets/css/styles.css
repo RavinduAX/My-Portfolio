@@ -263,7 +263,7 @@ main>section:nth-child(4) a{
 main>section:nth-child(5){      /*Services Section*/
     background-color: #020C1B;
     border-bottom: 4px solid #1DC789;
-    color: white;
+    color: black;
 }
 
 main>section:nth-child(5)>h2{
@@ -278,14 +278,31 @@ main>section:nth-child(5)>div{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: 10px;
+    margin-bottom: 60px;
 }
 
 main>section:nth-child(5)>div h1{
     font-size: large;
+}
+main>section:nth-child(5)>div figure{
+    background-color: white;
+    text-align: center;
+    border-radius: 5%;
+    width: 230px;
+    height: 300px;
+}
+
+main>section:nth-child(5)>div figcaption{
+    width: 180px;
+    position: relative;
+    left: 25px;
+    top: 40px;
 }
 
 main>section:nth-child(5)>div img{
     width: 100px;
     height: 100px;
     border-radius: 100%;
+    margin-top: 20px;
 }
