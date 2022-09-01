@@ -113,3 +113,40 @@ main>section:nth-child(1)>nav li{
 main>section:nth-child(1)>nav i{
     color: #020C1B;
 }
+
+main>section:nth-child(2){          /*About Section*/
+    border-top: 4px solid #1DC789;
+    border-bottom: 4px solid #1DC789;
+    color: white;
+    background-color: #020C1B;
+    height: 400px;
+}
+
+main>section:nth-child(2)>h2{
+    color: #64FFDA;
+    font-size: xx-large;
+    text-align: center;
+}
+
+main>section:nth-child(2)>div{
+    display: flex;
+    text-align: center;
+    margin-top: 35px;
+    margin-left: 50px;
+}
+
+main>section:nth-child(2)>div>figure{
+    text-align: center;
+}
+
+main>section:nth-child(2)>div>figure>img{
+    height: 110px;
+    width: 110px;
+    border-radius: 15%;
+    align-items: center;
+}
+
+main>section:nth-child(2)>hr{
+    margin-top: 12px;
+
+}
