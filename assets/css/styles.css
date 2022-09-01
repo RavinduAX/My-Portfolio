@@ -311,6 +311,7 @@ main>section:nth-child(6){      /*ContactMe Section*/
     background-color: #020C1B;
     border-bottom: 4px solid #1DC789;
     color: white;
+    position: relative;
 }
 
 main>section:nth-child(6)>h2{
@@ -352,10 +353,30 @@ main>section:nth-child(6)> div:nth-child(2)> ul> li:nth-child(4)>p:nth-child(2){
     margin-top: 5px;
 }
 
-main>section:nth-child(6)> div:nth-child(4){
-
+main>section:nth-child(6)> div:nth-child(4){      /*form area*/
+    border: 1px solid white;
+    width: 650px;
+    position: absolute;
+    top: 112px;
+    right: 100px;
 }
 
-main>section:nth-child(6)> div:nth-child(4)>fieldset{
+main>section:nth-child(6)> div:nth-child(4) fieldset{
+    margin: 0;
+    border: 0;
+}
+
+main>section:nth-child(6)> div:nth-child(4)>form> fieldset>input{
+    border-radius: 6px;
+    margin: 20px;
+    font-size: large;
+    padding: 5px;
+}
+
+#subOptional{
+    width: 539px;
+}
+
+main>section:nth-child(6)> div:nth-child(4)>form> fieldset>textarea{
 
 }
