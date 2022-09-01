@@ -413,3 +413,14 @@ main>section:nth-child(6)> div:nth-child(4)>form> fieldset>textarea{
     width: 140px;
     height: 48px;
 }
+
+footer{         /*footer*/
+    background-color: #64FFDA;
+    text-align: center;
+}
+
+footer li{
+    display: inline-block;
+    list-style: none;
+}
+
