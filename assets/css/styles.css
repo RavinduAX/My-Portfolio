@@ -153,3 +153,32 @@ main>section:nth-child(2)>hr{
     height: 3px;
     width: 90%;
 }
+
+main>section:nth-child(2)>ul{
+    position: relative;
+    top: -25px;
+    left: 120px;
+    width: 800px;
+}
+
+main>section:nth-child(2)>ul>li{
+    color: white;
+    list-style: none;
+    display: inline-block;
+}
+
+main>section:nth-child(2)>ul>li>div{
+    background-color: #E67E22;
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    position: relative;
+}
+
+main>section:nth-child(2)>ul>li>div:nth-child(2){
+    margin-left: 220px;
+}
+
+main>section:nth-child(2)>ul>li>div:nth-child(3){
+    margin-left: 195px;
+}
