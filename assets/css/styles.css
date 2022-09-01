@@ -53,6 +53,24 @@ main>section:nth-child(1)>img{
 
 main>section:nth-child(1)>div{
     color: white;
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+
+main>section:nth-child(1)>div>h2{
+    font-size: 45px;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+main>section:nth-child(1)>div>h1{
+    font-size: 55px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+main>section:nth-child(1)>div>h3{
+    font-size: 35px;
+    font-weight: normal;
 }
 
 main>section:nth-child(1)>div>h3>span{
@@ -66,13 +84,17 @@ main>section:nth-child(1)>button{
     border-radius: 5px;
     font-family: Ubuntu;
     padding: 5px 10px;
+    position: relative;
+    left: 50px;
+    top: 65px;
 }
 
-main>section:nth-child(1)>div:nth-child(4){
-
+main>section:nth-child(1)>div:nth-child(4) li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 15px;
 }
 
 main>section:nth-child(1)>div:nth-child(4) i{
     color: #64FFDA;
-    size: 5em;
 }
