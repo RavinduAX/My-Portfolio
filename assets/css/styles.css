@@ -415,11 +415,11 @@ main>section:nth-child(6)> div:nth-child(4)>form> fieldset>textarea{
 }
 
 footer{         /*footer*/
-    background-color: #64FFDA;
+    background-color: #1DC789;
     text-align: center;
     position: relative;
     top: -35px;
-    height: 120px
+    height: 121px;
 }
 
 footer>div:nth-child(1)>nav{
@@ -437,14 +437,18 @@ footer a{
 
 #navList a{
     color: black;
-}
-
-#socialList>li>i{
-    color: white;
+    padding: 0 10px 0 10px;
+    border-right: 1px solid black;
 }
 
 footer>small{
     color: gray;
+}
+
+footer>nav:nth-child(2) i{
+    color: white;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
 body{
