@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case_02</title>
+    <meta content="width=device-width initial-scale=1" name="viewport">
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <style>
+        * {
+            font-family: Ubuntu;
+            color: white;
+        }
+
+        body {
+            background-color: dodgerblue;
+        }
+
+        div {
+            border-radius: 100%;
+            background-color: white;
+            width: 370px;
+            height: 370px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background-color: gray;
+            border: 20px solid white;
+            border-top: 20px solid crimson;
+            cursor: pointer;
+        }
+
+        div > h1 {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: max-content;
+            width: max-content;
+        }
+
+        div:hover {
+            transform: rotate(360deg);
+            transition: all 3s;
+        }
+
+        div:hover > h1 {
+            transform: rotate(-360deg);
+            transition: all 3s;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <h1>RWAD</h1>
+</div>
+</body>
+</html>
