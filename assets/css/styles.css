@@ -2,7 +2,8 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
-header{         /*header*/
+/*==================header===================*/
+header{
     width: 100%;
     height: 65px;
     border-bottom: 5px solid #1DC789;    /*Line Color*/
@@ -36,12 +37,13 @@ header>nav>ul>li>a {
     text-decoration: none;
 }
 
+/*==================main===================*/
 main{
     position: relative;
     top: -35px;
 }
 
-main>section:nth-child(1){ /*about section*/
+main>section:nth-child(1){  /*------------------------------------------about section*/
     position: relative;
     width: 100%;
     height: 438px;
@@ -114,7 +116,7 @@ main>section:nth-child(1)>nav i{
     color: #020C1B;
 }
 
-main>section:nth-child(2){          /*Education Section*/
+main>section:nth-child(2){          /*---------------------------Education Section*/
     border-top: 4px solid #1DC789;
     border-bottom: 4px solid #1DC789;
     color: white;
@@ -183,7 +185,7 @@ main>section:nth-child(2)>ul>li:nth-child(3){
     margin-left: 195px;
 }
 
-main>section:nth-child(3){          /*Skills and Tools*/
+main>section:nth-child(3){          /*------------------------------------Skills and Tools*/
     background-color: #020C1B;
     border-bottom: 4px solid #1DC789;
 }
@@ -227,7 +229,7 @@ main>section:nth-child(3)>div:nth-child(5){
     margin: 60px 0;
 }
 
-main>section:nth-child(4){          /*My Works*/
+main>section:nth-child(4){          /*-------------------------------------My Works*/
     background-color: #020C1B;
     border-bottom: 4px solid #1DC789;
     color: white;
@@ -260,59 +262,10 @@ main>section:nth-child(4) a{
     font-size: large;
 }
 
-main>section:nth-child(5){      /*Services Section*/
+main>section:nth-child(6){      /*------------------------------------Services Section*/
     background-color: #020C1B;
     border-bottom: 4px solid #1DC789;
     color: black;
-}
-
-main>section:nth-child(5)>h2{
-    color: #64FFDA;
-    font-size: xx-large;
-    text-align: center;
-    margin-top: 0;
-    padding-top: 26.76px;
-}
-
-main>section:nth-child(5)>div{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-top: 10px;
-    margin-bottom: 60px;
-}
-
-main>section:nth-child(5)>div h1{
-    font-size: large;
-}
-main>section:nth-child(5)>div figure{
-    background-color: white;
-    text-align: center;
-    border-radius: 5%;
-    width: 230px;
-    height: 300px;
-}
-
-main>section:nth-child(5)>div figcaption{
-    width: 180px;
-    position: relative;
-    left: 25px;
-    top: 40px;
-}
-
-main>section:nth-child(5)>div img{
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    margin-top: 20px;
-}
-
-main>section:nth-child(6){      /*ContactMe Section*/
-    background-color: #020C1B;
-    border-bottom: 4px solid #1DC789;
-    color: white;
-    position: relative;
-    height: 525px;
 }
 
 main>section:nth-child(6)>h2{
@@ -323,23 +276,72 @@ main>section:nth-child(6)>h2{
     padding-top: 26.76px;
 }
 
-main>section:nth-child(6) i{
+main>section:nth-child(6)>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+main>section:nth-child(6)>div h1{
+    font-size: large;
+}
+main>section:nth-child(6)>div figure{
+    background-color: white;
+    text-align: center;
+    border-radius: 5%;
+    width: 230px;
+    height: 300px;
+}
+
+main>section:nth-child(6)>div figcaption{
+    width: 180px;
+    position: relative;
+    left: 25px;
+    top: 40px;
+}
+
+main>section:nth-child(6)>div img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin-top: 20px;
+}
+
+main>section:nth-child(7){      /*--------------------------------ContactMe Section*/
+    background-color: #020C1B;
+    border-bottom: 4px solid #1DC789;
+    color: white;
+    position: relative;
+    height: 525px;
+}
+
+main>section:nth-child(7)>h2{
+    color: #64FFDA;
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 26.76px;
+}
+
+main>section:nth-child(7) i{
     color: #64FFDA;
     margin-right: 45px;
 }
 
-main>section:nth-child(6)>div:nth-child(2) {
+main>section:nth-child(7)>div:nth-child(2) {
     position: relative;
     left: 70px;
     top: 25px;
     width: 700px;
 }
 
-main>section:nth-child(6)> div:nth-child(2)> ul{
+main>section:nth-child(7)> div:nth-child(2)> ul{
     width: 700px;
 }
 
-main>section:nth-child(6)> div:nth-child(2)> ul> li{
+main>section:nth-child(7)> div:nth-child(2)> ul> li{
     list-style: none;
     margin-bottom: 40px;
     font-size: 19px;
@@ -347,26 +349,26 @@ main>section:nth-child(6)> div:nth-child(2)> ul> li{
     width: 700px;
 }
 
-main>section:nth-child(6)> div:nth-child(2)> ul> li:nth-child(4)>p:nth-child(2){
+main>section:nth-child(7)> div:nth-child(2)> ul> li:nth-child(4)>p:nth-child(2){
     position: relative;
     left: 65px;
     bottom: 10px;
     margin-top: 5px;
 }
 
-main>section:nth-child(6)> div:nth-child(4){      /*form area*/
+main>section:nth-child(7)> div:nth-child(4){      /*form area*/
     width: 650px;
     position: absolute;
     top: 90px;
     right: 45px;
 }
 
-main>section:nth-child(6)> div:nth-child(4) fieldset{
+main>section:nth-child(7)> div:nth-child(4) fieldset{
     margin: 0;
     border: 0;
 }
 
-main>section:nth-child(6)> div:nth-child(4)>form> fieldset>input{
+main>section:nth-child(7)> div:nth-child(4)>form> fieldset>input{
     border-radius: 6px;
     margin: 15px;
     font-size: large;
@@ -377,7 +379,7 @@ main>section:nth-child(6)> div:nth-child(4)>form> fieldset>input{
     width: 530px;
 }
 
-main>section:nth-child(6)> div:nth-child(4)>form> fieldset>textarea{
+main>section:nth-child(7)> div:nth-child(4)>form> fieldset>textarea{
     width: 530px;
     height: 125px;
     border-radius: 6px;
@@ -415,7 +417,8 @@ main>section:nth-child(6)> div:nth-child(4)>form> fieldset>textarea{
     height: 51px;
 }
 
-footer{         /*footer*/
+/*==================footer===================*/
+footer{
     background-color: #1DC789;
     text-align: center;
     position: relative;
