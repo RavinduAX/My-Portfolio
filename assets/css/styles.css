@@ -312,6 +312,7 @@ main>section:nth-child(6){      /*ContactMe Section*/
     border-bottom: 4px solid #1DC789;
     color: white;
     position: relative;
+    height: 525px;
 }
 
 main>section:nth-child(6)>h2{
@@ -392,12 +393,12 @@ main>section:nth-child(6)> div:nth-child(4)>form> fieldset>textarea{
     border-radius: 7.5px;
     position: relative;
     left: 175px;
-    top: 35px;
+    top: 37px;
     font-size: large;
     padding: 12px;
     width: 149px;
     height: 51px;
-    margin-bottom: 100px;
+    /*margin-bottom: 100px;*/
 }
 
 #submitFormBtn{
@@ -410,8 +411,8 @@ main>section:nth-child(6)> div:nth-child(4)>form> fieldset>textarea{
     top: 23px;
     font-size: large;
     padding: 12px;
-    width: 140px;
-    height: 48px;
+    width: 149px;
+    height: 51px;
 }
 
 footer{         /*footer*/
@@ -420,6 +421,7 @@ footer{         /*footer*/
     position: relative;
     top: -35px;
     height: 121px;
+    padding-bottom: 10px;
 }
 
 footer>div:nth-child(1)>nav{
