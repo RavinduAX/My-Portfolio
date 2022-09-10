@@ -245,7 +245,7 @@ main>section:nth-child(4) h2{
 
 main>section:nth-child(4) img{
     border-radius: 10%;
-    height: 300px;
+    height: 270px;
     width: 325px;
 }
 
@@ -265,6 +265,7 @@ main>section:nth-child(4) a{
 main>section:nth-child(5){      /*------------------------------------Assignment Section*/
     background-color: #020C1B;
     border-bottom: 4px solid #1DC789;
+    height: 475px;
 }
 
 main>section:nth-child(5)>h2{
@@ -288,7 +289,24 @@ main>section:nth-child(5)>div img{
     width: 325px;
 }
 
+main>section:nth-child(5)>a>button{
+    color: #020C1B;
+    border: 4px solid #2ee0a7;
+    background-color: #2ee0a7;
+    border-radius: 7.5px;
+    font-size: large;
+    padding: 8px;
+    width: 133px;
+    height: 47px;
+    position: relative;
+    left: 692px;
+}
 
+main>section:nth-child(5)>a>button:hover{
+    color: #2ee0a7;
+    border: 4px solid #2ee0a7;
+    background-color: #020C1B;
+}
 
 main>section:nth-child(6){      /*------------------------------------Services Section*/
     background-color: #020C1B;
