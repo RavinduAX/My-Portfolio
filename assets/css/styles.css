@@ -262,6 +262,32 @@ main>section:nth-child(4) a{
     font-size: large;
 }
 
+main>section:nth-child(5){      /*------------------------------------Assignment Section*/
+    background-color: #020C1B;
+    border-bottom: 4px solid #1DC789;
+}
+
+main>section:nth-child(5)>h2{
+    color: #64FFDA;
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 26.76px;
+}
+
+main>section:nth-child(5)>div{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main>section:nth-child(5)>div img{
+    width: 100px;
+    height: 150px;
+    border-radius: 10%;
+}
+
+
+
 main>section:nth-child(6){      /*------------------------------------Services Section*/
     background-color: #020C1B;
     border-bottom: 4px solid #1DC789;
