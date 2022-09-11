@@ -522,6 +522,10 @@ body{
     }
 
     /*---------------------------Main---------------------------*/
+    main{
+        top: -27px;
+    }
+
     main>section:nth-child(1){
         height: 383px;
         margin-bottom: 105px;
