@@ -620,6 +620,9 @@ body {
     main > section:nth-child(3) > div:nth-child(2){
         flex-wrap: wrap;
     }
+    main > section:nth-child(3) > div:nth-child(5){
+        flex-wrap: wrap;
+    }
     main > section:nth-child(3) img{
         height: 75px;
         width: 75px;
