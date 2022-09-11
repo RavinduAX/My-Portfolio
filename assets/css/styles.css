@@ -726,14 +726,44 @@ body {
     }
 
     #hireMeBtn{
-        left: 90px;
+        left: 93px;
         font-size: small;
         font-weight: bold;
         padding: 8px;
-        width: 126px;
+        width: 118px;
         height: 40px;
+        top: 30px;
     }
 
+    main > section:nth-child(7) > div:nth-child(4) {
+        width: max-content;
+        top: 326px;
+        left: -1px;
+    }
 
+    main > section:nth-child(7) > div:nth-child(4) > form > fieldset > input{
+        margin: 3px;
+        font-size: small;
+    }
+    main > section:nth-child(7) > div:nth-child(4) > form > fieldset > input:nth-child(1){
+        /*visibility: hidden;*/
+        width: 121px;
+    }
+    main > section:nth-child(7) > div:nth-child(4) > form > fieldset > input:nth-child(2){
+        position: relative;
+        right: 5px;
+        width: 121px;
+    }
+
+    #subOptional {
+        width: 261px;
+    }
+
+    main > section:nth-child(7) > div:nth-child(4) > form > fieldset > textarea {
+        width: 264px;
+        height: 92px;
+        margin: 3px;
+        font-size: small;
+    }
 
 }
