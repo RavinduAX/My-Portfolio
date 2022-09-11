@@ -780,4 +780,24 @@ body {
         height: 40px;
     }
 
+    footer{
+        top: -27px;
+        height: 117px;
+        padding-bottom: 0;
+    }
+    footer>div:nth-child(1){
+        visibility: hidden;
+    }
+
+    footer>nav:nth-child(2){
+        position: relative;
+        right: 18px;
+        bottom: 62px;
+        font-size: 13px
+    }
+    footer>small{
+        position: relative;
+        bottom: 62px;
+    }
+
 }
