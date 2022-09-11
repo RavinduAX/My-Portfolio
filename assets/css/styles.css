@@ -1,13 +1,13 @@
-*{
+* {
     font-family: 'Ubuntu', sans-serif;
 }
 
 /*==================header===================*/
-header{
+header {
     width: 100%;
     height: 65px;
-    border-bottom: 5px solid #1DC789;    /*Line Color*/
-    background-color: #020C1B;          /*Background*/
+    border-bottom: 5px solid #1DC789; /*Line Color*/
+    background-color: #020C1B; /*Background*/
     position: relative;
 }
 
@@ -24,7 +24,7 @@ header > nav {
     right: 5px;
 }
 
-header>nav>ul>li{
+header > nav > ul > li {
     list-style: none;
     display: inline-block;
     padding-right: 20px;
@@ -32,18 +32,18 @@ header>nav>ul>li{
     /*border-right: 2px solid #64FFDA;*/
 }
 
-header>nav>ul>li>a {
-    color: #64FFDA;         /*Font Color*/
+header > nav > ul > li > a {
+    color: #64FFDA; /*Font Color*/
     text-decoration: none;
 }
 
 /*==================main===================*/
-main{
+main {
     position: relative;
     top: -35px;
 }
 
-main>section:nth-child(1){  /*------------------------------------------about section*/
+main > section:nth-child(1) { /*------------------------------------------about section*/
     position: relative;
     width: 100%;
     height: 438px;
@@ -51,7 +51,7 @@ main>section:nth-child(1){  /*------------------------------------------about se
     margin-bottom: 206px;
 }
 
-main>section:nth-child(1)>img{
+main > section:nth-child(1) > img {
     height: 440px;
     width: 440px;
     border-radius: 100%;
@@ -60,7 +60,7 @@ main>section:nth-child(1)>img{
     right: 110px;
 }
 
-main>section:nth-child(1)>div{
+main > section:nth-child(1) > div {
     color: white;
     position: relative;
     top: 100px;
@@ -68,26 +68,28 @@ main>section:nth-child(1)>div{
     width: max-content;
 }
 
-main>section:nth-child(1)>div>h2{
+main > section:nth-child(1) > div > h2 {
     font-size: 42px;
     font-weight: normal;
     margin-bottom: 0;
 }
-main>section:nth-child(1)>div>h1{
+
+main > section:nth-child(1) > div > h1 {
     font-size: 55px;
     font-weight: normal;
     margin-top: 10px;
 }
-main>section:nth-child(1)>div>h3{
+
+main > section:nth-child(1) > div > h3 {
     font-size: 35px;
     font-weight: normal;
 }
 
-main>section:nth-child(1)>div>h3>span{
+main > section:nth-child(1) > div > h3 > span {
     color: #64FFDA;
 }
 
-main>section:nth-child(1)>button{
+main > section:nth-child(1) > button {
     color: #64FFDA;
     background-color: #020C1B;
     border: 3px solid #64FFDA;
@@ -99,24 +101,24 @@ main>section:nth-child(1)>button{
     top: 115px;
 }
 
-main>section:nth-child(1)>nav{
+main > section:nth-child(1) > nav {
     position: relative;
     left: 45px;
     top: 202px;
     width: 750px;
 }
 
-main>section:nth-child(1)>nav li{
+main > section:nth-child(1) > nav li {
     display: inline-block;
     list-style: none;
     margin-left: 15px;
 }
 
-main>section:nth-child(1)>nav i{
+main > section:nth-child(1) > nav i {
     color: #020C1B;
 }
 
-main>section:nth-child(2){          /*---------------------------Education Section*/
+main > section:nth-child(2) { /*---------------------------Education Section*/
     border-top: 4px solid #1DC789;
     border-bottom: 4px solid #1DC789;
     color: white;
@@ -124,31 +126,31 @@ main>section:nth-child(2){          /*---------------------------Education Secti
     height: 400px;
 }
 
-main>section:nth-child(2)>h2{
+main > section:nth-child(2) > h2 {
     color: #64FFDA;
     font-size: xx-large;
     text-align: center;
 }
 
-main>section:nth-child(2)>div{
+main > section:nth-child(2) > div {
     display: flex;
     text-align: center;
     margin-top: 35px;
     margin-left: 50px;
 }
 
-main>section:nth-child(2)>div>figure{
+main > section:nth-child(2) > div > figure {
     text-align: center;
 }
 
-main>section:nth-child(2)>div>figure>img{
+main > section:nth-child(2) > div > figure > img {
     height: 110px;
     width: 110px;
     border-radius: 15%;
     align-items: center;
 }
 
-main>section:nth-child(2)>hr{
+main > section:nth-child(2) > hr {
     margin-top: 12px;
     border: 0;
     background-color: white;
@@ -156,20 +158,20 @@ main>section:nth-child(2)>hr{
     width: 90%;
 }
 
-main>section:nth-child(2)>ul{
+main > section:nth-child(2) > ul {
     position: relative;
     top: -25px;
     left: 120px;
     width: 800px;
 }
 
-main>section:nth-child(2)>ul>li{
+main > section:nth-child(2) > ul > li {
     color: white;
     list-style: none;
     display: inline-block;
 }
 
-main>section:nth-child(2)>ul>li>div{
+main > section:nth-child(2) > ul > li > div {
     background-color: #E67E22;
     border-radius: 100%;
     width: 15px;
@@ -177,44 +179,45 @@ main>section:nth-child(2)>ul>li>div{
     position: relative;
 }
 
-main>section:nth-child(2)>ul>li:nth-child(2){
+main > section:nth-child(2) > ul > li:nth-child(2) {
     margin-left: 220px;
 }
 
-main>section:nth-child(2)>ul>li:nth-child(3){
+main > section:nth-child(2) > ul > li:nth-child(3) {
     margin-left: 195px;
 }
 
-main>section:nth-child(3){          /*------------------------------------Skills and Tools*/
+main > section:nth-child(3) { /*------------------------------------Skills and Tools*/
     background-color: #020C1B;
     border-bottom: 4px solid #1DC789;
 }
 
-main>section:nth-child(3) h2{
+main > section:nth-child(3) h2 {
     color: #64FFDA;
     font-size: xx-large;
     text-align: center;
 }
-main>section:nth-child(3)>h2:nth-child(1){
+
+main > section:nth-child(3) > h2:nth-child(1) {
     margin-top: 0;
     padding-top: 26.76px;
 }
 
-main>section:nth-child(3)>div:nth-child(2){
+main > section:nth-child(3) > div:nth-child(2) {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin: 60px 0;
 }
 
-main>section:nth-child(3) img{
+main > section:nth-child(3) img {
     height: 100px;
     width: 100px;
     border-radius: 100%;
     margin-bottom: 60px;
 }
 
-main>section:nth-child(3)>hr{
+main > section:nth-child(3) > hr {
     margin-top: 12px;
     border: 0;
     background-color: #1DC789;
@@ -222,20 +225,20 @@ main>section:nth-child(3)>hr{
     width: 90%;
 }
 
-main>section:nth-child(3)>div:nth-child(5){
+main > section:nth-child(3) > div:nth-child(5) {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin: 60px 0;
 }
 
-main>section:nth-child(4){          /*-------------------------------------My Works*/
+main > section:nth-child(4) { /*-------------------------------------My Works*/
     background-color: #020C1B;
     border-bottom: 4px solid #1DC789;
     color: white;
 }
 
-main>section:nth-child(4) h2{
+main > section:nth-child(4) h2 {
     color: #64FFDA;
     font-size: xx-large;
     text-align: center;
@@ -243,32 +246,32 @@ main>section:nth-child(4) h2{
     padding-top: 26.76px;
 }
 
-main>section:nth-child(4) img{
+main > section:nth-child(4) img {
     border-radius: 10%;
     height: 270px;
     width: 325px;
 }
 
-main>section:nth-child(4) div{
+main > section:nth-child(4) div {
     display: flex;
     justify-content: space-evenly;
     margin-top: 10px;
     margin-bottom: 60px;
 }
 
-main>section:nth-child(4) a{
+main > section:nth-child(4) a {
     text-decoration: none;
     color: white;
     font-size: large;
 }
 
-main>section:nth-child(5){      /*------------------------------------Assignment Section*/
+main > section:nth-child(5) { /*------------------------------------Assignment Section*/
     background-color: #020C1B;
     border-bottom: 4px solid #1DC789;
     height: 490px;
 }
 
-main>section:nth-child(5)>h2{
+main > section:nth-child(5) > h2 {
     color: #64FFDA;
     font-size: xx-large;
     text-align: center;
@@ -276,20 +279,20 @@ main>section:nth-child(5)>h2{
     padding-top: 26.76px;
 }
 
-main>section:nth-child(5)>div{
+main > section:nth-child(5) > div {
     display: flex;
     justify-content: space-evenly;
     margin-top: 35px;
     margin-bottom: 60px;
 }
 
-main>section:nth-child(5)>div img{
+main > section:nth-child(5) > div img {
     border-radius: 10%;
     height: 240px;
     width: 325px;
 }
 
-main>section:nth-child(5)>a>button{
+main > section:nth-child(5) > a > button {
     color: #020C1B;
     border: 4px solid #2ee0a7;
     background-color: #2ee0a7;
@@ -302,19 +305,19 @@ main>section:nth-child(5)>a>button{
     left: 692px;
 }
 
-main>section:nth-child(5)>a>button:hover{
+main > section:nth-child(5) > a > button:hover {
     color: #2ee0a7;
     border: 4px solid #2ee0a7;
     background-color: #020C1B;
 }
 
-main>section:nth-child(6){      /*------------------------------------Services Section*/
+main > section:nth-child(6) { /*------------------------------------Services Section*/
     background-color: #020C1B;
     border-bottom: 4px solid #1DC789;
     color: black;
 }
 
-main>section:nth-child(6)>h2{
+main > section:nth-child(6) > h2 {
     color: #64FFDA;
     font-size: xx-large;
     text-align: center;
@@ -322,7 +325,7 @@ main>section:nth-child(6)>h2{
     padding-top: 26.76px;
 }
 
-main>section:nth-child(6)>div{
+main > section:nth-child(6) > div {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -330,10 +333,11 @@ main>section:nth-child(6)>div{
     margin-bottom: 60px;
 }
 
-main>section:nth-child(6)>div h1{
+main > section:nth-child(6) > div h1 {
     font-size: large;
 }
-main>section:nth-child(6)>div figure{
+
+main > section:nth-child(6) > div figure {
     background-color: white;
     text-align: center;
     border-radius: 5%;
@@ -341,21 +345,21 @@ main>section:nth-child(6)>div figure{
     height: 300px;
 }
 
-main>section:nth-child(6)>div figcaption{
+main > section:nth-child(6) > div figcaption {
     width: 180px;
     position: relative;
     left: 25px;
     top: 40px;
 }
 
-main>section:nth-child(6)>div img{
+main > section:nth-child(6) > div img {
     width: 100px;
     height: 100px;
     border-radius: 100%;
     margin-top: 20px;
 }
 
-main>section:nth-child(7){      /*--------------------------------ContactMe Section*/
+main > section:nth-child(7) { /*--------------------------------ContactMe Section*/
     background-color: #020C1B;
     border-bottom: 4px solid #1DC789;
     color: white;
@@ -363,7 +367,7 @@ main>section:nth-child(7){      /*--------------------------------ContactMe Sect
     height: 525px;
 }
 
-main>section:nth-child(7)>h2{
+main > section:nth-child(7) > h2 {
     color: #64FFDA;
     font-size: xx-large;
     text-align: center;
@@ -371,23 +375,23 @@ main>section:nth-child(7)>h2{
     padding-top: 26.76px;
 }
 
-main>section:nth-child(7) i{
+main > section:nth-child(7) i {
     color: #64FFDA;
     margin-right: 45px;
 }
 
-main>section:nth-child(7)>div:nth-child(2) {
+main > section:nth-child(7) > div:nth-child(2) {
     position: relative;
     left: 70px;
     top: 25px;
     width: 700px;
 }
 
-main>section:nth-child(7)> div:nth-child(2)> ul{
+main > section:nth-child(7) > div:nth-child(2) > ul {
     width: 700px;
 }
 
-main>section:nth-child(7)> div:nth-child(2)> ul> li{
+main > section:nth-child(7) > div:nth-child(2) > ul > li {
     list-style: none;
     margin-bottom: 40px;
     font-size: 19px;
@@ -395,37 +399,37 @@ main>section:nth-child(7)> div:nth-child(2)> ul> li{
     width: 700px;
 }
 
-main>section:nth-child(7)> div:nth-child(2)> ul> li:nth-child(4)>p:nth-child(2){
+main > section:nth-child(7) > div:nth-child(2) > ul > li:nth-child(4) > p:nth-child(2) {
     position: relative;
     left: 65px;
     bottom: 10px;
     margin-top: 5px;
 }
 
-main>section:nth-child(7)> div:nth-child(4){      /*form area*/
+main > section:nth-child(7) > div:nth-child(4) { /*form area*/
     width: 650px;
     position: absolute;
     top: 90px;
     right: 45px;
 }
 
-main>section:nth-child(7)> div:nth-child(4) fieldset{
+main > section:nth-child(7) > div:nth-child(4) fieldset {
     margin: 0;
     border: 0;
 }
 
-main>section:nth-child(7)> div:nth-child(4)>form> fieldset>input{
+main > section:nth-child(7) > div:nth-child(4) > form > fieldset > input {
     border-radius: 6px;
     margin: 15px;
     font-size: large;
     padding: 5px;
 }
 
-#subOptional{
+#subOptional {
     width: 530px;
 }
 
-main>section:nth-child(7)> div:nth-child(4)>form> fieldset>textarea{
+main > section:nth-child(7) > div:nth-child(4) > form > fieldset > textarea {
     width: 530px;
     height: 125px;
     border-radius: 6px;
@@ -434,7 +438,7 @@ main>section:nth-child(7)> div:nth-child(4)>form> fieldset>textarea{
     padding: 5px;
 }
 
-#hireMeBtn{
+#hireMeBtn {
     color: #FF4757;
     border: 4px solid #FF4757;
     background-color: #020C1B;
@@ -449,7 +453,7 @@ main>section:nth-child(7)> div:nth-child(4)>form> fieldset>textarea{
     /*margin-bottom: 100px;*/
 }
 
-#submitFormBtn{
+#submitFormBtn {
     color: #64FFDA;
     border: 4px solid #64FFDA;
     background-color: #020C1B;
@@ -464,7 +468,7 @@ main>section:nth-child(7)> div:nth-child(4)>form> fieldset>textarea{
 }
 
 /*==================footer===================*/
-footer{
+footer {
     background-color: #1DC789;
     text-align: center;
     position: relative;
@@ -473,123 +477,137 @@ footer{
     padding-bottom: 10px;
 }
 
-footer>div:nth-child(1)>nav{
+footer > div:nth-child(1) > nav {
     padding-top: 5px;
 }
 
-footer li{
+footer li {
     display: inline-block;
     list-style: none;
 }
 
-footer a{
+footer a {
     text-decoration: none;
 }
 
-#navList a{
+#navList a {
     color: black;
     padding: 0 10px 0 10px;
     border-right: 1px solid black;
 }
 
-footer>small{
+footer > small {
     color: gray;
 }
 
-footer>nav:nth-child(2) i{
+footer > nav:nth-child(2) i {
     color: white;
     padding-right: 5px;
     padding-left: 5px;
 }
 
-body{
+body {
     height: 3938.55px;
 }
 
-@media all and (max-width: 320px){
+@media all and (max-width: 320px) {
     /*---------------------------Header---------------------------*/
-    header>div>img{
+    header > div > img {
         height: 30px;
         width: 30px;
         margin-top: 17px;
     }
-    header>nav{
+
+    header > nav {
         top: -3px;
         text-align: center;
     }
-    header>nav>ul>li{
+
+    header > nav > ul > li {
         font-size: 12px;
     }
 
     /*---------------------------Main---------------------------*/
-    main{
+    main {
         top: -27px;
     }
 
-    main>section:nth-child(1){                                   /*About Section*/
+    main > section:nth-child(1) { /*About Section*/
         height: 383px;
         margin-bottom: 105px;
     }
 
-    main>section:nth-child(1)>img{
+    main > section:nth-child(1) > img {
         visibility: hidden;
     }
 
-    main>section:nth-child(1)>div{
+    main > section:nth-child(1) > div {
         top: 113px;
         left: 29px;
     }
 
-    main>section:nth-child(1)>div>h2{
+    main > section:nth-child(1) > div > h2 {
         font-size: 31px;
     }
-    main>section:nth-child(1)>div>h1{
+
+    main > section:nth-child(1) > div > h1 {
         font-size: 23px;
     }
-    main>section:nth-child(1)>div>h3{
+
+    main > section:nth-child(1) > div > h3 {
         font-size: 22px;
     }
-    main>section:nth-child(1)>button{
+
+    main > section:nth-child(1) > button {
         left: 90px;
         top: 152px;
     }
-    main>section:nth-child(1)>nav{
+
+    main > section:nth-child(1) > nav {
         left: -9px;
         top: 229px;
         width: max-content;
     }
-    main>section:nth-child(1)>nav li{
+
+    main > section:nth-child(1) > nav li {
         font-size: 15px;
     }
 
-    main>section:nth-child(2){                                   /*Education Section*/
+    main > section:nth-child(2) { /*Education Section*/
         height: max-content;
     }
-    main>section:nth-child(2)>h2{
+
+    main > section:nth-child(2) > h2 {
         font-size: x-large;
     }
-    main>section:nth-child(2)>div{
+
+    main > section:nth-child(2) > div {
         margin-left: 0px;
         flex-direction: column;
         width: max-content;
     }
-    main>section:nth-child(2)>div>figure{
+
+    main > section:nth-child(2) > div > figure {
         margin-bottom: 10px;
         display: flex;
     }
-    main>section:nth-child(2)>div>figure>figcaption{
+
+    main > section:nth-child(2) > div > figure > figcaption {
         margin-left: 18px;
         margin-top: 9px;
         text-align: center;
     }
-    main>section:nth-child(2)>div>figure>img {
+
+    main > section:nth-child(2) > div > figure > img {
         height: 60px;
         width: 60px;
     }
-    main>section:nth-child(2)>hr{
+
+    main > section:nth-child(2) > hr {
         visibility: hidden;
     }
-    main>section:nth-child(2)>ul{
+
+    main > section:nth-child(2) > ul {
         visibility: hidden;
     }
 }
