@@ -292,6 +292,11 @@ main > section:nth-child(5) > div img {
     width: 325px;
 }
 
+main > section:nth-child(5) > a{
+    position: relative;
+    left: 675px;
+}
+
 main > section:nth-child(5) > a > button {
     color: #020C1B;
     border: 4px solid #2ee0a7;
@@ -301,8 +306,6 @@ main > section:nth-child(5) > a > button {
     padding: 8px;
     width: 133px;
     height: 47px;
-    position: relative;
-    left: 692px;
 }
 
 main > section:nth-child(5) > a > button:hover {
@@ -643,8 +646,35 @@ body {
         width: 100px;
     }
 
+    main>section:nth-child(5){                                  /*Assignment Section*/
+        height: max-content;
+    }
 
+    main > section:nth-child(5) h2{
+        font-size: x-large;
+    }
+    main>section:nth-child(5)>div{
+        flex-direction: column;
+        margin-left: 51px;
+    }
+    main>section:nth-child(5)>div img{
+        height: 100px;
+        width: 200px;
+        margin-bottom: 20px;
+    }
 
+    main>section:nth-child(5)>a{
+        position: relative;
+        left: 92px;
+        bottom: 46px;
+    }
+
+    main>section:nth-child(5)>a>button{
+        font-size: small;
+        font-weight: bold;
+        width: 113px;
+        height: 39px;
+    }
 
 
 }
