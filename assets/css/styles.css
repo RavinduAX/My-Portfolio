@@ -719,15 +719,21 @@ body {
     }
     main > section:nth-child(7) > div:nth-child(2){
         left: -12px;
+        width: 270px;
     }
 
     main > section:nth-child(7) > div:nth-child(2) > ul {
-        width: max-content;
+        width: 270px;
     }
 
     main > section:nth-child(7) > div:nth-child(2) > ul > li{
         margin-bottom: 20px;
         font-size: 11px;
+        width: 270px;
+    }
+
+    main > section:nth-child(7) i{
+        margin-right: 33px;
     }
 
     #hireMeBtn{
