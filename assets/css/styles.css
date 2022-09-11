@@ -526,7 +526,7 @@ body{
         top: -27px;
     }
 
-    main>section:nth-child(1){
+    main>section:nth-child(1){                                   /*About Section*/
         height: 383px;
         margin-bottom: 105px;
     }
@@ -562,5 +562,28 @@ body{
         font-size: 15px;
     }
 
-
+    main>section:nth-child(2){                                   /*Education Section*/
+        height: max-content;
+    }
+    main>section:nth-child(2)>h2{
+        font-size: x-large;
+    }
+    main>section:nth-child(2)>div{
+        margin-left: 0px;
+        flex-direction: column;
+        width: max-content;
+    }
+    main>section:nth-child(2)>div>figure{
+        margin-bottom: 10px;
+        display: flex;
+    }
+    main>section:nth-child(2)>div>figure>figcaption{
+        margin-left: 18px;
+        margin-top: 9px;
+        text-align: center;
+    }
+    main>section:nth-child(2)>div>figure>img {
+        height: 60px;
+        width: 60px;
+    }
 }
