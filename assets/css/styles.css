@@ -507,6 +507,7 @@ body{
 }
 
 @media all and (max-width: 320px){
+    /*---------------------------Header---------------------------*/
     header>div>img{
         height: 30px;
         width: 30px;
@@ -519,5 +520,43 @@ body{
     header>nav>ul>li{
         font-size: 12px;
     }
+
+    /*---------------------------Main---------------------------*/
+    main>section:nth-child(1){
+        height: 383px;
+        margin-bottom: 105px;
+    }
+
+    main>section:nth-child(1)>img{
+        visibility: hidden;
+    }
+
+    main>section:nth-child(1)>div{
+        top: 113px;
+        left: 29px;
+    }
+
+    main>section:nth-child(1)>div>h2{
+        font-size: 31px;
+    }
+    main>section:nth-child(1)>div>h1{
+        font-size: 23px;
+    }
+    main>section:nth-child(1)>div>h3{
+        font-size: 22px;
+    }
+    main>section:nth-child(1)>button{
+        left: 90px;
+        top: 152px;
+    }
+    main>section:nth-child(1)>nav{
+        left: -9px;
+        top: 229px;
+        width: max-content;
+    }
+    main>section:nth-child(1)>nav li{
+        font-size: 15px;
+    }
+
 
 }
