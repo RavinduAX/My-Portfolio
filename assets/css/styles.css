@@ -611,10 +611,7 @@ body {
         visibility: hidden;
     }
 
-    main>section:nth-child(3){                                   /*Skill Section*/
-
-    }
-    main>section:nth-child(3) h2{
+    main>section:nth-child(3) h2{                                    /*Skill Section*/
         font-size: x-large;
     }
     main > section:nth-child(3) > div:nth-child(2){
@@ -630,4 +627,24 @@ body {
         flex-shrink: 0;
         margin-left: 10px;
     }
+
+    main > section:nth-child(4) > div{                                    /*My Works Section*/
+        flex-direction: column;
+        width: max-content;
+        text-align: center;
+    }
+
+    main > section:nth-child(4) h2{
+        font-size: x-large;
+    }
+
+    main > section:nth-child(4) img {
+        height: 100px;
+        width: 100px;
+    }
+
+
+
+
+
 }
