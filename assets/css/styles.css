@@ -612,6 +612,7 @@ body {
 
     main > section:nth-child(2) > ul {
         visibility: hidden;
+        width: 10px;
     }
 
     main>section:nth-child(3) h2{                                    /*Skill Section*/
@@ -633,7 +634,7 @@ body {
 
     main > section:nth-child(4) > div{                                    /*My Works Section*/
         flex-direction: column;
-        width: max-content;
+        width: 300px;
         text-align: center;
     }
 
@@ -709,7 +710,7 @@ body {
     }
 
 
-    main > section:nth-child(7){
+    main > section:nth-child(7){                                /*ContactME Section*/
         height: 610px;
     }
 
@@ -780,7 +781,7 @@ body {
         height: 40px;
     }
 
-    footer{
+    footer{                                 /*footer*/
         top: -27px;
         height: 117px;
         padding-bottom: 0;
