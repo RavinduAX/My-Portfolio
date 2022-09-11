@@ -677,4 +677,20 @@ body {
     }
 
 
+    main>section:nth-child(6){                                  /*Assignment Section*/
+        height: max-content;
+    }
+
+    main > section:nth-child(6) h2{
+        font-size: x-large;
+    }
+    main > section:nth-child(6) > div h1 {
+        font-size: 15px;
+    }
+    main > section:nth-child(6) > div img{
+        width: 80px;
+        height: 80px;
+        margin-top: 0;
+    }
+
 }
