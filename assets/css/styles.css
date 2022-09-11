@@ -532,7 +532,7 @@ body {
         top: -27px;
     }
 
-    main > section:nth-child(1) { /*About Section*/
+    main > section:nth-child(1) {                                 /*About Section*/
         height: 383px;
         margin-bottom: 105px;
     }
@@ -573,7 +573,7 @@ body {
         font-size: 15px;
     }
 
-    main > section:nth-child(2) { /*Education Section*/
+    main > section:nth-child(2) {                                 /*Education Section*/
         height: max-content;
     }
 
@@ -609,5 +609,22 @@ body {
 
     main > section:nth-child(2) > ul {
         visibility: hidden;
+    }
+
+    main>section:nth-child(3){                                   /*Skill Section*/
+
+    }
+    main>section:nth-child(3) h2{
+        font-size: x-large;
+    }
+    main > section:nth-child(3) > div:nth-child(2){
+        flex-wrap: wrap;
+    }
+    main > section:nth-child(3) img{
+        height: 75px;
+        width: 75px;
+        margin-bottom: 20px;
+        flex-shrink: 0;
+        margin-left: 10px;
     }
 }
