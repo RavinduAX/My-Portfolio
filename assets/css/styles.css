@@ -709,6 +709,10 @@ body {
     }
 
 
+    main > section:nth-child(7){
+        height: 610px;
+    }
+
     main > section:nth-child(7) h2{
         font-size: x-large;
     }
@@ -764,6 +768,16 @@ body {
         height: 92px;
         margin: 3px;
         font-size: small;
+    }
+
+    #submitFormBtn{
+        left: -202px;
+        top: 52px;
+        font-size: small;
+        font-weight: bold;
+        padding: 8px;
+        width: 118px;
+        height: 40px;
     }
 
 }
