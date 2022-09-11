@@ -586,4 +586,10 @@ body{
         height: 60px;
         width: 60px;
     }
+    main>section:nth-child(2)>hr{
+        visibility: hidden;
+    }
+    main>section:nth-child(2)>ul{
+        visibility: hidden;
+    }
 }
