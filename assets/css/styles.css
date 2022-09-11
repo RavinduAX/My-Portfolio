@@ -707,4 +707,33 @@ body {
         margin-top: 15px;
         position: static;
     }
+
+
+    main > section:nth-child(7) h2{
+        font-size: x-large;
+    }
+    main > section:nth-child(7) > div:nth-child(2){
+        left: -12px;
+    }
+
+    main > section:nth-child(7) > div:nth-child(2) > ul {
+        width: max-content;
+    }
+
+    main > section:nth-child(7) > div:nth-child(2) > ul > li{
+        margin-bottom: 20px;
+        font-size: 11px;
+    }
+
+    #hireMeBtn{
+        left: 90px;
+        font-size: small;
+        font-weight: bold;
+        padding: 8px;
+        width: 126px;
+        height: 40px;
+    }
+
+
+
 }
