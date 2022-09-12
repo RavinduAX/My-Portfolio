@@ -861,6 +861,14 @@ body {
         top: -30px;
     }
     /*-------------------------------About Section------------------------------------*/
+    main > section:nth-child(1) {
+        position: relative;
+        width: 100%;
+        height: 372px;
+        background-color: #020C1B;
+        margin-bottom: 109px;
+    }
+
     main > section:nth-child(1) > img {
         opacity: 0.2;
         height: 250px;
