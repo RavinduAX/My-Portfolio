@@ -1297,7 +1297,35 @@ body {
         margin-left: 10px;
     }
 
+    /*-------------------------------MyWorks Section------------------------------------*/
+    main > section:nth-child(4) > div{
+        flex-direction: column;
+        width: 350px;
+        text-align: center;
+        margin-left: 26px;
+        margin-top: 38px;
+    }
 
+    main > section:nth-child(4) h2{
+        font-size: x-large;
+    }
+
+    main > section:nth-child(4) img {
+        height: 100px;
+        width: 100px;
+    }
+
+    main>section:nth-child(4)>div>figure{
+        width: 308px;
+    }
+
+    main>section:nth-child(4)>div>figure>a{
+        display: flex;
+        align-items: center;
+    }
+    main>section:nth-child(4)>div>figure:nth-child(3)>a>figcaption{
+        padding-left: 20px;
+    }
 }
 
 
