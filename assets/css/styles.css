@@ -513,6 +513,8 @@ body {
     height: 3938.55px;
 }
 
+
+
 @media all and (max-width: 320px) {
     /*---------------------------Header---------------------------*/
     header > div > img {
@@ -541,7 +543,7 @@ body {
     }
 
     main > section:nth-child(1) > img {
-        visibility: hidden;
+        display: none;
     }
 
     main > section:nth-child(1) > div {
@@ -576,16 +578,10 @@ body {
         font-size: 15px;
     }
 
-    main>section:nth-child(2)>ul>li:nth-child(2){
-        margin-left: 0;
-    }
 
-    main>section:nth-child(2)>ul>li:nth-child(3){
-        margin-left: 0;
-    }
 
     main > section:nth-child(2) {                                 /*Education Section*/
-        height: max-content;
+        height: 400px;
     }
 
     main > section:nth-child(2) > h2 {
@@ -615,13 +611,21 @@ body {
     }
 
     main > section:nth-child(2) > hr {
-        visibility: hidden;
+        display: none;
     }
 
     main > section:nth-child(2) > ul {
         position: static;
-        visibility: hidden;
+        display: none;
         width: 10px;
+    }
+
+    main>section:nth-child(2)>ul>li:nth-child(2){
+        margin-left: 0;
+    }
+
+    main>section:nth-child(2)>ul>li:nth-child(3){
+        margin-left: 0;
     }
 
     main>section:nth-child(3) h2{                                    /*Skill Section*/
@@ -811,7 +815,8 @@ body {
         padding-bottom: 0;
     }
     footer>div:nth-child(1){
-        visibility: hidden;
+        display: none;
+        width: 100px;
     }
 
     footer>nav:nth-child(2){
