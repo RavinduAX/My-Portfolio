@@ -1502,6 +1502,25 @@ body {
         position: relative;
         top: 30px;
     }
+}
+
+/*=== -------------------------- 768px --------------------------- ===*/
+@media all and (min-width: 426px) and (max-width: 768px){
+
+    /*-------------------------------About Section------------------------------------*/
+    main > section:nth-child(1) > div{
+        top: 75px;
+        left: 75px;
+    }
+    main > section:nth-child(1) > div > h1{
+        font-size: 48px;
+    }
+    main > section:nth-child(1) > img{
+        height: 355px;
+        width: 355px;
+        top: 261px;
+        right: 8px;
+    }
 
 }
 
