@@ -811,7 +811,7 @@ body {
     }
 
     footer{                                 /*footer*/
-        top: -27px;
+        top: -40px;
         height: 117px;
         padding-bottom: 0;
     }
@@ -823,12 +823,12 @@ body {
     footer>nav:nth-child(2){
         position: relative;
         right: 18px;
-        bottom: 62px;
+        top: 23px;
         font-size: 13px
     }
     footer>small{
         position: relative;
-        bottom: 62px;
+        top: 30px;
     }
 
 }
