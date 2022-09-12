@@ -837,9 +837,9 @@ body {
 
 }
 
-/*=== 375px ===*/
+/*=== -------------------------- 375px --------------------------- ===*/
 
-@media all and (min-width: 374px) and (max-width: 376px){
+@media all and (min-width: 321px) and (max-width: 376px){
     /*-------------------------------------Header-----------------------------------*/
     header > div > img {
         height: 30px;
@@ -1163,6 +1163,26 @@ body {
         top: 30px;
     }
 
+}
+
+/*=== -------------------------- 425px --------------------------- ===*/
+
+@media all and (min-width: 377px) and (max-width: 426px){
+    /*-------------------------------------Header-----------------------------------*/
+    header > div > img {
+        height: 30px;
+        width: 30px;
+        margin-top: 17px;
+    }
+    header > nav {
+        top: -3px;
+        left: 5px;
+        text-align: center;
+    }
+
+    header > nav > ul > li {
+        font-size: 13.5px;
+    }
 }
 
 
