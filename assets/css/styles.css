@@ -1233,6 +1233,52 @@ body {
         font-size: 15px;
     }
 
+    /*-------------------------------Education Section------------------------------------*/
+    /*main > section:nth-child(2) {*/
+    /*    height: 400px;*/
+    /*}*/
+    main > section:nth-child(2) > h2 {
+        font-size: x-large;
+    }
+    main > section:nth-child(2) > div {
+        margin-left: 44px;
+        flex-direction: column;
+        width: 340px;
+    }
+    main > section:nth-child(2) > div > figure {
+        margin-bottom: 10px;
+        display: flex;
+    }
+
+    main > section:nth-child(2) > div > figure > figcaption {
+        margin-left: 18px;
+        margin-top: 9px;
+        text-align: center;
+    }
+
+    main > section:nth-child(2) > div > figure > img {
+        height: 70px;
+        width: 70px;
+    }
+
+    main > section:nth-child(2) > hr {
+        display: none;
+    }
+
+    main > section:nth-child(2) > ul {
+        position: static;
+        display: none;
+        width: 10px;
+    }
+
+    main>section:nth-child(2)>ul>li:nth-child(2){
+        margin-left: 0;
+    }
+
+    main>section:nth-child(2)>ul>li:nth-child(3){
+        margin-left: 0;
+    }
+
 }
 
 
