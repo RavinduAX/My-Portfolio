@@ -1521,6 +1521,16 @@ body {
         top: 261px;
         right: 8px;
     }
+    main > section:nth-child(1) > button{
+        padding: 10px 10px;
+        left: 75px;
+    }
+    main > section:nth-child(1) > nav{
+        width: max-content;
+        font-size: 19px;
+        left: 20px;
+        top: 227px;
+    }
 
 }
 
