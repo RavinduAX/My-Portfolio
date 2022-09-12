@@ -858,7 +858,7 @@ body {
 
     /*-------------------------------------Main-------------------------------------*/
     main{
-        top: -30px;
+        top: -33px;
     }
     /*-------------------------------About Section------------------------------------*/
     main > section:nth-child(1) {
@@ -892,7 +892,18 @@ body {
     main > section:nth-child(1) > div > h3 {
         font-size: 24px;
     }
-
+    main > section:nth-child(1) > button {
+        left: 115px;
+        top: 139px;
+    }
+    main > section:nth-child(1) > nav {
+        left: 21px;
+        top: 202px;
+        width: max-content;
+    }
+    main > section:nth-child(1) > nav li {
+        font-size: 15px;
+    }
 }
 
 
