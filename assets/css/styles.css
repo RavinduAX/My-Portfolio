@@ -589,7 +589,7 @@ body {
     }
 
     main > section:nth-child(2) > div {
-        margin-left: 18px;
+        margin-left: 13px;
         flex-direction: column;
         width: 290px;
     }
@@ -767,11 +767,12 @@ body {
         width: 287px;
         top: 326px;
         left: -1px;
-        margin-left: 10px;
+        margin-left: 13px;
     }
 
     main > section:nth-child(7) > div:nth-child(4) > form > fieldset{
         padding: 0;
+        height: 188px;
     }
 
     main > section:nth-child(7) > div:nth-child(4) > form > fieldset > input{
