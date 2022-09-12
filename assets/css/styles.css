@@ -1537,6 +1537,28 @@ body {
         width: max-content;
     }
 
+    /*-------------------------------MyWorks Section------------------------------------*/
+    main > section:nth-child(4) img {
+        height: 225px;
+        width: 310px;
+    }
+    main > section:nth-child(4) a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main > section:nth-child(4) div{
+        flex-direction: column;
+    }
+    main>section:nth-child(4)>div>figure>a>figcaption{
+        font-size: 22px;
+        margin-left: 28px;
+    }
+    main>section:nth-child(4)>div>figure:nth-child(3)>a>img{
+        position: relative;
+        right: 62px;
+    }
+
 }
 
 
