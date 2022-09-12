@@ -1055,7 +1055,7 @@ body {
 
     /*-------------------------------ContactMe Section------------------------------------*/
     main > section:nth-child(7){
-        height: 610px;
+        height: 616px;
     }
 
     main > section:nth-child(7) h2{
@@ -1133,12 +1133,34 @@ body {
 
     #submitFormBtn{
         left: 89px;
-        top: 30px;
+        top: 23px;
         font-size: small;
         font-weight: bold;
         padding: 8px;
         width: 118px;
         height: 40px;
+    }
+
+    /*---------------------------------footer-----------------------------*/
+    footer{
+        top: -47px;
+        height: 94px;
+        padding-bottom: 0;
+    }
+    footer>div:nth-child(1){
+        display: none;
+        width: 100px;
+    }
+
+    footer>nav:nth-child(2){
+        position: relative;
+        right: 18px;
+        top: 23px;
+        font-size: 13px
+    }
+    footer>small{
+        position: relative;
+        top: 30px;
     }
 
 }
