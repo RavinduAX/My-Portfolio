@@ -853,7 +853,36 @@ body {
     }
 
     header > nav > ul > li {
-        font-size: 13px;
+        font-size: 13.5px;
+    }
+
+    /*-------------------------------------Main-------------------------------------*/
+    main{
+        top: -27px;
+    }
+    /*-------------------------------About Section------------------------------------*/
+    main > section:nth-child(1) > img {
+        opacity: 0.2;
+        height: 250px;
+        width: 250px;
+        top: -2px;
+        left: -91px;
+    }
+    main > section:nth-child(1) > div {
+        top: 113px;
+        left: 29px;
+    }
+
+    main > section:nth-child(1) > div > h2 {
+        font-size: 31px;
+    }
+
+    main > section:nth-child(1) > div > h1 {
+        font-size: 23px;
+    }
+
+    main > section:nth-child(1) > div > h3 {
+        font-size: 22px;
     }
 
 }
