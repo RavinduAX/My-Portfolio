@@ -516,7 +516,7 @@ body {
 
 
 @media all and (max-width: 320px) {
-    /*---------------------------Header---------------------------*/
+    /*-------------------------------------Header-----------------------------------*/
     header > div > img {
         height: 30px;
         width: 30px;
@@ -532,12 +532,13 @@ body {
         font-size: 12px;
     }
 
-    /*---------------------------Main---------------------------*/
+    /*-------------------------------------Main-------------------------------------*/
     main {
         top: -27px;
     }
 
-    main > section:nth-child(1) {                                 /*About Section*/
+                                    /*-------------------------------About Section------------------------------------*/
+    main > section:nth-child(1) {
         height: 383px;
         margin-bottom: 105px;
     }
@@ -578,9 +579,8 @@ body {
         font-size: 15px;
     }
 
-
-
-    main > section:nth-child(2) {                                 /*Education Section*/
+                                /*-------------------------------Education Section------------------------------------*/
+    main > section:nth-child(2) {
         height: 400px;
     }
 
@@ -628,7 +628,8 @@ body {
         margin-left: 0;
     }
 
-    main>section:nth-child(3) h2{                                    /*Skill Section*/
+                                    /*-------------------------------Skills Section------------------------------------*/
+    main>section:nth-child(3) h2{
         font-size: x-large;
     }
     main > section:nth-child(3) > div:nth-child(2){
@@ -645,7 +646,8 @@ body {
         margin-left: 10px;
     }
 
-    main > section:nth-child(4) > div{                                    /*My Works Section*/
+                                        /*-------------------------------MyWorks Section------------------------------------*/
+    main > section:nth-child(4) > div{
         flex-direction: column;
         width: 300px;
         text-align: center;
@@ -660,7 +662,8 @@ body {
         width: 100px;
     }
 
-    main>section:nth-child(5){                                  /*Assignment Section*/
+                                /*-------------------------------Assignment Section------------------------------------*/
+    main>section:nth-child(5){
         height: max-content;
     }
 
@@ -690,8 +693,8 @@ body {
         height: 39px;
     }
 
-
-    main>section:nth-child(6){                                  /*Service Section*/
+                                /*-------------------------------Service Section------------------------------------*/
+    main>section:nth-child(6){
         height: max-content;
     }
 
@@ -722,8 +725,8 @@ body {
         position: static;
     }
 
-
-    main > section:nth-child(7){                                /*ContactME Section*/
+                                /*-------------------------------ContactMe Section------------------------------------*/
+    main > section:nth-child(7){
         height: 610px;
     }
 
@@ -810,7 +813,8 @@ body {
         height: 40px;
     }
 
-    footer{                                 /*footer*/
+    /*---------------------------------footer-----------------------------*/
+    footer{
         top: -40px;
         height: 117px;
         padding-bottom: 0;
@@ -832,3 +836,5 @@ body {
     }
 
 }
+
+
