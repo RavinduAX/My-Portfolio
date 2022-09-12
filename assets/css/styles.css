@@ -1425,7 +1425,7 @@ body {
     }
 
     #hireMeBtn{
-        left: 141px;
+        left: 146px;
         font-size: small;
         font-weight: bold;
         padding: 8px;
@@ -1435,9 +1435,9 @@ body {
     }
 
     main > section:nth-child(7) > div:nth-child(4) {
-        width: 308px;
-        top: 341px;
-        left: -10px;
+        width: 345px;
+        top: 345px;
+        left: -4px;
         margin-left: 41px;
     }
 
@@ -1452,27 +1452,27 @@ body {
     }
     main > section:nth-child(7) > div:nth-child(4) > form > fieldset > input:nth-child(1){
         /*visibility: hidden;*/
-        width: 121px;
+        width: 136px;
     }
     main > section:nth-child(7) > div:nth-child(4) > form > fieldset > input:nth-child(2){
         position: relative;
         right: 5px;
-        width: 139px;
+        width: 158px;
     }
 
     #subOptional {
-        width: 280px;
+        width: 315px;
     }
 
     main > section:nth-child(7) > div:nth-child(4) > form > fieldset > textarea {
-        width: 280px;
+        width: 315px;
         height: 92px;
         margin: 3px;
         font-size: small;
     }
 
     #submitFormBtn{
-        left: 89px;
+        left: 106px;
         top: 23px;
         font-size: small;
         font-weight: bold;
