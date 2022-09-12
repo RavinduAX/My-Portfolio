@@ -987,6 +987,40 @@ body {
         width: 100px;
     }
 
+    /*-------------------------------Assignment Section------------------------------------*/
+    main>section:nth-child(5){
+        height: max-content;
+    }
+
+    main > section:nth-child(5) h2{
+        font-size: x-large;
+    }
+    main>section:nth-child(5)>div{
+        flex-direction: column;
+        margin-left: 51px;
+        width: 250px;
+        align-items: center;
+        margin-top: 40px;
+    }
+    main>section:nth-child(5)>div img{
+        height: 100px;
+        width: 200px;
+        margin-bottom: 20px;
+    }
+
+    main>section:nth-child(5)>a{
+        position: relative;
+        left: 115px;
+        bottom: 46px;
+    }
+
+    main>section:nth-child(5)>a>button{
+        font-size: small;
+        font-weight: bold;
+        width: 113px;
+        height: 39px;
+    }
+
 }
 
 
