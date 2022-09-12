@@ -1392,6 +1392,95 @@ body {
         margin-top: 15px;
         position: static;
     }
+
+    /*-------------------------------ContactMe Section------------------------------------*/
+    main > section:nth-child(7){
+        height: 616px;
+    }
+
+    main > section:nth-child(7) h2{
+        font-size: x-large;
+    }
+    main > section:nth-child(7) > div:nth-child(2){
+        left: 2px;
+        width: 392px;
+    }
+
+    main > section:nth-child(7) > div:nth-child(2) > ul {
+        width: 344px;
+    }
+
+    main > section:nth-child(7) > div:nth-child(2) > ul > li{
+        margin-bottom: 20px;
+        font-size: 15px;
+        width: 346px;
+    }
+
+    main > section:nth-child(7) > div:nth-child(2) > ul > li:nth-child(4) > p:nth-child(2){
+        width: 151px;
+    }
+
+    main > section:nth-child(7) i{
+        margin-right: 33px;
+    }
+
+    #hireMeBtn{
+        left: 141px;
+        font-size: small;
+        font-weight: bold;
+        padding: 8px;
+        width: 118px;
+        height: 40px;
+        top: 30px;
+    }
+
+    main > section:nth-child(7) > div:nth-child(4) {
+        width: 308px;
+        top: 341px;
+        left: -10px;
+        margin-left: 41px;
+    }
+
+    main > section:nth-child(7) > div:nth-child(4) > form > fieldset{
+        padding: 0;
+        height: 188px;
+    }
+
+    main > section:nth-child(7) > div:nth-child(4) > form > fieldset > input{
+        margin: 3px;
+        font-size: small;
+    }
+    main > section:nth-child(7) > div:nth-child(4) > form > fieldset > input:nth-child(1){
+        /*visibility: hidden;*/
+        width: 121px;
+    }
+    main > section:nth-child(7) > div:nth-child(4) > form > fieldset > input:nth-child(2){
+        position: relative;
+        right: 5px;
+        width: 139px;
+    }
+
+    #subOptional {
+        width: 280px;
+    }
+
+    main > section:nth-child(7) > div:nth-child(4) > form > fieldset > textarea {
+        width: 280px;
+        height: 92px;
+        margin: 3px;
+        font-size: small;
+    }
+
+    #submitFormBtn{
+        left: 89px;
+        top: 23px;
+        font-size: small;
+        font-weight: bold;
+        padding: 8px;
+        width: 118px;
+        height: 40px;
+    }
+
 }
 
 
