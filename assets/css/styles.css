@@ -576,6 +576,14 @@ body {
         font-size: 15px;
     }
 
+    main>section:nth-child(2)>ul>li:nth-child(2){
+        margin-left: 0;
+    }
+
+    main>section:nth-child(2)>ul>li:nth-child(3){
+        margin-left: 0;
+    }
+
     main > section:nth-child(2) {                                 /*Education Section*/
         height: max-content;
     }
@@ -585,9 +593,9 @@ body {
     }
 
     main > section:nth-child(2) > div {
-        margin-left: 0px;
+        margin-left: 18px;
         flex-direction: column;
-        width: max-content;
+        width: 290px;
     }
 
     main > section:nth-child(2) > div > figure {
@@ -611,6 +619,7 @@ body {
     }
 
     main > section:nth-child(2) > ul {
+        position: static;
         visibility: hidden;
         width: 10px;
     }
@@ -732,6 +741,10 @@ body {
         width: 270px;
     }
 
+    main > section:nth-child(7) > div:nth-child(2) > ul > li:nth-child(4) > p:nth-child(2){
+        width: 121px;
+    }
+
     main > section:nth-child(7) i{
         margin-right: 33px;
     }
@@ -747,9 +760,14 @@ body {
     }
 
     main > section:nth-child(7) > div:nth-child(4) {
-        width: max-content;
+        width: 287px;
         top: 326px;
         left: -1px;
+        margin-left: 10px;
+    }
+
+    main > section:nth-child(7) > div:nth-child(4) > form > fieldset{
+        padding: 0;
     }
 
     main > section:nth-child(7) > div:nth-child(4) > form > fieldset > input{
