@@ -1532,6 +1532,11 @@ body {
         top: 227px;
     }
 
+    /*-------------------------------Education Section------------------------------------*/
+    main > section:nth-child(2) > ul{
+        width: max-content;
+    }
+
 }
 
 
