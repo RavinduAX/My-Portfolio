@@ -1559,6 +1559,25 @@ body {
         right: 62px;
     }
 
+    /*-------------------------------Assignment Section------------------------------------*/
+    main > section:nth-child(5){
+        height: max-content;
+    }
+    main > section:nth-child(5) > div{
+        flex-wrap: wrap;
+    }
+    main > section:nth-child(5) > div img{
+        margin-top: 13px;
+        margin-bottom: 14px;
+    }
+    main > section:nth-child(5) > a{
+        left: 304px;
+        bottom: 26px;
+    }
+    main > section:nth-child(5) > a > button{
+        margin-bottom: 39px;
+    }
+
 }
 
 
