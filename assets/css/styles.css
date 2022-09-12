@@ -1311,8 +1311,8 @@ body {
     }
 
     main > section:nth-child(4) img {
-        height: 100px;
-        width: 100px;
+        height: 115px;
+        width: 115px;
     }
 
     main>section:nth-child(4)>div>figure{
@@ -1326,6 +1326,41 @@ body {
     main>section:nth-child(4)>div>figure:nth-child(3)>a>figcaption{
         padding-left: 20px;
     }
+
+    /*-------------------------------Assignment Section------------------------------------*/
+    main>section:nth-child(5){
+        height: max-content;
+    }
+
+    main > section:nth-child(5) h2{
+        font-size: x-large;
+    }
+    main>section:nth-child(5)>div{
+        flex-direction: column;
+        margin-left: 81px;
+        width: 250px;
+        align-items: center;
+        margin-top: 40px;
+    }
+    main>section:nth-child(5)>div img{
+        height: 125px;
+        width: 215px;
+        margin-bottom: 20px;
+    }
+
+    main>section:nth-child(5)>a{
+        position: relative;
+        left: 145px;
+        bottom: 46px;
+    }
+
+    main>section:nth-child(5)>a>button{
+        font-size: small;
+        font-weight: bold;
+        width: 113px;
+        height: 39px;
+    }
+
 }
 
 
