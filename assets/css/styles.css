@@ -1639,7 +1639,20 @@ body {
         top: -35px;
         height: 122px;
     }
+}
+
+/*=== -------------------------- 1024px --------------------------- ===*/
+@media all and (min-width: 768px) and (max-width: 1024px){
+    main > section:nth-child(1) > img{
+        height: 400px;
+        width: 400px;
+        top: 226px;
+        right: 45px;
+        opacity: 0.9;
+    }
+
 
 }
+
 
 
