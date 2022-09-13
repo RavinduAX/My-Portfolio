@@ -1701,8 +1701,17 @@ body {
     body {
         height: 3892.55px;
     }
+}
 
+/*=== -------------------------- 1440px --------------------------- ===*/
+@media all and (min-width: 1024px) and (max-width: 1440px) {
 
+    main > section:nth-child(5) > a{
+        left: 646px;
+    }
+    body{
+        height: 3937.55px;
+    }
 
 }
 
