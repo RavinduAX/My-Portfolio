@@ -1590,6 +1590,10 @@ body {
     }
 
     /*-------------------------------ContactMe Section------------------------------------*/
+    main > section:nth-child(7){
+        height: 725px ;
+    }
+
     main > section:nth-child(7) > div:nth-child(2){
         width: 500px;
         left: 6px;
@@ -1604,11 +1608,32 @@ body {
     }
 
     #hireMeBtn{
-        left: 560px;
+        left: 563px;
         top: -70px;
     }
 
+    main > section:nth-child(7) > div:nth-child(4){
+        top: 382px;
+        right: 91px;
+    }
 
+    #subOptional {
+        width: 495px;
+    }
+    main > section:nth-child(7) > div:nth-child(4) > form > fieldset > textarea{
+        width: 494px;
+    }
+    main > section:nth-child(7) > div:nth-child(4) > form > fieldset>input:nth-child(1){
+        width: 223px;
+    }
+    main > section:nth-child(7) > div:nth-child(4) > form > fieldset>input:nth-child(2){
+        width: 224px;
+    }
+
+    #submitFormBtn{
+        left: 537px;
+        top: -71px;
+    }
 
 }
 
