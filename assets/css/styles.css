@@ -1658,7 +1658,10 @@ body {
         height: 225px;
         width: 267px;
     }
-
+    /*-------------------------------Assignment Section------------------------------------*/
+    main > section:nth-child(5) > a{
+        left: 429px;
+    }
 }
 
 
