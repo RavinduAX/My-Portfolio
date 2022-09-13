@@ -1662,6 +1662,44 @@ body {
     main > section:nth-child(5) > a{
         left: 429px;
     }
+    /*-------------------------------ContactMe Section------------------------------------*/
+    main > section:nth-child(7) > div:nth-child(2){
+        left: -5px;
+        width: 500px;
+    }
+    main > section:nth-child(7) > div:nth-child(2) > ul {
+        width: 500px;
+    }
+    main > section:nth-child(7) > div:nth-child(2) > ul > li{
+        margin-bottom: 33px;
+        width: 500px;
+    }
+    main > section:nth-child(7) > div:nth-child(4){
+        width: 535px;
+        right: 8px;
+    }
+    #subOptional {
+         width: 475px;
+    }
+
+    main > section:nth-child(7) > div:nth-child(4) > form > fieldset>input:nth-child(1){
+        width: 211px;
+    }
+    main > section:nth-child(7) > div:nth-child(4) > form > fieldset>input:nth-child(2){
+        width: 211px;
+    }
+
+    main > section:nth-child(7) > div:nth-child(4) > form > fieldset > textarea{
+        width: 475px;
+    }
+
+    #hireMeBtn{
+        left: 89px;
+        top: 67px;
+    }
+
+
+
 }
 
 
