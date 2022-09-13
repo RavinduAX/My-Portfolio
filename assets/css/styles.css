@@ -1635,6 +1635,11 @@ body {
         top: -71px;
     }
 
+    footer{
+        top: -35px;
+        height: 122px;
+    }
+
 }
 
 
