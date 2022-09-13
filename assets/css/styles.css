@@ -1578,6 +1578,18 @@ body {
         margin-bottom: 39px;
     }
 
+    /*-------------------------------Services Section------------------------------------*/
+
+    main > section:nth-child(6) > div figure{
+        width: 170px;
+    }
+    main > section:nth-child(6) > div figcaption{
+        width: 131px;
+        left: 22px;
+        top: 28px;
+    }
+
+
 }
 
 
