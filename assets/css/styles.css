@@ -1643,6 +1643,8 @@ body {
 
 /*=== -------------------------- 1024px --------------------------- ===*/
 @media all and (min-width: 768px) and (max-width: 1024px){
+
+    /*-------------------------------About Section------------------------------------*/
     main > section:nth-child(1) > img{
         height: 400px;
         width: 400px;
@@ -1651,6 +1653,11 @@ body {
         opacity: 0.9;
     }
 
+    /*-------------------------------MyWork Section------------------------------------*/
+    main > section:nth-child(4) img {
+        height: 225px;
+        width: 267px;
+    }
 
 }
 
