@@ -1589,6 +1589,26 @@ body {
         top: 28px;
     }
 
+    /*-------------------------------ContactMe Section------------------------------------*/
+    main > section:nth-child(7) > div:nth-child(2){
+        width: 500px;
+        left: 6px;
+    }
+    main > section:nth-child(7) > div:nth-child(2) > ul {
+        width: 475px;
+    }
+    main > section:nth-child(7) > div:nth-child(2) > ul > li{
+        font-size: 21px;
+        margin-bottom: 30px;
+        width: 500px;
+    }
+
+    #hireMeBtn{
+        left: 560px;
+        top: -70px;
+    }
+
+
 
 }
 
