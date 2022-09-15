@@ -40,6 +40,7 @@ section:nth-child(2)>section h2{
     width: 15%;
     font-size: 31px;
     padding: 4px;
+    padding-left: 15px;
 }
 section:nth-child(2)>section div{
     display: flex;
@@ -64,9 +65,14 @@ section:nth-child(2)>section div a figure{
     align-items: center;
 }
 section:nth-child(2)>section div a figure img{
-    width: 150px;
+    width: 165px;
     height: 85px;
 }
+
+section:nth-child(2)>section div a figure figcaption{
+    margin-top: 40px;
+}
+
 
 
 
