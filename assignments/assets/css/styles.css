@@ -47,7 +47,7 @@ section:nth-child(2)>section div{
     flex-wrap: nowrap;
     padding: 10px 0 50px 0;
 }
-section:nth-child(2)>section div figure{
+section:nth-child(2)>section div a figure{
     border: 4px solid #2ee0a7;
     border-radius: 15px;
     height: 215px;
