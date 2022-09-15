@@ -1,6 +1,9 @@
+*{
+    font-family: Ubuntu;
+}
 div:nth-child(1){
     background-color: #1DC789;
-    border: 25px solid #020C1B;
+    border: 15px solid #020C1B;
     border-right: 0;
     border-left: 0;
     text-align: center;
@@ -8,6 +11,36 @@ div:nth-child(1){
 div:nth-child(1)>h1{
     color: #020C1B;
     position: relative;
-    font-size: 42px;
+    font-size: 47px;
     margin: 8px 0;
+    font-weight: bold;
 }
+section:nth-child(2)>h1{
+    margin: 0;
+    color: white;
+    background-color: black;
+    text-align: center;
+    border: 5px solid white;
+    border-left: 0;
+    border-right: 0;
+    padding: 10px 0;
+    font-size: 34px;
+}
+section:nth-child(2)>section{
+     background-color: #020C1B;
+     color: #1DC789;
+ }
+section:nth-child(2)>section h2{
+    color: #1DC789;
+    margin: 0;
+    background-color: white;
+    border-bottom-right-radius: 180px;
+    border-top-right-radius: 180px;
+    border-top: 1px solid #020C1B;
+    width: 15%;
+    font-size: 31px;
+    padding: 4px;
+}
+
+
+
