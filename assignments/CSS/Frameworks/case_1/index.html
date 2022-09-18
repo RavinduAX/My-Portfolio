@@ -2,13 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dynamic | SignUp</title>
+    <title>Dynamic POS | SignUp</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        main{
+            background-color: #454545;
+            width: 395px;
+            height: 480px;
+            position: absolute;
+            left: 0; right: 0;
+            top: 0; bottom: 0;
+            margin: auto;
+            color: white;
+        }
+        main>img{
+            width: 150px;
+            height: 150px;
+        }
+    </style>
 </head>
 <body>
 
-
+<main>
+    <h1>Sign In</h1>
+    <img src="assets/images/user.png" alt="user-img">
+    <section>
+        <form>
+            <div class="mb-3">
+                <label for="inputEmail1" class="form-label">UserName</label>
+                <input type="text" class="form-control" id="inputEmail1">
+            </div>
+            <div class="mb-3">
+                <label for="inputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword1">
+            </div>
+            <button type="button" class="btn btn-primary">Sign Up</button>
+        </form>
+    </section>
+</main>
 
 <script src="assets/js/bootstrap.min.js"></script>
 </body>
