@@ -109,6 +109,20 @@
             width: 936px;
         }
 
+        #dashBill{
+            width: 318px;
+            height: 431px;
+            background-color: white;
+        }
+        #flexthree{
+            display: flex;
+        }
+
+        #dashBill .mb-3{
+            display: flex;
+            flex-direction: row;
+        }
+
         /*Main End*/
     </style>
 
@@ -150,104 +164,132 @@
 <!--Navbar End-->
 
 <main>
-    <section id="flextwo">
-        <section id="flexone">
-            <section>
-                <section id="orderDetail">
-                    <div class="mb-3">
-                        <label class="form-label" for="inputOrderId">OrderId</label>
-                        <input class="form-control" id="inputOrderId" type="text">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label" for="inputOrderDate">Order Date</label>
-                        <input class="form-control" id="inputOrderDate" type="date">
-                    </div>
-                </section>
+    <section id="flexthree">
+        <section id="flextwo">
+            <section id="flexone">
+                <section>
+                    <section id="orderDetail">
+                        <div class="mb-3">
+                            <label class="form-label" for="inputOrderId">OrderId</label>
+                            <input class="form-control" id="inputOrderId" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="inputOrderDate">Order Date</label>
+                            <input class="form-control" id="inputOrderDate" type="date">
+                        </div>
+                    </section>
 
-                <section id="customerDetail">
-                    <button class="btn btn-primary" type="button">+ New</button>
+                    <section id="customerDetail">
+                        <button class="btn btn-primary" type="button">+ New</button>
+                        <div>
+                            <div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="inputContactNo">Contact No.</label>
+                                    <input class="form-control" id="inputContactNo" type="number">
+                                </div>
+                                <button class="btn btn-primary" type="button">Search</button>
+                            </div>
+                            <div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="inputCustomerId">Customer ID</label>
+                                    <input class="form-control" id="inputCustomerId" type="text">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="inputCustomerName">Customer Name</label>
+                                    <input class="form-control" id="inputCustomerName" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section id="itemDetail">
                     <div>
-                        <div>
-                            <div class="mb-3">
-                                <label class="form-label" for="inputContactNo">Contact No.</label>
-                                <input class="form-control" id="inputContactNo" type="number">
-                            </div>
-                            <button class="btn btn-primary" type="button">Search</button>
+                        <div class="mb-3">
+                            <label class="form-label" for="inputItemCode">Item Code</label>
+                            <input class="form-control" id="inputItemCode" type="text">
                         </div>
-                        <div>
-                            <div class="mb-3">
-                                <label class="form-label" for="inputCustomerId">Customer ID</label>
-                                <input class="form-control" id="inputCustomerId" type="text">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label" for="inputCustomerName">Customer Name</label>
-                                <input class="form-control" id="inputCustomerName" type="text">
-                            </div>
+                        <button class="btn btn-primary" type="button">Search</button>
+                    </div>
+                    <div>
+                        <div class="mb-3">
+                            <label class="form-label" for="inputItemCode">Item Name</label>
+                            <input class="form-control" id="inputItemName" type="text">
                         </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="inputPrice">Price</label>
+                            <input class="form-control" id="inputPrice" type="number">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="inputQtyOnHand">QtyOnHand</label>
+                            <input class="form-control" id="inputQtyOnHand" type="number">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-3">
+                            <label class="form-label" for="inputOrderQty">Order Qty</label>
+                            <input class="form-control" id="inputOrderQty" type="number">
+                        </div>
+                        <button class="btn btn-primary" type="button">Add Item</button>
                     </div>
                 </section>
             </section>
-            <section id="itemDetail">
-                <div>
-                    <div class="mb-3">
-                        <label class="form-label" for="inputItemCode">Item Code</label>
-                        <input class="form-control" id="inputItemCode" type="text">
-                    </div>
-                    <button class="btn btn-primary" type="button">Search</button>
-                </div>
-                <div>
-                    <div class="mb-3">
-                        <label class="form-label" for="inputItemCode">Item Name</label>
-                        <input class="form-control" id="inputItemName" type="text">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label" for="inputPrice">Price</label>
-                        <input class="form-control" id="inputPrice" type="number">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label" for="inputQtyOnHand">QtyOnHand</label>
-                        <input class="form-control" id="inputQtyOnHand" type="number">
-                    </div>
-                </div>
-                <div>
-                    <div class="mb-3">
-                        <label class="form-label" for="inputOrderQty">Order Qty</label>
-                        <input class="form-control" id="inputOrderQty" type="number">
-                    </div>
-                    <button class="btn btn-primary" type="button">Add Item</button>
-                </div>
+            <section id="dashTable">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Item Code</th>
+                        <th scope="col">Item Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    </tbody>
+                </table>
             </section>
         </section>
-        <section id="dashTable">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th scope="col">Item Code</th>
-                    <th scope="col">Item Name</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Qty</th>
-                    <th scope="col">Total</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-                </tbody>
-            </table>
+        <section id="dashBill">
+            <div class="mb-3">
+                <label class="form-label" for="inputTotal">Total</label>
+                <input class="form-control" id="inputTotal" type="number">
+            </div>
+            <hr>
+            <div class="mb-3">
+                <label class="form-label" for="inputCash">Cash</label>
+                <input class="form-control" id="inputCash" type="number">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="inputDiscount">Discount</label>
+                <input class="form-control" id="inputDiscount" type="number">
+            </div>
+            <button class="btn btn-primary" type="button">Purchase</button>
+            <hr>
+            <div class="mb-3">
+                <label class="form-label" for="inputSubTotal">Sub Total</label>
+                <input class="form-control" id="inputSubTotal" type="number">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="inputBalance">Balance</label>
+                <input class="form-control" id="inputBalance" type="number">
+            </div>
         </section>
     </section>
+
 
 
 </main>
