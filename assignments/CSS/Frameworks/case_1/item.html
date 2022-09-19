@@ -42,10 +42,20 @@
         main {
             background-color: #454545;
         }
-        #customerDetail{
+        #itemDetail{
             width: 287px;
             height: 319px;
             background-color: white;
+            position: relative;
+            left: 35px;
+            top: 35px;
+            border-radius: 10px;
+        }
+        #itemDetail>div:nth-child(1){
+            margin-top: 25px;
+        }
+        #itemDetail>div:nth-child(2){
+            margin-top: 30px;
         }
 
         #flexone{
@@ -54,6 +64,24 @@
         #flexone>div:nth-child(2){
             display: flex;
             flex-direction: column;
+            position: relative;
+            left: 56px;
+            top: 83px;
+        }
+        #flexone>div:nth-child(2)>button:nth-child(1){
+            margin-bottom: 171px;
+            width: 130px;
+            height: 35px;
+            border-radius: 45px;
+            background-color: black;
+            padding-top: 3px;
+        }
+        #flexone>div:nth-child(2)>button:nth-child(2){
+            width: 130px;
+            height: 35px;
+            border-radius: 45px;
+            background-color: #27AE60;
+            padding-top: 5px;
         }
         #tableSection{
             width: 834px;
@@ -61,6 +89,44 @@
         }
         main{
             display: flex;
+            height: 91.25vh;
+        }
+        #itemSection{
+            width: 493px;
+            height: 474px;
+            background-color: #4B6584;
+            border-radius: 10px;
+            position: relative;
+            top: 92px;
+            left: 46px;
+        }
+        .form-label{
+            margin: 0;
+        }
+        .form-control{
+            width: 230px;
+            height: 30px;
+        }
+        .mb-3{
+            margin-left: 25px;
+            margin-bottom: 0.5rem!important;
+        }
+        #itemSection>div:nth-child(2){
+            position: relative;
+            top: 79px;
+            left: 35px;
+        }
+        #itemSection>div:nth-child(2)>button{
+            width: 93px;
+            height: 38px;
+        }
+        #tableSection{
+            position: relative;
+            top: 92px;
+            left: 88px;
+        }
+        .table>thead{
+            background-color: #01BFA5;
         }
 
         /*Main End*/
@@ -103,40 +169,40 @@
 <!--Navbar End-->
 
 <main>
-    <section id="customerSection">
+    <section id="itemSection">
         <div id="flexone">
-            <div id="customerDetail">
+            <div id="itemDetail">
                 <div class="mb-3">
-                    <label class="form-label" for="inputCustomerID">ItemCode</label>
-                    <input class="form-control" id="inputCustomerID" type="text">
+                    <label class="form-label" for="inputItemCode">Item Code</label>
+                    <input class="form-control" id="inputItemCode" type="text">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="inputCustomerName">Item Name</label>
-                    <input class="form-control" id="inputCustomerName" type="text">
+                    <label class="form-label" for="inputItemName">Item Name</label>
+                    <input class="form-control" id="inputItemName" type="text">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="inputAddress">Price</label>
-                    <input class="form-control" id="inputAddress" type="text">
+                    <label class="form-label" for="inputPrice">Price</label>
+                    <input class="form-control" id="inputPrice" type="text">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="inputContactNo">Qty</label>
-                    <input class="form-control" id="inputContactNo" type="text">
+                    <label class="form-label" for="inputQty">Qty</label>
+                    <input class="form-control" id="inputQty" type="text">
                 </div>
             </div>
             <div>
-                <button class="btn btn-primary" type="button">Search</button>
-                <button class="btn btn-primary" type="button">Add</button>
+                <button class="btn text-white" type="button">Search</button>
+                <button class="btn fw-semibold" type="button">Add</button>
             </div>
         </div>
         <div>
-            <button class="btn btn-primary" type="button">Update</button>
-            <button class="btn btn-primary" type="button">Delete</button>
-            <button class="btn btn-primary" type="button">Clear</button>
+            <button class="btn btn-warning" type="button">Update</button>
+            <button class="btn btn-danger" type="button">Delete</button>
+            <button class="btn btn-light" type="button">Clear</button>
         </div>
     </section>
     <section id="tableSection">
-        <table class="table">
-            <thead>
+        <table class="table table-bordered table-hover">
+            <thead class="text-white">
             <tr>
                 <th scope="col">Item Code</th>
                 <th scope="col">Item Name</th>
@@ -144,7 +210,7 @@
                 <th scope="col">Qty</th>
             </tr>
             </thead>
-            <tbody>
+            <tbody class="table-group-divider bg-light">
             <tr>
                 <td>Mark</td>
                 <td>Otto</td>
