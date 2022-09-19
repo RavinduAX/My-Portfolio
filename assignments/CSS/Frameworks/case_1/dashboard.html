@@ -6,36 +6,97 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        header h4{
+        /*NavBar Start*/
+        header h4 {
             color: white;
             margin-bottom: 2px;
         }
-        .navbar{
-            background-color: #0C2461!important;
+
+        .navbar {
+            background-color: #0C2461 !important;
         }
-        .navbar-brand{
+
+        .navbar-brand {
             color: white;
         }
-        .nav-link{
+
+        .nav-link {
             color: white;
         }
-        .nav-link:hover{
+
+        .nav-link:hover {
             color: white;
         }
-        .nav-link:visited{
+
+        .nav-link:visited {
             color: white;
         }
-        header .d-flex>a:nth-child(1){
+
+        header .d-flex > a:nth-child(1) {
             margin-right: 10px;
         }
-        header .navbar-nav{
+
+        header .navbar-nav {
             margin: 0 400px 0 293px;
-            font-size: 20px!important;
+            font-size: 20px !important;
         }
-        header .navbar-nav>.nav-item{
+
+        header .navbar-nav > .nav-item {
             padding-right: 12px;
         }
+
+        /*Navbar End*/
+
+        /*Main Start*/
+        main {
+            background-color: #454545;
+        }
+
+        #orderDetail {
+            width: 373px;
+            height: 69px;
+            background-color: white;
+            display: flex;
+        }
+
+        #orderDetail input {
+            height: 30px;
+            width: 149px;
+        }
+
+        #customerDetail {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #customerDetail > button:nth-child(1) {
+            width: 80px;
+            height: 30px;
+
+        }
+
+        #customerDetail > div:nth-child(2) {
+            width: 374px;
+            height: 137px;
+            background-color: white;
+        }
+
+        #customerDetail > div:nth-child(2) > div:nth-child(1) {
+            display: flex;
+        }
+
+        #customerDetail > div:nth-child(2) > div:nth-child(1) > button {
+            width: 115px;
+            height: 35px;
+        }
+
+        #customerDetail > div:nth-child(2) > div:nth-child(2) {
+            display: flex;
+        }
+
+        /*Main End*/
     </style>
+
 </head>
 <body>
 
@@ -44,7 +105,8 @@
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="assets/images/logo.jpg" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                <img alt="Logo" class="d-inline-block align-text-top" height="30" src="assets/images/logo.jpg"
+                     width="30">
             </a>
             <h4>Dynamic POS System</h4>
             <div class="collapse navbar-collapse" id="navbarContent">
@@ -73,7 +135,73 @@
 <!--Navbar End-->
 
 <main>
+    <section>
+        <section>
+            <section id="orderDetail">
+                <div class="mb-3">
+                    <label class="form-label" for="inputOrderId">OrderId</label>
+                    <input class="form-control" id="inputOrderId" type="text">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="inputOrderDate">Order Date</label>
+                    <input class="form-control" id="inputOrderDate" type="date">
+                </div>
+            </section>
 
+            <section id="customerDetail">
+                <button class="btn btn-primary" type="button">+ New</button>
+                <div>
+                    <div>
+                        <div class="mb-3">
+                            <label class="form-label" for="inputContactNo">Contact No.</label>
+                            <input class="form-control" id="inputContactNo" type="number">
+                        </div>
+                        <button class="btn btn-primary" type="button">Search</button>
+                    </div>
+                    <div>
+                        <div class="mb-3">
+                            <label class="form-label" for="inputCustomerId">Customer ID</label>
+                            <input class="form-control" id="inputCustomerId" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="inputCustomerName">Customer Name</label>
+                            <input class="form-control" id="inputCustomerName" type="text">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section id="itemDetail">
+             <div>
+                 <div class="mb-3">
+                     <label class="form-label" for="inputItemCode">Item Code</label>
+                     <input class="form-control" id="inputItemCode" type="text">
+                 </div>
+                 <button class="btn btn-primary" type="button">Search</button>
+             </div>
+            <div>
+                <div class="mb-3">
+                    <label class="form-label" for="inputContactNo">Item Name</label>
+                    <input class="form-control" id="inputContactNo" type="text">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="inputContactNo">Price</label>
+                    <input class="form-control" id="inputContactNo" type="number">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="inputContactNo">QtyOnHand</label>
+                    <input class="form-control" id="inputContactNo" type="number">
+                </div>
+            </div>
+            <div>
+                <div class="mb-3">
+                    <label class="form-label" for="inputContactNo">Order Qty</label>
+                    <input class="form-control" id="inputContactNo" type="number">
+                </div>
+                <button class="btn btn-primary" type="button">Add Item</button>
+            </div>
+        </section>
+    </section>
 </main>
 
 <script src="assets/js/bootstrap.min.js"></script>
