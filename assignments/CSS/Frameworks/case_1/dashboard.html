@@ -58,7 +58,6 @@
             background-color: white;
             display: flex;
         }
-
         #orderDetail input {
             height: 30px;
             width: 149px;
@@ -68,30 +67,46 @@
             display: flex;
             flex-direction: column;
         }
-
         #customerDetail > button:nth-child(1) {
             width: 80px;
             height: 30px;
 
         }
-
         #customerDetail > div:nth-child(2) {
             width: 374px;
             height: 137px;
             background-color: white;
         }
-
         #customerDetail > div:nth-child(2) > div:nth-child(1) {
             display: flex;
         }
-
         #customerDetail > div:nth-child(2) > div:nth-child(1) > button {
             width: 115px;
             height: 35px;
         }
-
         #customerDetail > div:nth-child(2) > div:nth-child(2) {
             display: flex;
+        }
+
+        #itemDetail{
+            background-color: white;
+        }
+        #itemDetail>div:nth-child(1){
+            display: flex;
+        }
+        #itemDetail>div:nth-child(2){
+            display: flex;
+        }
+        #itemDetail>div:nth-child(3){
+            display: flex;
+        }
+        #flexone{
+            display: flex;
+        }
+
+        #dashTable{
+            height: 190px;
+            width: 936px;
         }
 
         /*Main End*/
@@ -135,73 +150,106 @@
 <!--Navbar End-->
 
 <main>
-    <section>
-        <section>
-            <section id="orderDetail">
-                <div class="mb-3">
-                    <label class="form-label" for="inputOrderId">OrderId</label>
-                    <input class="form-control" id="inputOrderId" type="text">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label" for="inputOrderDate">Order Date</label>
-                    <input class="form-control" id="inputOrderDate" type="date">
-                </div>
-            </section>
+    <section id="flextwo">
+        <section id="flexone">
+            <section>
+                <section id="orderDetail">
+                    <div class="mb-3">
+                        <label class="form-label" for="inputOrderId">OrderId</label>
+                        <input class="form-control" id="inputOrderId" type="text">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="inputOrderDate">Order Date</label>
+                        <input class="form-control" id="inputOrderDate" type="date">
+                    </div>
+                </section>
 
-            <section id="customerDetail">
-                <button class="btn btn-primary" type="button">+ New</button>
+                <section id="customerDetail">
+                    <button class="btn btn-primary" type="button">+ New</button>
+                    <div>
+                        <div>
+                            <div class="mb-3">
+                                <label class="form-label" for="inputContactNo">Contact No.</label>
+                                <input class="form-control" id="inputContactNo" type="number">
+                            </div>
+                            <button class="btn btn-primary" type="button">Search</button>
+                        </div>
+                        <div>
+                            <div class="mb-3">
+                                <label class="form-label" for="inputCustomerId">Customer ID</label>
+                                <input class="form-control" id="inputCustomerId" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="inputCustomerName">Customer Name</label>
+                                <input class="form-control" id="inputCustomerName" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section id="itemDetail">
                 <div>
-                    <div>
-                        <div class="mb-3">
-                            <label class="form-label" for="inputContactNo">Contact No.</label>
-                            <input class="form-control" id="inputContactNo" type="number">
-                        </div>
-                        <button class="btn btn-primary" type="button">Search</button>
+                    <div class="mb-3">
+                        <label class="form-label" for="inputItemCode">Item Code</label>
+                        <input class="form-control" id="inputItemCode" type="text">
                     </div>
-                    <div>
-                        <div class="mb-3">
-                            <label class="form-label" for="inputCustomerId">Customer ID</label>
-                            <input class="form-control" id="inputCustomerId" type="text">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label" for="inputCustomerName">Customer Name</label>
-                            <input class="form-control" id="inputCustomerName" type="text">
-                        </div>
+                    <button class="btn btn-primary" type="button">Search</button>
+                </div>
+                <div>
+                    <div class="mb-3">
+                        <label class="form-label" for="inputItemCode">Item Name</label>
+                        <input class="form-control" id="inputItemName" type="text">
                     </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="inputPrice">Price</label>
+                        <input class="form-control" id="inputPrice" type="number">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="inputQtyOnHand">QtyOnHand</label>
+                        <input class="form-control" id="inputQtyOnHand" type="number">
+                    </div>
+                </div>
+                <div>
+                    <div class="mb-3">
+                        <label class="form-label" for="inputOrderQty">Order Qty</label>
+                        <input class="form-control" id="inputOrderQty" type="number">
+                    </div>
+                    <button class="btn btn-primary" type="button">Add Item</button>
                 </div>
             </section>
         </section>
-        <section id="itemDetail">
-             <div>
-                 <div class="mb-3">
-                     <label class="form-label" for="inputItemCode">Item Code</label>
-                     <input class="form-control" id="inputItemCode" type="text">
-                 </div>
-                 <button class="btn btn-primary" type="button">Search</button>
-             </div>
-            <div>
-                <div class="mb-3">
-                    <label class="form-label" for="inputContactNo">Item Name</label>
-                    <input class="form-control" id="inputContactNo" type="text">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label" for="inputContactNo">Price</label>
-                    <input class="form-control" id="inputContactNo" type="number">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label" for="inputContactNo">QtyOnHand</label>
-                    <input class="form-control" id="inputContactNo" type="number">
-                </div>
-            </div>
-            <div>
-                <div class="mb-3">
-                    <label class="form-label" for="inputContactNo">Order Qty</label>
-                    <input class="form-control" id="inputContactNo" type="number">
-                </div>
-                <button class="btn btn-primary" type="button">Add Item</button>
-            </div>
+        <section id="dashTable">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Total</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                </tbody>
+            </table>
         </section>
     </section>
+
+
 </main>
 
 <script src="assets/js/bootstrap.min.js"></script>
