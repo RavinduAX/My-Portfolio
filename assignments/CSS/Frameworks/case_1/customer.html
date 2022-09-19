@@ -55,7 +55,13 @@
             display: flex;
             flex-direction: column;
         }
-
+        #tableSection{
+            width: 834px;
+            height: 474px;
+        }
+        main{
+            display: flex;
+        }
 
         /*Main End*/
 
@@ -97,7 +103,7 @@
 <!--Navbar End-->
 
 <main>
-    <section>
+    <section id="customerSection">
         <div id="flexone">
             <div id="customerDetail">
                 <div class="mb-3">
@@ -122,10 +128,38 @@
                 <button class="btn btn-primary" type="button">Add</button>
             </div>
         </div>
-
+        <div>
+            <button class="btn btn-primary" type="button">Update</button>
+            <button class="btn btn-primary" type="button">Delete</button>
+            <button class="btn btn-primary" type="button">Clear</button>
+        </div>
     </section>
-    <section>
-<!--        table-->
+    <section id="tableSection">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Customer ID</th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Contact No</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <td>@twitter</td>
+            </tr>
+            </tbody>
+        </table>
     </section>
 </main>
 
