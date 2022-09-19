@@ -6,10 +6,191 @@
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    /*NavBar Start*/
+    header h4 {
+      color: white;
+      margin-bottom: 2px;
+    }
+
+    .navbar {
+      background-color: #0C2461 !important;
+    }
+
+    .navbar-brand {
+      color: white;
+    }
+
+    .nav-link {
+      color: white;
+    }
+
+    .nav-link:hover {
+      color: white;
+    }
+
+    .nav-link:visited {
+      color: white;
+    }
+
+    header .d-flex > a:nth-child(1) {
+      margin-right: 10px;
+    }
+
+    header .navbar-nav {
+      margin: 0 400px 0 293px;
+      font-size: 20px !important;
+    }
+
+    header .navbar-nav > .nav-item {
+      padding-right: 12px;
+    }
+
+    /*Navbar End*/
+
+    /*Main Start*/
+    main {
+      background-color: #454545;
+    }
+
+    #customerSearch{
+      width: 340px;
+      height: 124px;
+      background-color: white;
+      display: flex;
+    }
+
+    #orderDetail{
+      width: 685px;
+      height: 140px;
+      background-color: white;
+    }
+    #orderDetail>div:nth-child(1){
+      display: flex;
+    }
+    #orderDetail>div:nth-child(2){
+      display: flex;
+    }
+    #flexone{
+      display: flex;
+    }
+
+    /*Main End*/
 
   </style>
 </head>
 <body>
+
+<header>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img alt="Logo" class="d-inline-block align-text-top" height="30" src="assets/images/logo.jpg"
+             width="30">
+      </a>
+      <h4>Dynamic POS System</h4>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Customer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Item</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Order</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <a class="nav-link" href="#">SignIn</a>
+          <a class="nav-link" href="#">LogOut</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+<!--Navbar End-->
+
+<main>
+  <section id="flexone">
+    <div id="customerSearch">
+      <div class="mb-3">
+        <label class="form-label" for="inputCustomerID">CustomerID/Name</label>
+        <input class="form-control" id="inputCustomerID" type="text">
+      </div>
+      <div>
+        <button class="btn btn-primary" type="button">Search</button>
+        <button class="btn btn-primary" type="button">Clear</button>
+      </div>
+    </div>
+
+    <div id="orderDetail">
+      <div>
+        <div class="mb-3">
+          <label class="form-label" for="inputOrderID">Order ID</label>
+          <input class="form-control" id="inputOrderID" type="text">
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="inputOrderDate">Order Date</label>
+          <input class="form-control" id="inputOrderDate" type="text">
+        </div>
+      </div>
+      <div>
+        <div class="mb-3">
+          <label class="form-label" for="inputItemCode">Item Code</label>
+          <input class="form-control" id="inputItemCode" type="text">
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="inputItemName">Item Name</label>
+          <input class="form-control" id="inputItemName" type="text">
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="inputPrice">Price</label>
+          <input class="form-control" id="inputPrice" type="number">
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="inputQty">Qty</label>
+          <input class="form-control" id="inputQty" type="number">
+        </div>
+      </div>
+    </div>
+    <div id="orderBtn">
+      <button class="btn btn-primary" type="button">Get All</button>
+      <div>
+        <button class="btn btn-primary" type="button">Update</button>
+        <button class="btn btn-primary" type="button">Delete</button>
+      </div>
+    </div>
+  </section>
+  <section>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <td>@twitter</td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
 
 <script src="assets/js/bootstrap.min.js"></script>
 </body>
