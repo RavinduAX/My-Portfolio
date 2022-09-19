@@ -14,7 +14,7 @@
       width: 100%;
       text-align: center;
       height: 68px;
-      padding: 5px;
+      padding: 13px;
       position: relative;
       top: 15px;
       margin-bottom: 27px;
@@ -33,6 +33,33 @@
       flex-direction: column;
       align-items: center;
     }
+    .form-label{
+      margin: 0;
+    }
+    #customerDetail{
+      width: 271px;
+      height: 385px;
+      position: relative;
+      top: 20px;
+    }
+    #customerDetail>.mb-3{
+      margin-bottom: 0.6rem!important;
+    }
+    #customerDetail .form-control{
+      height: 30px;
+    }
+    main>div:nth-child(3){
+      position: relative;
+      bottom: 35px;
+    }
+    main>div:nth-child(3)>button{
+      width: 218px;
+      height: 40px;
+      border-radius: 45px;
+      background-color: #05C46B!important;
+      font-size: 18px;
+    }
+
 
 
   </style>
@@ -41,7 +68,7 @@
 <body>
 <main>
   <h2>New Customer</h2>
-  <section>
+  <section id="customerDetail">
     <div class="mb-3">
       <label class="form-label" for="inputCustomerID">ItemCode</label>
       <input class="form-control" id="inputCustomerID" type="text">
@@ -60,7 +87,7 @@
     </div>
   </section>
   <div>
-    <button class="btn btn-primary" type="button">Save</button>
+    <button class="btn text-bg-primary" type="button">Save</button>
   </div>
 </main>
 <script src="assets/js/bootstrap.min.js"></script>
