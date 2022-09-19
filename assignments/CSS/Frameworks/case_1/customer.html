@@ -89,6 +89,7 @@
         }
         main{
             display: flex;
+            height: 91.25vh;
         }
         #customerSection{
             width: 493px;
@@ -119,7 +120,14 @@
             width: 93px;
             height: 38px;
         }
-
+        #tableSection{
+            position: relative;
+            top: 92px;
+            left: 88px;
+        }
+        .table>thead{
+            background-color: #01BFA5;
+        }
 
         /*Main End*/
 
@@ -193,8 +201,8 @@
         </div>
     </section>
     <section id="tableSection">
-        <table class="table">
-            <thead>
+        <table class="table table-bordered table-hover">
+            <thead class="text-white">
             <tr>
                 <th scope="col">Customer ID</th>
                 <th scope="col">Customer Name</th>
@@ -202,7 +210,7 @@
                 <th scope="col">Contact No</th>
             </tr>
             </thead>
-            <tbody>
+            <tbody class="table-group-divider bg-light">
             <tr>
                 <td>Mark</td>
                 <td>Otto</td>
