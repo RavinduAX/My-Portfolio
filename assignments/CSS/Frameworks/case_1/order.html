@@ -129,6 +129,31 @@
     #inputQty{
       width: 101px!important;
     }
+    #orderBtn{
+      position: relative;
+      left: 204px;
+      top: 110px;
+    }
+    #orderBtn>div:nth-child(2){
+      position: relative;
+      top: 67px;
+    }
+    #orderBtn>div>button{
+      height: 35px;
+      width: 108px;
+      border-radius: 45px;
+      padding-top: 4px;
+    }
+    #orderBtn>div>button:nth-child(1){
+      margin-right: 12px;
+    }
+    #btnGetAll{
+      width: 130px;
+      height: 35px;
+      border-radius: 45px;
+      position: relative;
+      left: 102px;
+    }
 
     /*Main End*/
 
@@ -213,10 +238,10 @@
       </div>
     </div>
     <div id="orderBtn">
-      <button class="btn btn-primary" type="button">Get All</button>
+      <button id="btnGetAll" class="btn btn-success text-black fw-semibold" type="button">Get All</button>
       <div>
-        <button class="btn btn-primary" type="button">Update</button>
-        <button class="btn btn-primary" type="button">Delete</button>
+        <button class="btn btn-warning text-black fw-semibold " type="button">Update</button>
+        <button class="btn btn-danger text-black fw-semibold" type="button">Delete</button>
       </div>
     </div>
   </section>
