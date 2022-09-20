@@ -154,6 +154,19 @@
       position: relative;
       left: 102px;
     }
+    .table>thead {
+      background-color: #01BFA5;
+    }
+    #tblSection{
+      width: 1385px;
+      height: 320px;
+      position: relative;
+      left: 75px;
+      top: 137px;
+    }
+    main{
+      height: 91.25vh;
+    }
 
     /*Main End*/
 
@@ -245,9 +258,10 @@
       </div>
     </div>
   </section>
-  <section>
-    <table class="table">
-      <thead>
+
+  <section id="tblSection">
+    <table class="table table-bordered table-hover">
+      <thead class="text-white">
       <tr>
         <th scope="col">OrderID</th>
         <th scope="col">CustomerID</th>
@@ -259,7 +273,7 @@
         <th scope="col">Sub Total</th>
       </tr>
       </thead>
-      <tbody>
+      <tbody class="table-group-divider bg-light">
       <tr>
         <td>Mark</td>
         <td>Otto</td>
