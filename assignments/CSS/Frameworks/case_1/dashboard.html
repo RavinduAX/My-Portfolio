@@ -224,6 +224,43 @@
             display: flex;
             flex-direction: row;
         }
+        #lblTotal {
+            font-size: 30px;
+            padding-right: 26px;
+            padding-left: 19px;
+        }
+        #inputTotal {
+            height: 40px;
+            padding: 0;
+            font-size: 30px;
+            width: 165px;
+        }
+        #divTotal {
+            margin-top: 22px;
+        }
+        #lblCash {
+            position: relative;
+            left: 50px;
+        }
+        #inputCash {
+            width: 115px;
+            height: 30px;
+            padding: 0;
+            position: relative;
+            left: 105px;
+        }
+        #lblDiscount {
+            position: relative;
+            left: 21px;
+        }
+        #inputDiscount {
+            width: 115px;
+            height: 30px;
+            padding: 0;
+            position: relative;
+            left: 77px;
+        }
+
         /*Main End*/
     </style>
 
@@ -365,27 +402,27 @@
             </section>
         </section>
         <section id="dashBill">
-            <div class="mb-3">
-                <label class="form-label" for="inputTotal">Total</label>
+            <div class="mb-3" id="divTotal">
+                <label class="form-label" for="inputTotal" id="lblTotal">Total</label>
                 <input class="form-control" id="inputTotal" type="number">
             </div>
             <hr>
-            <div class="mb-3">
-                <label class="form-label" for="inputCash">Cash</label>
+            <div class="mb-3" id="divCash">
+                <label class="form-label" for="inputCash" id="lblCash">Cash</label>
                 <input class="form-control" id="inputCash" type="number">
             </div>
-            <div class="mb-3">
-                <label class="form-label" for="inputDiscount">Discount</label>
+            <div class="mb-3" id="divDiscount">
+                <label class="form-label" for="inputDiscount" id="lblDiscount">Discount</label>
                 <input class="form-control" id="inputDiscount" type="number">
             </div>
-            <button class="btn btn-primary" type="button">Purchase</button>
+            <button class="btn btn-primary" type="button" id="btnPurchase">Purchase</button>
             <hr>
-            <div class="mb-3">
-                <label class="form-label" for="inputSubTotal">Sub Total</label>
+            <div class="mb-3" id="divSubTotal">
+                <label class="form-label" for="inputSubTotal" id="lblSubTotal">Sub Total</label>
                 <input class="form-control" id="inputSubTotal" type="number">
             </div>
-            <div class="mb-3">
-                <label class="form-label" for="inputBalance">Balance</label>
+            <div class="mb-3" id="divBalance">
+                <label class="form-label" for="inputBalance" id="lblBalance">Balance</label>
                 <input class="form-control" id="inputBalance" type="number">
             </div>
         </section>
