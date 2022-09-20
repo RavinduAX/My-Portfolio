@@ -146,6 +146,44 @@
         #itemDetail>div:nth-child(3){
             display: flex;
         }
+        #inputItemCode{
+            width: 300px;
+        }
+        #inputItemName{
+            width: 188px;
+        }
+        #inputPrice{
+            width: 92px;
+        }
+        #inputQtyOnHand{
+            width: 104px;
+        }
+        #inputOrderQty{
+            width: 298px;
+        }
+        #btnItemSearch{
+            width: 115px;
+            height: 35px;
+            background-color: black;
+            color: white;
+            padding-top: 2px;
+            border-radius: 45px;
+            position: relative;
+            top: 25px;
+            left: 21px;
+        }
+        #btnAddItem{
+            width: 115px;
+            height: 35px;
+            background-color: #E74C3C;
+            border-radius: 45px;
+            padding-top: 4px;
+            font-weight: 500;
+            position: relative;
+            top: 26px;
+            left: 23px;
+        }
+
         #flexone{
             display: flex;
             /*position: relative;*/
@@ -271,7 +309,7 @@
                             <label class="form-label" for="inputItemCode">Item Code</label>
                             <input class="form-control" id="inputItemCode" type="text">
                         </div>
-                        <button class="btn btn-primary" type="button">Search</button>
+                        <button class="btn" type="button" id="btnItemSearch">Search</button>
                     </div>
                     <div>
                         <div class="mb-3">
@@ -292,7 +330,7 @@
                             <label class="form-label" for="inputOrderQty">Order Qty</label>
                             <input class="form-control" id="inputOrderQty" type="number">
                         </div>
-                        <button class="btn btn-primary" type="button">Add Item</button>
+                        <button class="btn" type="button" id="btnAddItem">Add Item</button>
                     </div>
                 </section>
             </section>
