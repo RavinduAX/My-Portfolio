@@ -238,6 +238,9 @@
         #divTotal {
             margin-top: 22px;
         }
+        #divCash {
+            margin-top: 35px;
+        }
         #lblCash {
             position: relative;
             left: 50px;
@@ -249,6 +252,9 @@
             position: relative;
             left: 105px;
         }
+        #divDiscount {
+            margin-top: 20px;
+        }
         #lblDiscount {
             position: relative;
             left: 21px;
@@ -259,6 +265,34 @@
             padding: 0;
             position: relative;
             left: 77px;
+        }
+        #btnPurchase {
+            width: 157px;
+            height: 39px;
+            background-color: #05C46B;
+            border-radius: 45px;
+            position: relative;
+            left: 80px;
+            top: 34px;
+            font-weight: 500;
+            margin-bottom: 38px;
+        }
+        #inputSubTotal {
+            width: 165px;
+            height: 40px;
+            padding: 0;
+            font-size: 30px;
+            position: relative;
+            left: 42px;
+        }
+        #inputBalance {
+            width: 165px;
+            height: 40px;
+            padding: 0;
+            font-size: 30px;
+            position: absolute;
+            left: 116px;
+            margin-top: 10px;
         }
 
         /*Main End*/
@@ -415,7 +449,7 @@
                 <label class="form-label" for="inputDiscount" id="lblDiscount">Discount</label>
                 <input class="form-control" id="inputDiscount" type="number">
             </div>
-            <button class="btn btn-primary" type="button" id="btnPurchase">Purchase</button>
+            <button class="btn" type="button" id="btnPurchase">Purchase</button>
             <hr>
             <div class="mb-3" id="divSubTotal">
                 <label class="form-label" for="inputSubTotal" id="lblSubTotal">Sub Total</label>
