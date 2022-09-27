@@ -2,237 +2,118 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dynamic POS | Item</title>
+    <title>SELL-X Item</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /*NavBar Start*/
-        header h4 {
-            color: white;
-            margin-bottom: 2px;
-        }
-        .navbar {
-            background-color: #0C2461 !important;
-        }
-        .navbar-brand {
-            color: white;
-        }
-        .nav-link {
-            color: white;
-        }
-        .nav-link:hover {
-            color: white;
-        }
-        .nav-link:visited {
-            color: white;
-        }
-        header .d-flex > a:nth-child(1) {
-            margin-right: 10px;
-        }
-        header .navbar-nav {
-            margin: 0 400px 0 293px;
-            font-size: 20px !important;
-        }
-        header .navbar-nav > .nav-item {
-            padding-right: 12px;
-        }
-        /*Navbar End*/
-
-        /*Main Start*/
-        main {
-            background-color: #454545;
-        }
-        #itemDetail{
-            width: 287px;
-            height: 319px;
-            background-color: white;
-            position: relative;
-            left: 35px;
-            top: 35px;
-            border-radius: 10px;
-        }
-        #itemDetail>div:nth-child(1){
-            margin-top: 25px;
-        }
-        #itemDetail>div:nth-child(2){
-            margin-top: 30px;
-        }
-
-        #flexone{
-            display: flex;
-        }
-        #flexone>div:nth-child(2){
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            left: 56px;
-            top: 83px;
-        }
-        #flexone>div:nth-child(2)>button:nth-child(1){
-            margin-bottom: 171px;
-            width: 130px;
-            height: 35px;
-            border-radius: 45px;
-            background-color: black;
-            padding-top: 3px;
-        }
-        #flexone>div:nth-child(2)>button:nth-child(2){
-            width: 130px;
-            height: 35px;
-            border-radius: 45px;
-            background-color: #27AE60;
-            padding-top: 5px;
-        }
-        #tableSection{
-            width: 834px;
-            height: 474px;
-        }
-        main{
-            display: flex;
-            height: 91.25vh;
-        }
-        #itemSection{
-            width: 493px;
-            height: 474px;
-            background-color: #4B6584;
-            border-radius: 10px;
-            position: relative;
-            top: 92px;
-            left: 46px;
-        }
-        .form-label{
-            margin: 0;
-        }
-        .form-control{
-            width: 230px;
-            height: 30px;
-        }
-        .mb-3{
-            margin-left: 25px;
-            margin-bottom: 0.5rem!important;
-        }
-        #itemSection>div:nth-child(2){
-            position: relative;
-            top: 79px;
-            left: 35px;
-        }
-        #itemSection>div:nth-child(2)>button{
-            width: 93px;
-            height: 38px;
-        }
-        #tableSection{
-            position: relative;
-            top: 92px;
-            left: 88px;
-        }
-        .table>thead{
-            background-color: #01BFA5;
-        }
-        h2{
-            position: absolute;
-            background-color: white;
-            width: 245px;
-            text-align: center;
-            border-bottom-right-radius: 45px;
-        }
-        /*Main End*/
-
-    </style>
 </head>
 <body>
-<!--Navbar Start-->
+<!--header section-->
 <header>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg" style="background-color: #30336B;height: 62px">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img alt="Logo" class="d-inline-block align-text-top" height="30" src="../assets/images/logo.jpg"
-                     width="30">
-            </a>
-            <h4>Dynamic POS System</h4>
-            <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Dashboard</a>
+            <img src="../assets/images/logo.jpg" alt="logo-img" width="30px" height="30px">
+            <h3 style="margin-bottom: 0; margin-left: 10px; color: white"><i>SELL-X</i> POS System</h3>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 256px;">
+                    <li class="nav-item" style="margin-right: 2px;">
+                        <button id="navBtnDashboard" type="button" class="btn btn-danger" style="width: 107.11px; border: 0; border-radius: 3px; padding: 3px 6px">
+                            <a class="nav-link active text-white" href="#">Dashboard</a>
+                        </button>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Customer</a>
+                    <li class="nav-item" style="margin-right: 3px;">
+                        <button id="navBtnCustomer" type="button" class="btn btn-danger" style="width: 107.11px; border: 0; border-radius: 3px; padding: 3px 6px">
+                            <a class="nav-link active text-white" href="#">Customer</a>
+                        </button>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Item</a>
+                    <li class="nav-item" style="margin-right: 2px;">
+                        <button id="navBtnItem" type="button" class="btn btn-danger" style="width: 107.11px; border: 0; border-radius: 3px; padding: 3px 6px">
+                            <a class="nav-link active text-white" href="#">Item</a>
+                        </button>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Order</a>
+                    <li class="nav-item" style="margin-right: 2px;">
+                        <button id="navBtnOrder" type="button" class="btn btn-danger" style="width: 107.11px; border: 0; border-radius: 3px; padding: 3px 6px">
+                            <a class="nav-link active text-white" href="#">Order</a>
+                        </button>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <a class="nav-link" href="#">SignIn</a>
-                    <a class="nav-link" href="#">LogOut</a>
-                </form>
             </div>
         </div>
     </nav>
 </header>
-<!--Navbar End-->
 
-<main>
-    <h2>Item</h2>
-    <section id="itemSection">
-        <div id="flexone">
-            <div id="itemDetail">
-                <div class="mb-3">
-                    <label class="form-label" for="inputItemCode">Item Code</label>
-                    <input class="form-control" id="inputItemCode" type="text">
+<!--Item Section-->
+<main class="container-fluid">
+    <h2 style="background-color: black;color: white;width: 225px;height: 45px;text-align: center;border-bottom-left-radius: 45px;border-bottom-right-radius: 45px;">Item</h2>
+    <section class="d-flex" style="margin-top: 62px; margin-left: 65px">
+        <!--form-->
+        <section style="margin-right: 100px">
+            <div class="modal-content col-auto p-0" style="width: 407px">
+                <div class="modal-header bg-primary" style="height: 36px">
+                    <h5 class="modal-title text-white">Item Registration</h5>
+                    <button class="btn btn-success pt-0" style="height: 32px; width: 75px; border-radius: 45px"><i>+New</i></button>
                 </div>
-                <div class="mb-3">
-                    <label class="form-label" for="inputItemName">Item Name</label>
-                    <input class="form-control" id="inputItemName" type="text">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label" for="inputPrice">Price</label>
-                    <input class="form-control" id="inputPrice" type="text">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label" for="inputQty">Qty</label>
-                    <input class="form-control" id="inputQty" type="text">
+                <div class="modal-body border border-dark">
+                    <div class="d-flex" style="margin-left: 25px; margin-top: 35px">
+                        <div style="margin-bottom: 15px">
+                            <label for="txtInputItemCode" class="form-label mb-0">Item Code</label>
+                            <input type="text" class="form-control" id="txtInputItemCode" style="width: 200px; height: 30px; margin-right: 25px">
+                        </div>
+                        <button type="button" class="btn btn-secondary p-0" style="border-radius: 15px; color: white; width: 130px; height: 32px; margin-top: 23px">Search</button>
+                    </div>
+                    <div style="margin-left: 25px; margin-bottom: 15px">
+                        <label for="txtInputItemName" class="form-label mb-0">Item Name</label>
+                        <input type="text" class="form-control" id="txtInputItemName" style="width: 356px; height: 30px">
+                    </div>
+                    <div style="margin-left: 25px; margin-bottom: 15px">
+                        <label for="txtInputPrice" class="form-label mb-0">Price</label>
+                        <input type="text" class="form-control" id="txtInputPrice" style="width: 356px; height: 30px">
+                    </div>
+                    <div style="margin-left: 25px; margin-bottom: 50px">
+                        <label for="txtInputQty" class="form-label mb-0">Qty</label>
+                        <input type="text" class="form-control" id="txtInputQty" style="width: 356px; height: 30px">
+                    </div>
+                    <div class="d-flex justify-content-evenly" style="margin-left: 25px; margin-bottom: 55px; width: 355px">
+                        <button type="button" class="btn btn-danger pt-0 pb-1" style="border-radius: 45px; width: 100px; height: 35px">Delete</button>
+                        <button type="button" class="btn btn-warning pt-0 pb-1" style="border-radius: 45px; width: 100px; height: 35px">Update</button>
+                        <button type="button" class="btn btn-success pt-0 pb-1" style="border-radius: 45px; width: 100px; height: 35px">Save</button>
+                    </div>
+
                 </div>
             </div>
-            <div>
-                <button class="btn text-white" type="button">Search</button>
-                <button class="btn fw-semibold" type="button">Add</button>
-            </div>
-        </div>
-        <div>
-            <button class="btn btn-warning" type="button">Update</button>
-            <button class="btn btn-danger" type="button">Delete</button>
-            <button class="btn btn-light" type="button">Clear</button>
-        </div>
-    </section>
-    <section id="tableSection">
-        <table class="table table-bordered table-hover">
-            <thead class="text-white">
-            <tr>
-                <th scope="col">Item Code</th>
-                <th scope="col">Item Name</th>
-                <th scope="col">Price</th>
-                <th scope="col">Qty</th>
-            </tr>
-            </thead>
-            <tbody class="table-group-divider bg-light">
-            <tr>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <td>@twitter</td>
-            </tr>
-            </tbody>
-        </table>
+        </section>
+        <!--table-->
+        <section style="width: 872px; height: 473px">
+            <table class="table table-hover table-bordered">
+                <thead style="background-color: #FF5252">
+                <tr>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Qty</th>
+                </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
     </section>
 </main>
 
