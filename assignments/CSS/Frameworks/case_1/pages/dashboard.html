@@ -2,490 +2,206 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dynamic POS | Dashboard</title>
+    <title>SELL-X Dashboard</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /*NavBar Start*/
-        header h4 {
-            color: white;
-            margin-bottom: 2px;
-        }
-        main{
-            height: 91.25vh;
-        }
-        .navbar {
-            background-color: #0C2461 !important;
-        }
-
-        .navbar-brand {
-            color: white;
-        }
-
-        .nav-link {
-            color: white;
-        }
-
-        .nav-link:hover {
-            color: white;
-        }
-
-        .nav-link:visited {
-            color: white;
-        }
-
-        header .d-flex > a:nth-child(1) {
-            margin-right: 10px;
-        }
-
-        header .navbar-nav {
-            margin: 0 400px 0 293px;
-            font-size: 20px !important;
-        }
-
-        header .navbar-nav > .nav-item {
-            padding-right: 12px;
-        }
-
-        /*Navbar End*/
-
-        /*Main Start*/
-        main {
-            background-color: #454545;
-        }
-        .form-label{
-            margin: 0;
-        }
-        .form-control{
-            height: 30px;
-        }
-        .table>thead {
-            background-color: #01BFA5;
-        }
-        .mb-3 {
-            margin-bottom: 0.5rem!important;
-            margin: 5px 10px;
-        }
-        #orderDetail {                       /*+++++++++++++++++++++++++++++++++++++++++++++++++*/
-            width: 373px;
-            height: 69px;
-            background-color: white;
-            display: flex;
-            position: relative;
-            /*left: 90px;*/
-            top: -25px;
-            border-radius: 10px;
-        }
-        #orderDetail input {
-            height: 30px;
-            width: 149px;
-        }
-        #orderDetail>div:nth-child(1){
-            margin-left: 27px;
-        }
-
-        #customerDetail {                       /*+++++++++++++++++++++++++++++++++++++++++++++++++*/
-            display: flex;
-            flex-direction: column;
-            width: 374px;
-            height: 166px;
-            /*position: relative;*/
-            /*left: 90px;*/
-            /*top: 77px;*/
-        }
-        #customerDetail > div:nth-child(2) {
-            width: 374px;
-            height: 137px;
-            background-color: white;
-            border-radius: 10px;
-        }
-        #customerDetail > div:nth-child(2) > div:nth-child(1) {
-            display: flex;
-        }
-        #customerDetail > div:nth-child(2) > div:nth-child(2) {
-            display: flex;
-        }
-        #btnAddCustomer{
-            width: 80px;
-            height: 30px;
-            position: relative;
-            left: 294px;
-            padding-top: 1px;
-            bottom: 1px;
-            background-color: #10AC84;
-            color: black;
-            font-weight: 500;
-        }
-        #btnSearchCustomer{
-            width: 115px;
-            height: 35px;
-            background-color: black;
-            color: white;
-            padding-top: 3px;
-            border-radius: 45px;
-            position: relative;
-            top: 27px;
-            left: 22px;
-        }
-
-        #itemDetail{                       /*+++++++++++++++++++++++++++++++++++++++++++++++++*/
-            background-color: white;
-            width: 470px;
-            height: 205px;
-            position: relative;
-            top: 29px;
-            left: 95px;
-            border-radius: 10px;
-        }
-        #itemDetail>div:nth-child(1){
-            display: flex;
-        }
-        #itemDetail>div:nth-child(2){
-            display: flex;
-        }
-        #itemDetail>div:nth-child(3){
-            display: flex;
-        }
-        #inputItemCode{
-            width: 300px;
-        }
-        #inputItemName{
-            width: 188px;
-        }
-        #inputPrice{
-            width: 92px;
-        }
-        #inputQtyOnHand{
-            width: 104px;
-        }
-        #inputOrderQty{
-            width: 298px;
-        }
-        #btnItemSearch{
-            width: 115px;
-            height: 35px;
-            background-color: black;
-            color: white;
-            padding-top: 2px;
-            border-radius: 45px;
-            position: relative;
-            top: 25px;
-            left: 21px;
-        }
-        #btnAddItem{
-            width: 115px;
-            height: 35px;
-            background-color: #E74C3C;
-            border-radius: 45px;
-            padding-top: 4px;
-            font-weight: 500;
-            position: relative;
-            top: 26px;
-            left: 23px;
-        }
-
-        #flexone{
-            display: flex;
-            /*position: relative;*/
-            /*left: 90px;*/
-            /*top: 62px;*/
-        }
-        #flextwo{
-            /*position: relative;*/
-            /*left: 90px;*/
-            /*top: 62px;*/
-        }
-        #flexthree{
-            display: flex;
-            position: relative;
-            left: 90px;
-            top: 100px;
-            width: 1358px;
-        }
-        #dashTable{                       /*+++++++++++++++++++++++++++++++++++++++++++++++++*/
-            height: 230px;
-            width: 938px;
-            position: relative;
-            top: 30px;
-            /*left: 90px;*/
-        }
-
-        #dashBill{                       /*+++++++++++++++++++++++++++++++++++++++++++++++++*/
-            width: 318px;
-            height: 450px;
-            background-color: white;
-            border-radius: 10px;
-            position: relative;
-            /*top: 90px;*/
-            left: 101px;
-        }
-
-        #dashBill .mb-3{
-            display: flex;
-            flex-direction: row;
-        }
-        #lblTotal {
-            font-size: 30px;
-            padding-right: 26px;
-            padding-left: 19px;
-            color: #1EBC61;
-        }
-        #inputTotal {
-            height: 40px;
-            padding: 0;
-            font-size: 30px;
-            width: 165px;
-        }
-        #divTotal {
-            margin-top: 22px;
-        }
-        #divCash {
-            margin-top: 35px;
-        }
-        #lblCash {
-            position: relative;
-            left: 50px;
-            font-size: 18px;
-        }
-        #inputCash {
-            width: 115px;
-            height: 30px;
-            padding: 0;
-            position: relative;
-            left: 105px;
-        }
-        #divDiscount {
-            margin-top: 20px;
-        }
-        #lblDiscount {
-            position: relative;
-            left: 21px;
-            font-size: 18px;
-        }
-        #inputDiscount {
-            width: 115px;
-            height: 30px;
-            padding: 0;
-            position: relative;
-            left: 73px;
-        }
-        #btnPurchase {
-            width: 157px;
-            height: 39px;
-            background-color: #05C46B;
-            border-radius: 45px;
-            position: relative;
-            left: 80px;
-            top: 34px;
-            font-weight: 500;
-            margin-bottom: 38px;
-        }
-        #inputSubTotal {
-            width: 165px;
-            height: 40px;
-            padding: 0;
-            font-size: 30px;
-            position: relative;
-            left: 27px;
-            margin-top: 5px;
-        }
-        #inputBalance {
-            width: 165px;
-            height: 40px;
-            padding: 0;
-            font-size: 30px;
-            position: absolute;
-            left: 139px;
-            margin-top: 10px;
-        }
-        #lblSubTotal {
-            font-size: 25px;
-            position: relative;
-            top: 6px;
-            color: #17BBB0;
-        }
-        #lblBalance {
-            font-size: 25px;
-            position: relative;
-            top: 10px;
-            color: #F75C4C;
-        }
-        h2{
-            position: absolute;
-            background-color: white;
-            width: 245px;
-            text-align: center;
-            border-bottom-right-radius: 45px;
-        }
-        /*Main End*/
-    </style>
-
 </head>
+
 <body>
 
-<!--Navbar Start-->
+<!--Header Section-->
 <header>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg" style="background-color: #30336B;height: 62px">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img alt="Logo" class="d-inline-block align-text-top" height="30" src="../assets/images/logo.jpg"
-                     width="30">
-            </a>
-            <h4>Dynamic POS System</h4>
-            <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Dashboard</a>
+            <img src="../assets/images/logo.jpg" alt="logo-img" width="30px" height="30px">
+            <h3 style="margin-bottom: 0; margin-left: 10px; color: white"><i>SELL-X</i> POS System</h3>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 256px;">
+                    <li class="nav-item" style="margin-right: 2px;">
+                        <button id="navBtnDashboard" type="button" class="btn btn-danger" style="width: 107.11px; border: 0; border-radius: 3px; padding: 3px 6px">
+                            <a class="nav-link active text-white" href="#">Dashboard</a>
+                        </button>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Customer</a>
+                    <li class="nav-item" style="margin-right: 3px;">
+                        <button id="navBtnCustomer" type="button" class="btn btn-danger" style="width: 107.11px; border: 0; border-radius: 3px; padding: 3px 6px">
+                            <a class="nav-link active text-white" href="#">Customer</a>
+                        </button>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Item</a>
+                    <li class="nav-item" style="margin-right: 2px;">
+                        <button id="navBtnItem" type="button" class="btn btn-danger" style="width: 107.11px; border: 0; border-radius: 3px; padding: 3px 6px">
+                            <a class="nav-link active text-white" href="#">Item</a>
+                        </button>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Order</a>
+                    <li class="nav-item" style="margin-right: 2px;">
+                        <button id="navBtnOrder" type="button" class="btn btn-danger" style="width: 107.11px; border: 0; border-radius: 3px; padding: 3px 6px">
+                            <a class="nav-link active text-white" href="#">Order</a>
+                        </button>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <a class="nav-link" href="#">SignIn</a>
-                    <a class="nav-link" href="#">LogOut</a>
-                </form>
             </div>
         </div>
     </nav>
 </header>
-<!--Navbar End-->
 
-<main>
-    <h2>Dashboard</h2>
-    <section id="flexthree">
-        <section id="flextwo">
-            <section id="flexone">
-                <section>
-                    <section id="orderDetail">
-                        <div class="mb-3">
-                            <label class="form-label" for="inputOrderId">OrderId</label>
-                            <input class="form-control" id="inputOrderId" type="text">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label" for="inputOrderDate">Order Date</label>
-                            <input class="form-control" id="inputOrderDate" type="date">
-                        </div>
-                    </section>
+<!--Dashboard Section-->
+<main class="container-fluid">
+    <section class="row" style="margin: 16px 20px">
+        <div class="col" style="width: 207px; height: 70px; border: 1px solid black; border-radius: 10px">
+            <label for="txtOrderID" class="form-label mb-0">Order ID</label>
+            <input type="text" class="form-control" id="txtOrderID">
+        </div>
+        <div class="col" style="width: 207px; height: 70px; border-radius: 10px; background-color: #17BBB0; margin-left: 345px">
+            <label for="txtCustomerCount" class="form-label mb-0 text-white">Total Customers</label>
+            <input type="text" class="form-control border-0" id="txtCustomerCount" style="background-color: #17BBB0">
+        </div>
+        <div class="col ms-1" style="width: 207px; height: 70px; border-radius: 10px; background-color: #009B90">
+            <label for="txtItemCount" class="form-label mb-0 text-white">Total Items</label>
+            <input type="text" class="form-control border-0" id="txtItemCount" style="background-color: #009B90">
+        </div>
+        <div class="col ms-1" style="width: 207px; height: 70px; border-radius: 10px; background-color: #007B70">
+            <label for="txtOrderCount" class="form-label mb-0 text-white">Total Orders</label>
+            <input type="text" class="form-control border-0" id="txtOrderCount" style="background-color: #007B70">
+        </div>
+        <div class="col ms-1" style="width: 207px; height: 70px; border-radius: 10px; background-color: #005B50">
+            <label for="txtDate&Time" class="form-label mb-0 text-white">Date & Time</label>
+            <input type="text" class="form-control border-0" id="txtDate&Time" style="background-color: #005B50">
+        </div>
+    </section>
 
-                    <section id="customerDetail">
-                        <button class="btn" type="button" id="btnAddCustomer">+ New</button>
-                        <div>
+    <section class="d-flex">
+        <section class="row" style="margin-left: 18px; margin-top: 25px">
+            <!--forms-->
+            <section class="row mb-4">
+                <!--customer details-->
+                <div class="modal-content col-auto p-0" style="width: 357px; height: 192px">
+                    <div class="modal-header bg-primary" style="height: 36px">
+                        <h5 class="modal-title"><i>Customer Details</i></h5>
+                    </div>
+                    <div class="modal-body border border-dark">
+                        <div class="d-flex ms-3 mt-3">
                             <div>
-                                <div class="mb-3">
-                                    <label class="form-label" for="inputContactNo">Contact No.</label>
-                                    <input class="form-control" id="inputContactNo" type="number">
-                                </div>
-                                <button class="btn" type="button" id="btnSearchCustomer">Search</button>
+                                <label for="txtInputTelNo" class="form-label mb-0">Tel No</label>
+                                <input type="text" class="form-control" id="txtInputTelNo" style="width: 150px; height: 30px">
                             </div>
+                            <button type="button" class="btn btn-secondary pt-0 ms-4 mt-4 " style="width: 145px; height: 33px; border-radius: 45px; padding-bottom: 3px">Search</button>
+                        </div>
+                        <div class="d-flex ms-3 mt-2">
                             <div>
-                                <div class="mb-3">
-                                    <label class="form-label" for="inputCustomerId">Customer ID</label>
-                                    <input class="form-control" id="inputCustomerId" type="text">
+                                <label for="txtCustID" class="form-label mb-0">Customer ID</label>
+                                <input type="text" class="form-control" id="txtCustID" style="width: 150px; height: 30px">
+                            </div>
+                            <div class="ms-4">
+                                <label for="txtInputCustName" class="form-label mb-0">Customer Name</label>
+                                <input type="text" class="form-control" id="txtInputCustName" style="width: 150px; height: 30px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--purchase details-->
+                <div class="modal-content col p-0 ms-5">
+                    <div class="modal-header bg-primary" style="height: 36px">
+                        <h5 class="modal-title"><i>Purchase Details</i></h5>
+                    </div>
+                    <div class="d-flex modal-body border border-dark m-0">
+                        <div style="width: 440px; padding-top: 14px"> <!--Ldiv-->
+                            <div class="d-flex" style="margin-left: 20px; margin-bottom: 8px"> <!--Topdiv-->
+                                <div>
+                                    <label for="txtInputItemCode" class="form-label mb-0">Item Code</label>
+                                    <input type="text" class="form-control" id="txtInputItemCode" style="width: 259px; height: 30px">
                                 </div>
-                                <div class="mb-3">
-                                    <label class="form-label" for="inputCustomerName">Customer Name</label>
-                                    <input class="form-control" id="inputCustomerName" type="text">
+                                <button type="button" class="btn btn-secondary pt-0 mt-4 " style="width: 120px; height: 33px; border-radius: 45px; padding-bottom: 3px; margin-left: 20px">Search</button>
+                            </div>
+                            <div class="d-flex justify-content-evenly"> <!--Bottomdiv-->
+                                <div>
+                                    <label for="txtItemName" class="form-label mb-0">Item Name</label>
+                                    <input type="text" class="form-control" id="txtItemName" style="width: 120px; height: 30px">
+                                </div>
+                                <div>
+                                    <label for="txtPrice" class="form-label mb-0">Price</label>
+                                    <input type="text" class="form-control" id="txtPrice" style="width: 120px; height: 30px">
+                                </div>
+                                <div>
+                                    <label for="txtQtyOnHand" class="form-label mb-0">Qty On Hand</label>
+                                    <input type="text" class="form-control" id="txtQtyOnHand" style="width: 120px; height: 30px">
                                 </div>
                             </div>
                         </div>
-                    </section>
-                </section>
-                <section id="itemDetail">
-                    <div>
-                        <div class="mb-3">
-                            <label class="form-label" for="inputItemCode">Item Code</label>
-                            <input class="form-control" id="inputItemCode" type="text">
-                        </div>
-                        <button class="btn" type="button" id="btnItemSearch">Search</button>
-                    </div>
-                    <div>
-                        <div class="mb-3">
-                            <label class="form-label" for="inputItemCode">Item Name</label>
-                            <input class="form-control" id="inputItemName" type="text">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label" for="inputPrice">Price</label>
-                            <input class="form-control" id="inputPrice" type="number">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label" for="inputQtyOnHand">QtyOnHand</label>
-                            <input class="form-control" id="inputQtyOnHand" type="number">
+                        <div style="border-left: 2px solid black"> <!--Rdiv-->
+                            <div style="margin-left: 20px; margin-top: 14px; margin-bottom: 11px">
+                                <label for="txtInputOrderQty" class="form-label mb-0">Order Qty</label>
+                                <input type="text" class="form-control" id="txtInputOrderQty" style="width: 120px; height: 30px">
+                            </div>
+                            <button type="button" class="btn pt-0 mt-4 " style="width: 120px; height: 33px; border-radius: 45px; padding-bottom: 3px; margin-left: 20px; background-color: #B71540">Add Item</button>
                         </div>
                     </div>
-                    <div>
-                        <div class="mb-3">
-                            <label class="form-label" for="inputOrderQty">Order Qty</label>
-                            <input class="form-control" id="inputOrderQty" type="number">
-                        </div>
-                        <button class="btn" type="button" id="btnAddItem">Add Item</button>
-                    </div>
-                </section>
+                </div>
             </section>
-            <section id="dashTable">
-                <table class="table table-bordered table-hover">
-                    <thead class="text-white">
+            <!--table-->
+            <section class="row" style="height: 308px">
+                <table class="table table-hover table-bordered">
+                    <thead style="background-color: #FF5252">
                     <tr>
-                        <th scope="col">Item Code</th>
-                        <th scope="col">Item Name</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Qty</th>
-                        <th scope="col">Total</th>
+                        <th>Item Code</th>
+                        <th>Item Name</th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th>Total</th>
                     </tr>
                     </thead>
-                    <tbody class="table-group-divider bg-light">
+                    <tbody class="table-group-divider">
                     <tr>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     <tr>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     </tbody>
                 </table>
             </section>
         </section>
-        <section id="dashBill">
-            <div class="mb-3" id="divTotal">
-                <label class="form-label" for="inputTotal" id="lblTotal">Total</label>
-                <input class="form-control" id="inputTotal" type="number">
-            </div>
-            <hr>
-            <div class="mb-3" id="divCash">
-                <label class="form-label" for="inputCash" id="lblCash">Cash</label>
-                <input class="form-control" id="inputCash" type="number">
-            </div>
-            <div class="mb-3" id="divDiscount">
-                <label class="form-label" for="inputDiscount" id="lblDiscount">Discount</label>
-                <input class="form-control" id="inputDiscount" type="number">
-            </div>
-            <button class="btn" type="button" id="btnPurchase">Purchase</button>
-            <hr>
-            <div class="mb-3" id="divSubTotal">
-                <label class="form-label" for="inputSubTotal" id="lblSubTotal">Sub Total</label>
-                <input class="form-control" id="inputSubTotal" type="number">
-            </div>
-            <div class="mb-3" id="divBalance">
-                <label class="form-label" for="inputBalance" id="lblBalance">Balance</label>
-                <input class="form-control" id="inputBalance" type="number">
+        <section style="margin-top: 25px; margin-right: 21px; margin-left: 43px; width: 524px"><!--purchase bill-->
+            <div style="border: 2px solid black">
+                <div class="d-flex">
+                    <h1 style="color: #1EBC61; margin-left: 45px; margin-top: 17px; margin-bottom: 18px">Total</h1>
+                    <input type="text" class="form-control" id="txtTotal" style="width: 150px; height: 30px; margin-left: 25px; margin-top: 28px">
+                </div>
+                <hr>
+                <div style="margin-top: 37px; margin-left: 67px"> <!--middle content-->
+                    <div class="d-flex" style="margin-bottom: 25px; margin-left: 27px">
+                        <label for="txtInputCash" class="form-label mb-0">Cash</label>
+                        <input type="text" class="form-control" id="txtInputCash" style="width: 150px; height: 30px; margin-left: 25px">
+                    </div>
+                    <div class="d-flex">
+                        <label for="txtInputDiscount" class="form-label mb-0">Discount</label>
+                        <input type="text" class="form-control" id="txtInputDiscount" style="width: 150px; height: 30px; margin-left: 24px">
+                    </div>
+                    <button type="button" class="btn btn-success pt-0 ms-4 mt-4 " style="width: 150px; height: 40px; border-radius: 45px; padding-bottom: 3px; margin-left: 60px!important; margin-top: 45px!important; margin-bottom: 27px">Purchase</button>
+                </div>
+                <hr>
+                <div class="d-flex">
+                    <h1 style="color: #17BBB0; margin-left: 43px; margin-bottom: 16px; margin-top: 12px">Sub Total</h1>
+                    <input type="text" class="form-control" id="txtSubTotal" style="width: 150px; height: 30px; margin-left: 25px; margin-top: 24px">
+                </div>
+                <div class="d-flex">
+                    <h1 style="color: #F75C4C; margin-left: 43px; margin-bottom: 13px">Balance</h1>
+                    <input type="text" class="form-control" id="txtBalance" style="width: 150px; height: 30px; margin-left: 52px; margin-top: 10px;">
+                </div>
+
+
             </div>
         </section>
     </section>
-
-
 
 </main>
 
