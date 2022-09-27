@@ -1,95 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-  <title>Dynamic POS | NewCustomer</title>
+  <meta charset="UTF-8">
+  <title>New Customer</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body{
-      background-color: #1E1E1E;
-    }
-    h2{
-      background-color: #0C2461;
-      width: 100%;
-      text-align: center;
-      height: 68px;
-      padding: 13px;
-      position: relative;
-      top: 15px;
-      margin-bottom: 27px;
-    }
-
-    main{
-      background-color: #454545;
-      width: 395px;
-      height: 480px;
-      position: absolute;
-      left: 0; right: 0;
-      top: 0; bottom: 0;
-      margin: auto;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .form-label{
-      margin: 0;
-    }
-    #customerDetail{
-      width: 271px;
-      height: 385px;
-      position: relative;
-      top: 20px;
-    }
-    #customerDetail>.mb-3{
-      margin-bottom: 0.6rem!important;
-    }
-    #customerDetail .form-control{
-      height: 30px;
-    }
-    main>div:nth-child(3){
-      position: relative;
-      bottom: 35px;
-    }
-    main>div:nth-child(3)>button{
-      width: 218px;
-      height: 40px;
-      border-radius: 45px;
-      background-color: #05C46B!important;
-      font-size: 18px;
-    }
-
-
-
-  </style>
 </head>
-
 <body>
-<main>
-  <h2>New Customer</h2>
-  <section id="customerDetail">
-    <div class="mb-3">
-      <label class="form-label" for="inputCustomerID">ItemCode</label>
-      <input class="form-control" id="inputCustomerID" type="text">
+
+<main class="container-fluid">
+  <div class="modal-content col-auto p-0" style="width: 407px">
+    <div class="modal-header bg-primary" style="height: 36px">
+      <h5 class="modal-title text-white">Customer Registration</h5>
+      <button class="btn btn-success pt-0" style="height: 32px; width: 75px; border-radius: 45px"><i>+New</i></button>
     </div>
-    <div class="mb-3">
-      <label class="form-label" for="inputCustomerName">Item Name</label>
-      <input class="form-control" id="inputCustomerName" type="text">
+    <div class="modal-body border border-dark">
+      <div style="margin-left: 25px; margin-top: 35px">
+        <div style="margin-bottom: 15px">
+          <label for="txtInputCustomerID" class="form-label mb-0">CustomerID</label>
+          <input type="text" class="form-control" id="txtInputCustomerID" style="width: 356px; height: 30px; margin-right: 25px">
+        </div>
+      </div>
+      <div style="margin-left: 25px; margin-bottom: 15px">
+        <label for="txtCustomerName" class="form-label mb-0">Customer Name</label>
+        <input type="text" class="form-control" id="txtCustomerName" style="width: 356px; height: 30px">
+      </div>
+      <div style="margin-left: 25px; margin-bottom: 15px">
+        <label for="txtAddress" class="form-label mb-0">Address</label>
+        <input type="text" class="form-control" id="txtAddress" style="width: 356px; height: 30px">
+      </div>
+      <div style="margin-left: 25px; margin-bottom: 50px">
+        <label for="txtContactNo" class="form-label mb-0">Contact No</label>
+        <input type="text" class="form-control" id="txtContactNo" style="width: 356px; height: 30px">
+      </div>
+      <div class="d-flex justify-content-evenly" style="margin-left: 25px; margin-bottom: 55px; width: 355px">
+        <button type="button" class="btn btn-success pt-0 pb-1" style="border-radius: 45px; width: 160px; height: 35px">Save</button>
+      </div>
+
     </div>
-    <div class="mb-3">
-      <label class="form-label" for="inputAddress">Price</label>
-      <input class="form-control" id="inputAddress" type="text">
-    </div>
-    <div class="mb-3">
-      <label class="form-label" for="inputContactNo">Qty</label>
-      <input class="form-control" id="inputContactNo" type="text">
-    </div>
-  </section>
-  <div>
-    <button class="btn text-bg-primary" type="button">Save</button>
   </div>
 </main>
-<script src="../assets/js/bootstrap.min.js"></script>
+
 </body>
 </html>
