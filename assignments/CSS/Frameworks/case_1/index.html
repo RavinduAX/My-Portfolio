@@ -45,6 +45,413 @@
     </nav>
 </header>
 
+<!--Dashboard Section-->
+<main class="container-fluid">
+    <section class="row" style="margin: 16px 20px">
+        <div class="col" style="width: 207px; height: 70px; border: 1px solid black; border-radius: 10px">
+            <label for="txtDOrderID" class="form-label mb-0">Order ID</label>
+            <input type="text" class="form-control" id="txtDOrderID">
+        </div>
+        <div class="col" style="width: 207px; height: 70px; border-radius: 10px; background-color: #17BBB0; margin-left: 345px">
+            <label for="txtDCustomerCount" class="form-label mb-0 text-white">Total Customers</label>
+            <input type="text" class="form-control border-0" id="txtDCustomerCount" style="background-color: #17BBB0">
+        </div>
+        <div class="col ms-1" style="width: 207px; height: 70px; border-radius: 10px; background-color: #009B90">
+            <label for="txtDItemCount" class="form-label mb-0 text-white">Total Items</label>
+            <input type="text" class="form-control border-0" id="txtDItemCount" style="background-color: #009B90">
+        </div>
+        <div class="col ms-1" style="width: 207px; height: 70px; border-radius: 10px; background-color: #007B70">
+            <label for="txtDOrderCount" class="form-label mb-0 text-white">Total Orders</label>
+            <input type="text" class="form-control border-0" id="txtDOrderCount" style="background-color: #007B70">
+        </div>
+        <div class="col ms-1" style="width: 207px; height: 70px; border-radius: 10px; background-color: #005B50">
+            <label for="txtDDate&Time" class="form-label mb-0 text-white">Date & Time</label>
+            <input type="text" class="form-control border-0" id="txtDDate&Time" style="background-color: #005B50">
+        </div>
+    </section>
+
+    <section class="d-flex">
+        <section class="row" style="margin-left: 18px; margin-top: 25px">
+            <!--forms-->
+            <section class="row mb-4">
+                <!--customer details-->
+                <div class="modal-content col-auto p-0" style="width: 357px; height: 192px">
+                    <div class="modal-header bg-primary" style="height: 36px">
+                        <h5 class="modal-title"><i>Customer Details</i></h5>
+                    </div>
+                    <div class="modal-body border border-dark">
+                        <div class="d-flex ms-3 mt-3">
+                            <div>
+                                <label for="txtDInputTelNo" class="form-label mb-0">Tel No</label>
+                                <input type="text" class="form-control" id="txtDInputTelNo" style="width: 150px; height: 30px">
+                            </div>
+                            <button type="button" class="btn btn-secondary pt-0 ms-4 mt-4 " style="width: 145px; height: 33px; border-radius: 45px; padding-bottom: 3px">Search</button>
+                        </div>
+                        <div class="d-flex ms-3 mt-2">
+                            <div>
+                                <label for="txtDCustID" class="form-label mb-0">Customer ID</label>
+                                <input type="text" class="form-control" id="txtDCustID" style="width: 150px; height: 30px">
+                            </div>
+                            <div class="ms-4">
+                                <label for="txtDInputCustName" class="form-label mb-0">Customer Name</label>
+                                <input type="text" class="form-control" id="txtDInputCustName" style="width: 150px; height: 30px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--purchase details-->
+                <div class="modal-content col p-0 ms-5">
+                    <div class="modal-header bg-primary" style="height: 36px">
+                        <h5 class="modal-title"><i>Purchase Details</i></h5>
+                    </div>
+                    <div class="d-flex modal-body border border-dark m-0">
+                        <div style="width: 440px; padding-top: 14px"> <!--Ldiv-->
+                            <div class="d-flex" style="margin-left: 20px; margin-bottom: 8px"> <!--Topdiv-->
+                                <div>
+                                    <label for="txtDInputItemCode" class="form-label mb-0">Item Code</label>
+                                    <input type="text" class="form-control" id="txtDInputItemCode" style="width: 259px; height: 30px">
+                                </div>
+                                <button type="button" class="btn btn-secondary pt-0 mt-4 " style="width: 120px; height: 33px; border-radius: 45px; padding-bottom: 3px; margin-left: 20px">Search</button>
+                            </div>
+                            <div class="d-flex justify-content-evenly"> <!--Bottomdiv-->
+                                <div>
+                                    <label for="txtDItemName" class="form-label mb-0">Item Name</label>
+                                    <input type="text" class="form-control" id="txtDItemName" style="width: 120px; height: 30px">
+                                </div>
+                                <div>
+                                    <label for="txtDPrice" class="form-label mb-0">Price</label>
+                                    <input type="text" class="form-control" id="txtDPrice" style="width: 120px; height: 30px">
+                                </div>
+                                <div>
+                                    <label for="txtDQtyOnHand" class="form-label mb-0">Qty On Hand</label>
+                                    <input type="text" class="form-control" id="txtDQtyOnHand" style="width: 120px; height: 30px">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="border-left: 2px solid black"> <!--Rdiv-->
+                            <div style="margin-left: 20px; margin-top: 14px; margin-bottom: 11px">
+                                <label for="txtDInputOrderQty" class="form-label mb-0">Order Qty</label>
+                                <input type="text" class="form-control" id="txtDInputOrderQty" style="width: 120px; height: 30px">
+                            </div>
+                            <button type="button" class="btn pt-0 mt-4 " style="width: 120px; height: 33px; border-radius: 45px; padding-bottom: 3px; margin-left: 20px; background-color: #B71540">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--table-->
+            <section class="row" style="height: 308px">
+                <table class="table table-hover table-bordered">
+                    <thead style="background-color: #FF5252">
+                    <tr>
+                        <th>Item Code</th>
+                        <th>Item Name</th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th>Total</th>
+                    </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+        <section style="margin-top: 25px; margin-right: 21px; margin-left: 43px; width: 524px"><!--purchase bill-->
+            <div style="border: 2px solid black">
+                <div class="d-flex">
+                    <h1 style="color: #1EBC61; margin-left: 45px; margin-top: 17px; margin-bottom: 18px">Total</h1>
+                    <input type="text" class="form-control" id="txtTotal" style="width: 150px; height: 30px; margin-left: 25px; margin-top: 28px">
+                </div>
+                <hr>
+                <div style="margin-top: 37px; margin-left: 67px"> <!--middle content-->
+                    <div class="d-flex" style="margin-bottom: 25px; margin-left: 27px">
+                        <label for="txtInputCash" class="form-label mb-0">Cash</label>
+                        <input type="text" class="form-control" id="txtInputCash" style="width: 150px; height: 30px; margin-left: 25px">
+                    </div>
+                    <div class="d-flex">
+                        <label for="txtInputDiscount" class="form-label mb-0">Discount</label>
+                        <input type="text" class="form-control" id="txtInputDiscount" style="width: 150px; height: 30px; margin-left: 24px">
+                    </div>
+                    <button type="button" class="btn btn-success pt-0 ms-4 mt-4 " style="width: 150px; height: 40px; border-radius: 45px; padding-bottom: 3px; margin-left: 60px!important; margin-top: 45px!important; margin-bottom: 27px">Purchase</button>
+                </div>
+                <hr>
+                <div class="d-flex">
+                    <h1 style="color: #17BBB0; margin-left: 43px; margin-bottom: 16px; margin-top: 12px">Sub Total</h1>
+                    <input type="text" class="form-control" id="txtSubTotal" style="width: 150px; height: 30px; margin-left: 25px; margin-top: 24px">
+                </div>
+                <div class="d-flex">
+                    <h1 style="color: #F75C4C; margin-left: 43px; margin-bottom: 13px">Balance</h1>
+                    <input type="text" class="form-control" id="txtBalance" style="width: 150px; height: 30px; margin-left: 52px; margin-top: 10px;">
+                </div>
+
+
+            </div>
+        </section>
+    </section>
+
+</main>
+
+<!--Customer Section-->
+<main class="container-fluid">
+    <h2 style="background-color: black;color: white;width: 225px;height: 45px;text-align: center;border-bottom-left-radius: 45px;border-bottom-right-radius: 45px;">Customer</h2>
+    <section class="d-flex" style="margin-top: 62px; margin-left: 65px">
+        <!--form-->
+        <section style="margin-right: 100px">
+            <div class="modal-content col-auto p-0" style="width: 407px">
+                <div class="modal-header bg-primary" style="height: 36px">
+                    <h5 class="modal-title text-white">Customer Registration</h5>
+                    <button class="btn btn-success pt-0" style="height: 32px; width: 75px; border-radius: 45px"><i>+New</i></button>
+                </div>
+                <div class="modal-body border border-dark">
+                    <div class="d-flex" style="margin-left: 25px; margin-top: 35px">
+                        <div style="margin-bottom: 15px">
+                            <label for="txtCInputCustomerID" class="form-label mb-0">CustomerID</label>
+                            <input type="text" class="form-control" id="txtCInputCustomerID" style="width: 200px; height: 30px; margin-right: 25px">
+                        </div>
+                        <button type="button" class="btn btn-secondary p-0" style="border-radius: 15px; color: white; width: 130px; height: 32px; margin-top: 23px">Search</button>
+                    </div>
+                    <div style="margin-left: 25px; margin-bottom: 15px">
+                        <label for="txtCCustomerName" class="form-label mb-0">Customer Name</label>
+                        <input type="text" class="form-control" id="txtCCustomerName" style="width: 356px; height: 30px">
+                    </div>
+                    <div style="margin-left: 25px; margin-bottom: 15px">
+                        <label for="txtCAddress" class="form-label mb-0">Address</label>
+                        <input type="text" class="form-control" id="txtCAddress" style="width: 356px; height: 30px">
+                    </div>
+                    <div style="margin-left: 25px; margin-bottom: 50px">
+                        <label for="txtCContactNo" class="form-label mb-0">Contact No</label>
+                        <input type="text" class="form-control" id="txtCContactNo" style="width: 356px; height: 30px">
+                    </div>
+                    <div class="d-flex justify-content-evenly" style="margin-left: 25px; margin-bottom: 55px; width: 355px">
+                        <button type="button" class="btn btn-danger pt-0 pb-1" style="border-radius: 45px; width: 100px; height: 35px">Delete</button>
+                        <button type="button" class="btn btn-warning pt-0 pb-1" style="border-radius: 45px; width: 100px; height: 35px">Update</button>
+                        <button type="button" class="btn btn-success pt-0 pb-1" style="border-radius: 45px; width: 100px; height: 35px">Save</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--table-->
+        <section style="width: 872px; height: 473px">
+            <table class="table table-hover table-bordered">
+                <thead style="background-color: #FF5252">
+                <tr>
+                    <th scope="col">Customer ID</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Contact No</th>
+                </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+</main>
+
+<!--Item Section-->
+<main class="container-fluid">
+    <h2 style="background-color: black;color: white;width: 225px;height: 45px;text-align: center;border-bottom-left-radius: 45px;border-bottom-right-radius: 45px;">Item</h2>
+    <section class="d-flex" style="margin-top: 62px; margin-left: 65px">
+        <!--form-->
+        <section style="margin-right: 100px">
+            <div class="modal-content col-auto p-0" style="width: 407px">
+                <div class="modal-header bg-primary" style="height: 36px">
+                    <h5 class="modal-title text-white">Item Registration</h5>
+                    <button class="btn btn-success pt-0" style="height: 32px; width: 75px; border-radius: 45px"><i>+New</i></button>
+                </div>
+                <div class="modal-body border border-dark">
+                    <div class="d-flex" style="margin-left: 25px; margin-top: 35px">
+                        <div style="margin-bottom: 15px">
+                            <label for="txtIInputItemCode" class="form-label mb-0">Item Code</label>
+                            <input type="text" class="form-control" id="txtIInputItemCode" style="width: 200px; height: 30px; margin-right: 25px">
+                        </div>
+                        <button type="button" class="btn btn-secondary p-0" style="border-radius: 15px; color: white; width: 130px; height: 32px; margin-top: 23px">Search</button>
+                    </div>
+                    <div style="margin-left: 25px; margin-bottom: 15px">
+                        <label for="txtIInputItemName" class="form-label mb-0">Item Name</label>
+                        <input type="text" class="form-control" id="txtIInputItemName" style="width: 356px; height: 30px">
+                    </div>
+                    <div style="margin-left: 25px; margin-bottom: 15px">
+                        <label for="txtIInputPrice" class="form-label mb-0">Price</label>
+                        <input type="text" class="form-control" id="txtIInputPrice" style="width: 356px; height: 30px">
+                    </div>
+                    <div style="margin-left: 25px; margin-bottom: 50px">
+                        <label for="txtIInputQty" class="form-label mb-0">Qty</label>
+                        <input type="text" class="form-control" id="txtIInputQty" style="width: 356px; height: 30px">
+                    </div>
+                    <div class="d-flex justify-content-evenly" style="margin-left: 25px; margin-bottom: 55px; width: 355px">
+                        <button type="button" class="btn btn-danger pt-0 pb-1" style="border-radius: 45px; width: 100px; height: 35px">Delete</button>
+                        <button type="button" class="btn btn-warning pt-0 pb-1" style="border-radius: 45px; width: 100px; height: 35px">Update</button>
+                        <button type="button" class="btn btn-success pt-0 pb-1" style="border-radius: 45px; width: 100px; height: 35px">Save</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--table-->
+        <section style="width: 872px; height: 473px">
+            <table class="table table-hover table-bordered">
+                <thead style="background-color: #FF5252">
+                <tr>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Qty</th>
+                </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+</main>
+
+<!--Order Section-->
+<main class="container-fluid" style="position:relative;">
+    <h2 style="background-color: black;color: white;width: 225px;height: 45px;text-align: center;border-bottom-left-radius: 45px;border-bottom-right-radius: 45px;">Order</h2>
+
+    <button class="btn btn-success" type="button" style="width: 120px; height: 39px; position: absolute; top: 95px; right: 81px; border-radius: 45px">Get All</button>
+
+    <section class="d-flex" style="margin-top: 62px; margin-left: 65px">
+
+        <!--form-->
+        <section style="margin-right: 100px">
+            <div class="modal-content col-auto p-0" style="width: 407px">
+                <div class="modal-header bg-primary" style="height: 36px">
+                    <h5 class="modal-title text-white">Order Details</h5>
+                    <button class="btn btn-success pt-0" style="height: 32px; width: 75px; border-radius: 45px"><i>+New</i></button>
+                </div>
+                <div class="modal-body border border-dark">
+                    <div class="d-flex" style="margin-left: 25px; margin-top: 20px">
+                        <div style="margin-bottom: 15px">
+                            <label for="txtOInputCustomerID" class="form-label mb-0">CustomerID / Name</label>
+                            <input type="text" class="form-control" id="txtOInputCustomerID" style="width: 200px; height: 30px; margin-right: 25px">
+                        </div>
+                        <button type="button" class="btn btn-secondary p-0" style="border-radius: 15px; color: white; width: 130px; height: 32px; margin-top: 23px">Search</button>
+                    </div>
+                    <hr>
+
+                    <div>
+                        <div class="d-flex justify-content-evenly">
+                            <div style="margin-bottom: 15px; margin-top: 12px">
+                                <label for="txtOOrderID" class="form-label mb-0">Order ID</label>
+                                <input type="text" class="form-control" id="txtOOrderID" style="width: 152px; height: 30px">
+                            </div>
+                            <div style="margin-bottom: 15px; margin-top: 12px">
+                                <label for="txtOOrderDate" class="form-label mb-0">Order Date</label>
+                                <input type="text" class="form-control" id="txtOOrderDate" style="width: 152px; height: 30px">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-evenly">
+                            <div style="margin-bottom: 15px; margin-top: 6px">
+                                <label for="txtOItemCOde" class="form-label mb-0">Item Code</label>
+                                <input type="text" class="form-control" id="txtOItemCOde" style="width: 152px; height: 30px">
+                            </div>
+                            <div style="margin-bottom: 15px; margin-top: 6px">
+                                <label for="txtOItemName" class="form-label mb-0">Item Name</label>
+                                <input type="text" class="form-control" id="txtOItemName" style="width: 152px; height: 30px">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-evenly">
+                            <div style="margin-bottom: 40px; margin-top: 6px">
+                                <label for="txtOPrice" class="form-label mb-0">Price</label>
+                                <input type="text" class="form-control" id="txtOPrice" style="width: 152px; height: 30px">
+                            </div>
+                            <div style="margin-bottom: 40px; margin-top: 6px">
+                                <label for="txtOQty" class="form-label mb-0">Qty</label>
+                                <input type="text" class="form-control" id="txtOQty" style="width: 152px; height: 30px">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-evenly" style="margin-left: 25px; margin-bottom: 40px; width: 355px">
+                        <button type="button" class="btn btn-danger pt-0 pb-1" style="border-radius: 45px; width: 125px; height: 35px">Delete</button>
+                        <button type="button" class="btn btn-warning pt-0 pb-1" style="border-radius: 45px; width: 125px; height: 35px">Update</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--table-->
+        <section style="width: 872px; height: 490px">
+            <table class="table table-hover table-bordered">
+                <thead style="background-color: #FF5252">
+                <tr>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Sub Total</th>
+                </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </section>
+</main>
+
 
 <script src="assets/js/bootstrap.min.js"></script>
 </body>
