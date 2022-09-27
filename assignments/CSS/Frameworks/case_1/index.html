@@ -2,88 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dynamic POS | SignUp</title>
+    <title>SELL-X POS</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body{
-            background-color: #1E1E1E;
-        }
-        h1{
-            background-color: #0C2461;
-            width: 100%;
-            text-align: center;
-            height: 68px;
-            padding: 5px;
-            position: relative;
-            top: 15px;
-            margin-bottom: 27px;
-        }
-
-        main{
-            background-color: #454545;
-            width: 395px;
-            height: 480px;
-            position: absolute;
-            left: 0; right: 0;
-            top: 0; bottom: 0;
-            margin: auto;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        main>img{
-            width: 125px;
-            height: 125px;
-            margin-top: 5px;
-        }
-        .form-control{
-            width: 250px;
-            height: 30px;
-            border-radius: 30px;
-        }
-        main>section{
-            margin-top: 20px;
-            text-align: center;
-        }
-        main>section>form>button{
-            height: 37px;
-            width: 220px;
-            background-color: #2980B9;
-            border-radius: 90px!important;
-            margin: 0 auto 0 auto;
-        }
-        .form-label{
-            margin-bottom: 0;
-        }
-        main>section>form>div:nth-child(1){
-            margin-bottom: 8px!important;
-        }main>section>form>div:nth-child(2){
-             margin-bottom: 30px!important;
-         }
-
-    </style>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
 <body>
 
-<main>
-    <h1>Sign In</h1>
-    <img src="assets/images/user.png" alt="user-img">
-    <section>
-        <form>
-            <div class="mb-3">
-                <label for="inputEmail1" class="form-label">UserName</label>
-                <input type="text" class="form-control" id="inputEmail1">
+<!--Header Content-->
+<header>
+    <nav class="navbar navbar-expand-lg" style="background-color: #30336B;height: 62px">
+        <div class="container-fluid">
+            <img src="assets/images/logo.jpg" alt="logo-img" width="30px" height="30px">
+            <h3 style="margin-bottom: 0; margin-left: 10px; color: white"><i>SELL-X</i> POS System</h3>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 256px;">
+                    <li class="nav-item" style="margin-right: 2px;">
+                        <button id="navBtnDashboard" type="button" class="btn btn-danger" style="width: 107.11px; border: 0; border-radius: 3px; padding: 3px 6px">
+                            <a class="nav-link active text-white" href="#">Dashboard</a>
+                        </button>
+                    </li>
+                    <li class="nav-item" style="margin-right: 3px;">
+                        <button id="navBtnCustomer" type="button" class="btn btn-danger" style="width: 107.11px; border: 0; border-radius: 3px; padding: 3px 6px">
+                            <a class="nav-link active text-white" href="#">Customer</a>
+                        </button>
+                    </li>
+                    <li class="nav-item" style="margin-right: 2px;">
+                        <button id="navBtnItem" type="button" class="btn btn-danger" style="width: 107.11px; border: 0; border-radius: 3px; padding: 3px 6px">
+                            <a class="nav-link active text-white" href="#">Item</a>
+                        </button>
+                    </li>
+                    <li class="nav-item" style="margin-right: 2px;">
+                        <button id="navBtnOrder" type="button" class="btn btn-danger" style="width: 107.11px; border: 0; border-radius: 3px; padding: 3px 6px">
+                            <a class="nav-link active text-white" href="#">Order</a>
+                        </button>
+                    </li>
+                </ul>
             </div>
-            <div class="mb-3">
-                <label for="inputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="inputPassword1">
-            </div>
-            <button type="button" class="btn btn-primary">Sign Up</button>
-        </form>
-    </section>
-</main>
+        </div>
+    </nav>
+</header>
+
 
 <script src="assets/js/bootstrap.min.js"></script>
 </body>

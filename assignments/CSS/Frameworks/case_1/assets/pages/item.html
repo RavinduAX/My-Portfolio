@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dynamic POS | Customer</title>
+    <title>Dynamic POS | Item</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
     <style>
         /*NavBar Start*/
         header h4 {
@@ -42,7 +42,7 @@
         main {
             background-color: #454545;
         }
-        #customerDetail{
+        #itemDetail{
             width: 287px;
             height: 319px;
             background-color: white;
@@ -51,10 +51,10 @@
             top: 35px;
             border-radius: 10px;
         }
-        #customerDetail>div:nth-child(1){
+        #itemDetail>div:nth-child(1){
             margin-top: 25px;
         }
-        #customerDetail>div:nth-child(2){
+        #itemDetail>div:nth-child(2){
             margin-top: 30px;
         }
 
@@ -91,7 +91,7 @@
             display: flex;
             height: 91.25vh;
         }
-        #customerSection{
+        #itemSection{
             width: 493px;
             height: 474px;
             background-color: #4B6584;
@@ -111,12 +111,12 @@
             margin-left: 25px;
             margin-bottom: 0.5rem!important;
         }
-        #customerSection>div:nth-child(2){
+        #itemSection>div:nth-child(2){
             position: relative;
             top: 79px;
             left: 35px;
         }
-        #customerSection>div:nth-child(2)>button{
+        #itemSection>div:nth-child(2)>button{
             width: 93px;
             height: 38px;
         }
@@ -145,7 +145,7 @@
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img alt="Logo" class="d-inline-block align-text-top" height="30" src="assets/images/logo.jpg"
+                <img alt="Logo" class="d-inline-block align-text-top" height="30" src="../images/logo.jpg"
                      width="30">
             </a>
             <h4>Dynamic POS System</h4>
@@ -175,25 +175,25 @@
 <!--Navbar End-->
 
 <main>
-    <h2>Customer</h2>
-    <section id="customerSection">
+    <h2>Item</h2>
+    <section id="itemSection">
         <div id="flexone">
-            <div id="customerDetail">
+            <div id="itemDetail">
                 <div class="mb-3">
-                    <label class="form-label" for="inputCustomerID">CustomerID</label>
-                    <input class="form-control" id="inputCustomerID" type="text">
+                    <label class="form-label" for="inputItemCode">Item Code</label>
+                    <input class="form-control" id="inputItemCode" type="text">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="inputCustomerName">Customer Name</label>
-                    <input class="form-control" id="inputCustomerName" type="text">
+                    <label class="form-label" for="inputItemName">Item Name</label>
+                    <input class="form-control" id="inputItemName" type="text">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="inputAddress">Address</label>
-                    <input class="form-control" id="inputAddress" type="text">
+                    <label class="form-label" for="inputPrice">Price</label>
+                    <input class="form-control" id="inputPrice" type="text">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="inputContactNo">Contact No</label>
-                    <input class="form-control" id="inputContactNo" type="text">
+                    <label class="form-label" for="inputQty">Qty</label>
+                    <input class="form-control" id="inputQty" type="text">
                 </div>
             </div>
             <div>
@@ -211,10 +211,10 @@
         <table class="table table-bordered table-hover">
             <thead class="text-white">
             <tr>
-                <th scope="col">Customer ID</th>
-                <th scope="col">Customer Name</th>
-                <th scope="col">Address</th>
-                <th scope="col">Contact No</th>
+                <th scope="col">Item Code</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Qty</th>
             </tr>
             </thead>
             <tbody class="table-group-divider bg-light">
@@ -236,6 +236,6 @@
     </section>
 </main>
 
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 </body>
 </html>
