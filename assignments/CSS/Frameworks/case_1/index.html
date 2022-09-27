@@ -46,7 +46,7 @@
 </header>
 
 <!--Dashboard Section-->
-<main class="container-fluid">
+<main id="secDash" class="container-fluid">
     <section class="row" style="margin: 16px 20px">
         <div class="col" style="width: 207px; height: 70px; border: 1px solid black; border-radius: 10px">
             <label for="txtDOrderID" class="form-label mb-0">Order ID</label>
@@ -205,7 +205,7 @@
 </main>
 
 <!--Customer Section-->
-<main class="container-fluid">
+<main id="secCust" class="container-fluid">
     <h2 style="background-color: black;color: white;width: 225px;height: 45px;text-align: center;border-bottom-left-radius: 45px;border-bottom-right-radius: 45px;">Customer</h2>
     <section class="d-flex" style="margin-top: 62px; margin-left: 65px">
         <!--form-->
@@ -278,7 +278,7 @@
 </main>
 
 <!--Item Section-->
-<main class="container-fluid">
+<main id="secItem" class="container-fluid">
     <h2 style="background-color: black;color: white;width: 225px;height: 45px;text-align: center;border-bottom-left-radius: 45px;border-bottom-right-radius: 45px;">Item</h2>
     <section class="d-flex" style="margin-top: 62px; margin-left: 65px">
         <!--form-->
@@ -351,10 +351,10 @@
 </main>
 
 <!--Order Section-->
-<main class="container-fluid" style="position:relative;">
+<main id="secOrder" class="container-fluid" style="position:relative;">
     <h2 style="background-color: black;color: white;width: 225px;height: 45px;text-align: center;border-bottom-left-radius: 45px;border-bottom-right-radius: 45px;">Order</h2>
 
-    <button class="btn btn-success" type="button" style="width: 120px; height: 39px; position: absolute; top: 95px; right: 81px; border-radius: 45px">Get All</button>
+    <button class="btn btn-success" type="button" style="width: 120px; height: 39px; position: absolute; top: 40px; right: 81px; border-radius: 45px">Get All</button>
 
     <section class="d-flex" style="margin-top: 62px; margin-left: 65px">
 
@@ -452,7 +452,39 @@
     </section>
 </main>
 
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+<script>
 
-<script src="assets/js/bootstrap.min.js"></script>
+    $('#secDash').css('display','block');
+    $('#secCust').css('display','none');
+    $('#secItem').css('display','none');
+    $('#secOrder').css('display','none');
+
+    $('#navBtnDashboard').click(function (){
+        $('#secDash').css('display','block');
+        $('#secCust').css('display','none');
+        $('#secItem').css('display','none');
+        $('#secOrder').css('display','none');
+    });
+    $('#navBtnCustomer').click(function (){
+        $('#secDash').css('display','none');
+        $('#secCust').css('display','block');
+        $('#secItem').css('display','none');
+        $('#secOrder').css('display','none');
+    });
+    $('#navBtnItem').click(function (){
+        $('#secDash').css('display','none');
+        $('#secCust').css('display','none');
+        $('#secItem').css('display','block');
+        $('#secOrder').css('display','none');
+    });
+    $('#navBtnOrder').click(function (){
+        $('#secDash').css('display','none');
+        $('#secCust').css('display','none');
+        $('#secItem').css('display','none');
+        $('#secOrder').css('display','block');
+    });
+
+</script>
 </body>
 </html>
