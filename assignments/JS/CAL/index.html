@@ -12,8 +12,33 @@
             background-position: center;
             width: 100vw;
             height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-
+        body>section:first-child>section{
+            width: 415px;
+            height: 555px;
+            border-radius: 20px;
+            background-color: white;
+        }
+        #btnArea{
+            display: grid;
+            grid-template-rows: repeat(5,1fr);
+            grid-template-columns: repeat(4,1fr);
+        }
+        #btnAdd{
+            grid-row: 2/4;
+            grid-column: 4/5;
+        }
+        #btnEqual{
+            grid-row: 4/6;
+            grid-column: 4/5;
+        }
+        #btn0{
+            grid-row: 5/6;
+            grid-column: 1/3;
+        }
 
     </style>
 </head>
@@ -21,7 +46,31 @@
 
 <section>
     <section>
+        <!--txtArea-->
+        <div id="txtArea">
 
+        </div>
+        <hr>
+        <!--btnArea-->
+        <div id="btnArea">
+            <button id="btnC" type="button" class="btn btn-secondary text-white">C</button>
+            <button id="btnDiv" type="button" class="btn btn-secondary text-white">/</button>
+            <button id="btnMul" type="button" class="btn btn-secondary text-white">*</button>
+            <button id="btnSub" type="button" class="btn btn-secondary text-white">-</button>
+            <button id="btn7" type="button" class="btn btn-secondary text-white">7</button>
+            <button id="btn8" type="button" class="btn btn-secondary text-white">8</button>
+            <button id="btn9" type="button" class="btn btn-secondary text-white">9</button>
+            <button id="btnAdd" type="button" class="btn btn-secondary text-white">+</button>
+            <button id="btn4" type="button" class="btn btn-secondary text-white">4</button>
+            <button id="btn5" type="button" class="btn btn-secondary text-white">5</button>
+            <button id="btn6" type="button" class="btn btn-secondary text-white">6</button>
+            <button id="btn1" type="button" class="btn btn-secondary text-white">1</button>
+            <button id="btn2" type="button" class="btn btn-secondary text-white">2</button>
+            <button id="btn3" type="button" class="btn btn-secondary text-white">3</button>
+            <button id="btnEqual" type="button" class="btn btn-secondary text-white">=</button>
+            <button id="btn0" type="button" class="btn btn-secondary text-white">0</button>
+            <button id="btnDecimal" type="button" class="btn btn-secondary text-white">.</button>
+        </div>
     </section>
 </section>
 
