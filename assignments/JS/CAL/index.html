@@ -99,6 +99,7 @@
 <script>
     var num1="";
     var num2="";
+    var mSymbol="";
 
     $('#btn0').click(function (){
         $('#txtMain').val($('#txtMain').val()+0);
@@ -137,23 +138,28 @@
         $('#txtMain').val('');
         $('#txtSecondary').val('');
     });
+    //Math operation
     $('#btnAdd').click(function () {
         num1 = $('#txtMain').val()+'+';
+        mSymbol='+';
         $('#txtMain').val('');
         $('#txtSecondary').val(num1);
     });
     $('#btnSub').click(function () {
         num1 = $('#txtMain').val()+'-';
+        mSymbol='-';
         $('#txtMain').val('');
         $('#txtSecondary').val(num1);
     });
     $('#btnMul').click(function () {
         num1 = $('#txtMain').val()+'*';
+        mSymbol='*';
         $('#txtMain').val('');
         $('#txtSecondary').val(num1);
     });
     $('#btnDiv').click(function () {
         num1 = $('#txtMain').val()+'/';
+        mSymbol='/';
         $('#txtMain').val('');
         $('#txtSecondary').val(num1);
     });
@@ -161,7 +167,16 @@
         num2 = $('#txtMain').val();
         $('#txtSecondary').val(num1+num2);
 
-        $('#txtMain').val(parseInt(num1)+parseInt(num2));
+        if(mSymbol == '+'){
+            $('#txtMain').val(parseInt(num1)+parseInt(num2));
+        }else if (mSymbol == '-'){
+            $('#txtMain').val(parseInt(num1)-parseInt(num2));
+        }else if (mSymbol == '*'){
+            $('#txtMain').val(parseInt(num1)*parseInt(num2));
+        }else if (mSymbol == '/'){
+            $('#txtMain').val(parseInt(num1)/parseInt(num2));
+        }
+
 
     });
 
