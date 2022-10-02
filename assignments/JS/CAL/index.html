@@ -97,6 +97,8 @@
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script>
+    var num1="";
+    var num2="";
 
     $('#btn0').click(function (){
         $('#txtMain').val($('#txtMain').val()+0);
@@ -128,6 +130,40 @@
     $('#btn9').click(function (){
         $('#txtMain').val($('#txtMain').val()+9);
     });
+    $('#btnDecimal').click(function (){
+        $('#txtMain').val($('#txtMain').val()+'.');
+    });
+    $('#btnC').click(function (){
+        $('#txtMain').val('');
+        $('#txtSecondary').val('');
+    });
+    $('#btnAdd').click(function () {
+        num1 = $('#txtMain').val()+'+';
+        $('#txtMain').val('');
+        $('#txtSecondary').val(num1);
+    });
+    $('#btnSub').click(function () {
+        num1 = $('#txtMain').val()+'-';
+        $('#txtMain').val('');
+        $('#txtSecondary').val(num1);
+    });
+    $('#btnMul').click(function () {
+        num1 = $('#txtMain').val()+'*';
+        $('#txtMain').val('');
+        $('#txtSecondary').val(num1);
+    });
+    $('#btnDiv').click(function () {
+        num1 = $('#txtMain').val()+'/';
+        $('#txtMain').val('');
+        $('#txtSecondary').val(num1);
+    });
+    $('#btnEqual').click(function () {
+        num2 = $('#txtMain').val();
+        $('#txtMain').val(num1+num2);
+        $('#txtSecondary').val(num1+num2);
+
+    });
+
 
 </script>
 </body>
