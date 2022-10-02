@@ -159,8 +159,9 @@
     });
     $('#btnEqual').click(function () {
         num2 = $('#txtMain').val();
-        $('#txtMain').val(num1+num2);
         $('#txtSecondary').val(num1+num2);
+
+        $('#txtMain').val(parseInt(num1)+parseInt(num2));
 
     });
 
