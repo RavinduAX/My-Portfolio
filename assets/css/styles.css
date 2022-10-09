@@ -256,13 +256,30 @@ main > section:nth-child(4) div {
     display: flex;
     justify-content: space-evenly;
     margin-top: 10px;
-    margin-bottom: 60px;
+    margin-bottom: 37px;
 }
 
 main > section:nth-child(4) a {
     text-decoration: none;
     color: white;
     font-size: large;
+}
+
+#workSecA{
+    position: relative;
+    left: 675px;
+}
+
+#btnWorkSecSeeMore{
+    color: #020C1B;
+    border: 4px solid #2ee0a7;
+    background-color: #2ee0a7;
+    border-radius: 7.5px;
+    font-size: large;
+    padding: 8px;
+    width: 133px;
+    height: 47px;
+    margin-bottom: 44px;
 }
 
 main > section:nth-child(5) { /*------------------------------------Assignment Section*/
