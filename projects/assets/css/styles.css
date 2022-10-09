@@ -1,0 +1,47 @@
+*{
+    font-family: Ubuntu;
+}
+h2{
+    color: ghostwhite;
+    background-color: #020C1B;
+    border: 2px solid ghostwhite;
+    font-weight: 500;
+    margin: 20px 0 15px 0;
+    border-radius: 180px;
+    width: 465px;
+    font-size: 30px;
+    padding: 4px;
+    text-align: center;
+}
+div:nth-child(1){
+    background-color: #1DC789;
+    border: 15px solid #020C1B;
+    border-right: 0;
+    border-left: 0;
+    text-align: center;
+}
+div:nth-child(1)>h1{
+    color: #020C1B;
+    position: relative;
+    font-size: 47px;
+    margin: 8px 0;
+    font-weight: bold;
+}
+section:nth-child(2){
+    background-color: #020C1B;
+}
+img, a{
+    width: 345px;
+    height: 225px;
+    border-radius: 15px;
+    justify-content: center;
+}
+section:nth-child(2)>section:nth-child(1){
+    margin-bottom: 20px;
+}
+section:nth-child(2)>section:nth-child(1),section:nth-child(2)>section:nth-child(2){
+    justify-content: space-around;
+}
+section:nth-child(2) div{
+    text-align: center;
+}
