@@ -15,7 +15,7 @@ div:nth-child(1)>h1{
     margin: 8px 0;
     font-weight: bold;
 }
-section:nth-child(2)>h1{
+section:nth-child(2)>h1, section:nth-child(3)>h1{
     margin: 0;
     color: ghostwhite;
     background-color: black;
@@ -26,11 +26,11 @@ section:nth-child(2)>h1{
     padding: 10px 0;
     font-size: 34px;
 }
-section:nth-child(2)>section{
+section:nth-child(2)>section, section:nth-child(3)>section{
      background-color: #020C1B;
      color: #1DC789;
  }
-section:nth-child(2)>section h2{
+section:nth-child(2)>section h2,section:nth-child(3)>section h2{
     color: #1DC789;
     margin: 0;
     background-color: ghostwhite;
@@ -42,19 +42,19 @@ section:nth-child(2)>section h2{
     padding: 4px;
     padding-left: 15px;
 }
-section:nth-child(2)>section div{
+section:nth-child(2)>section div, section:nth-child(3)>section div{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: nowrap;
     padding: 10px 0 50px 0;
 }
-section:nth-child(2)>section div a{
+section:nth-child(2)>section div a, section:nth-child(3)>section div a{
     text-decoration: none;
     color: ghostwhite;
     text-align: center;
     font-size: large;
 }
-section:nth-child(2)>section div a figure{
+section:nth-child(2)>section div a figure, section:nth-child(3)>section div a figure{
     border: 3px solid #2ee0a7;
     border-radius: 15px;
     height: 215px;
@@ -64,12 +64,12 @@ section:nth-child(2)>section div a figure{
     justify-content: center;
     align-items: center;
 }
-section:nth-child(2)>section div a figure img{
+section:nth-child(2)>section div a figure img, section:nth-child(3)>section div a figure img{
     width: 165px;
     height: 85px;
 }
 
-section:nth-child(2)>section div a figure figcaption{
+section:nth-child(2)>section div a figure figcaption, section:nth-child(3)>section div a figure figcaption{
     margin-top: 40px;
 }
 
