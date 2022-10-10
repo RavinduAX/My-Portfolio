@@ -73,6 +73,11 @@ section:nth-child(2)>section div a figure figcaption, section:nth-child(3)>secti
     margin-top: 40px;
 }
 
+figure:hover{
+    transform: scale(1.3);
+    transition-duration: 2s;
+}
+
 
 
 
