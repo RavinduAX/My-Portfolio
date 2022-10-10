@@ -89,7 +89,7 @@ main > section:nth-child(1) > div > h3 > span {
     color: #64FFDA;
 }
 
-main > section:nth-child(1) > button {
+main > section:nth-child(1) > a > button {
     color: #64FFDA;
     background-color: #020C1B;
     border: 3px solid #64FFDA;
@@ -99,6 +99,11 @@ main > section:nth-child(1) > button {
     position: relative;
     left: 100px;
     top: 115px;
+}
+main > section:nth-child(1) > a > button:hover{
+    background-color: #2ee0a7;
+    color: #020C1B;
+    font-weight: bold;
 }
 
 main > section:nth-child(1) > nav {
@@ -585,7 +590,7 @@ body {
         font-size: 22px;
     }
 
-    main > section:nth-child(1) > button {
+    main > section:nth-child(1) > a > button {
         left: 90px;
         top: 152px;
     }
@@ -913,7 +918,7 @@ body {
     main > section:nth-child(1) > div > h3 {
         font-size: 24px;
     }
-    main > section:nth-child(1) > button {
+    main > section:nth-child(1) > a > button {
         left: 115px;
         top: 139px;
     }
@@ -1241,7 +1246,7 @@ body {
     main > section:nth-child(1) > div > h3 {
         font-size: 26px;
     }
-    main > section:nth-child(1) > button {
+    main > section:nth-child(1) > a > button {
         left: 139px;
         top: 139px;
     }
@@ -1542,7 +1547,7 @@ body {
         top: 261px;
         right: 8px;
     }
-    main > section:nth-child(1) > button{
+    main > section:nth-child(1) > a >button{
         padding: 10px 10px;
         left: 75px;
     }
