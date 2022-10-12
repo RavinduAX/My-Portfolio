@@ -140,7 +140,7 @@
                 </div>
             </section>
             <!--table-->
-            <section class="row" style="height: 308px">
+            <section class="row" style="height: 308px; overflow-y: scroll">
                 <table class="table table-hover table-bordered">
                     <thead style="background-color: #FF5252">
                     <tr>
@@ -151,21 +151,8 @@
                         <th>Total</th>
                     </tr>
                     </thead>
-                    <tbody class="table-group-divider">
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    <tbody class="table-group-divider" id="tblPurchaseOrder">
+
                     </tbody>
                 </table>
             </section>
@@ -241,13 +228,14 @@
                         <button type="button" class="btn btn-danger pt-0 pb-1" style="border-radius: 45px; width: 100px; height: 35px">Delete</button>
                         <button type="button" class="btn btn-warning pt-0 pb-1" style="border-radius: 45px; width: 100px; height: 35px">Update</button>
                         <button type="button" class="btn btn-success pt-0 pb-1" style="border-radius: 45px; width: 100px; height: 35px">Save</button>
+                        <button type="button" class="btn btn-dark pt-0 pb-1" style="border-radius: 45px; width: 100px; height: 35px">Get All</button>
                     </div>
 
                 </div>
             </div>
         </section>
         <!--table-->
-        <section style="width: 872px; height: 473px">
+        <section style="width: 872px; height: 473px; overflow-y: scroll">
             <table class="table table-hover table-bordered">
                 <thead style="background-color: #FF5252">
                 <tr>
@@ -257,22 +245,8 @@
                     <th scope="col">Contact No</th>
                 </tr>
                 </thead>
-                <tbody class="table-group-divider">
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+                <tbody class="table-group-divider" id="tblCustomer">
+
                 </tbody>
             </table>
         </section>
@@ -314,14 +288,15 @@
                         <button type="button" class="btn btn-danger pt-0 pb-1" style="border-radius: 45px; width: 100px; height: 35px">Delete</button>
                         <button type="button" class="btn btn-warning pt-0 pb-1" style="border-radius: 45px; width: 100px; height: 35px">Update</button>
                         <button type="button" class="btn btn-success pt-0 pb-1" style="border-radius: 45px; width: 100px; height: 35px">Save</button>
+                        <button type="button" class="btn btn-dark pt-0 pb-1" style="border-radius: 45px; width: 100px; height: 35px">Get All</button>
                     </div>
 
                 </div>
             </div>
         </section>
         <!--table-->
-        <section style="width: 872px; height: 473px">
-            <table class="table table-hover table-bordered">
+        <section style="width: 872px; height: 473px; overflow-y: scroll">
+            <table class="table table-hover table-bordered" id="tblItem">
                 <thead style="background-color: #FF5252">
                 <tr>
                     <th scope="col">Item Code</th>
@@ -331,21 +306,7 @@
                 </tr>
                 </thead>
                 <tbody class="table-group-divider">
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
                 </tbody>
             </table>
         </section>
@@ -353,10 +314,8 @@
 </main>
 
 <!--Order Section-->
-<main id="secOrder" class="container-fluid" style="position:relative;">
+<main id="secOrder" class="container-fluid" style="position:relative">
     <h2 style="background-color: black;color: white;width: 225px;height: 45px;text-align: center;border-bottom-left-radius: 45px;border-bottom-right-radius: 45px;">Order</h2>
-
-    <button class="btn btn-success" type="button" style="width: 120px; height: 39px; position: absolute; top: 40px; right: 81px; border-radius: 45px">Get All</button>
 
     <section class="d-flex" style="margin-top: 62px; margin-left: 65px">
 
@@ -413,18 +372,21 @@
                     <div class="d-flex justify-content-evenly" style="margin-left: 25px; margin-bottom: 40px; width: 355px">
                         <button type="button" class="btn btn-danger pt-0 pb-1" style="border-radius: 45px; width: 125px; height: 35px">Delete</button>
                         <button type="button" class="btn btn-warning pt-0 pb-1" style="border-radius: 45px; width: 125px; height: 35px">Update</button>
+                        <button type="button" class="btn btn-dark pt-0 pb-1" style="border-radius: 45px; width: 100px; height: 35px">Get All</button>
+
                     </div>
 
                 </div>
             </div>
         </section>
         <!--table-->
-        <section style="width: 872px; height: 490px">
-            <table class="table table-hover table-bordered">
+        <section style="width: 872px; height: 490px; overflow-y: scroll">
+            <table class="table table-hover table-bordered" id="tblOrder">
                 <thead style="background-color: #FF5252">
                 <tr>
+                    <th scope="col">Order ID</th>
+                    <th scope="col">Customer ID</th>
                     <th scope="col">Item Code</th>
-                    <th scope="col">Item Name</th>
                     <th scope="col">Price</th>
                     <th scope="col">Qty</th>
                     <th scope="col">Total</th>
@@ -432,21 +394,7 @@
                 </tr>
                 </thead>
                 <tbody class="table-group-divider">
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
                 </tbody>
             </table>
         </section>
