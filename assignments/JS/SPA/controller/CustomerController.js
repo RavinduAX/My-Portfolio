@@ -20,7 +20,7 @@ $('#btnCSave').click(function () {
 
     loadAllCustomers();
 
-
+    bindRowClickEvents();
 });
 
 $('#btnCGetAll').click(function () {
@@ -35,4 +35,18 @@ function loadAllCustomers(){
         $('#tblCustomer').append(row);
     }
 
+}
+
+function bindRowClickEvents() {
+    $('#tblCustomer>tr').click(function () {
+        let id = $(this).children(':eq(0)').text();
+        let name = $(this).children(':eq(1)').text();
+        let address = $(this).children(':eq(2)').text();
+        let contact = $(this).children(':eq(3)').text();
+
+        $('#txtCInputCustomerID').text(id);
+        $('#txtCCustomerName').text(name);
+        $('#txtCAddress').text(address);
+        $('#txtCContactNo').text(contact);
+    });
 }
