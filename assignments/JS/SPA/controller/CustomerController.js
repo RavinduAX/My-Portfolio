@@ -1,5 +1,6 @@
 $('#btnCNew').click(function () {
-    clearFields();
+    clearCFields();
+    bindCRowClickEvents();
 });
 
 $('#btnCSave').click(function () {
@@ -7,11 +8,12 @@ $('#btnCSave').click(function () {
 
     loadAllCustomers();
 
-    bindRowClickEvents();
+    bindCRowClickEvents();
 });
 
 $('#btnCGetAll').click(function () {
     loadAllCustomers();
+    bindCRowClickEvents();
 });
 
 $('#btnCDelete').click(function () {
@@ -32,14 +34,14 @@ $('#btnCDelete').click(function () {
                     'Your file has been deleted.',
                     'success'
                 )
-                clearFields();
+                clearCFields();
             }else{
                 Swal.fire(
                     'Error',
                     'NO customer to delete, Re-Check customer ID',
                     'error'
                 )
-                clearFields();
+                clearCFields();
             }
         }
     })
@@ -49,14 +51,14 @@ $('#btnCSearch').click(function () {
     let typedID = $('#txtCInputCustomerID').val();
     let customer = searchCustomer(typedID);
     if(customer != null){
-        setTextFieldValues(customer.name, customer.address, customer.contact);
+        setCTextFieldValues(customer.name, customer.address, customer.contact);
     }else{
         Swal.fire(
             'Error',
             'There is no customer available for ' + typedID,
             'error'
         )
-        setTextFieldValues("", "", "", "");
+        setCTextFieldValues("", "", "", "");
     }
 });
 
@@ -76,14 +78,14 @@ $('#btnCUpdate').click(function () {
                     'Customer updated successfully.',
                     'success'
                 )
-                clearFields();
+                clearCFields();
             }else{
                 Swal.fire(
                     'Error',
                     'NO customer to update, Re-Check customer ID',
                     'error'
                 )
-                clearFields();
+                clearCFields();
             }
         }
     })
@@ -109,7 +111,7 @@ function saveCustomer(id, name, address, contact){
         timer: 1800
     })
 
-    clearFields();
+    clearCFields();
 }
 
 function deleteCustomer(id){
@@ -118,6 +120,7 @@ function deleteCustomer(id){
         let indexNo = customerArr.indexOf(customer);
         customerArr.splice(indexNo,1);
         loadAllCustomers();
+        bindCRowClickEvents();
         return true;
     }else{
         return false;
@@ -127,6 +130,7 @@ function deleteCustomer(id){
 function searchCustomer(id){
     for (let customer of customerArr) {
         if(customer.id == id){
+            bindCRowClickEvents();
             return customer;
         }
     }
@@ -140,6 +144,7 @@ function updateCustomer(id){
         customer.address = $('#txtCAddress').val();
         customer.contact = $('#txtCContactNo').val();
         loadAllCustomers();
+        bindCRowClickEvents();
         return true;
     }else {
         return false;
@@ -156,7 +161,7 @@ function loadAllCustomers(){
 
 }
 
-function bindRowClickEvents() {
+function bindCRowClickEvents() {
     $('#tblCustomer>tr').click(function () {
         let id = $(this).children(':eq(0)').text();
         let name = $(this).children(':eq(1)').text();
@@ -170,13 +175,13 @@ function bindRowClickEvents() {
     });
 }
 
-function setTextFieldValues(name, address, contact){
+function setCTextFieldValues(name, address, contact){
     $('#txtCCustomerName').val(name);
     $('#txtCAddress').val(address);
     $('#txtCContactNo').val(contact);
 }
 
-function clearFields(){
+function clearCFields(){
     $('#txtCInputCustomerID').val("");
     $('#txtCCustomerName').val("");
     $('#txtCAddress').val("");
