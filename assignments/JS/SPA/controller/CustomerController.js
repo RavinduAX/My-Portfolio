@@ -1,22 +1,9 @@
 $('#btnCNew').click(function () {
-    $('#txtCInputCustomerID').val("");
-    $('#txtCCustomerName').val("");
-    $('#txtCAddress').val("");
-    $('#txtCContactNo').val("");
+    clearFields();
 });
 
 $('#btnCSave').click(function () {
-    let customerId = $('#txtCInputCustomerID').val();
-    let customerName = $('#txtCCustomerName').val();
-    let customerAddress = $('#txtCAddress').val();
-    let customerContact = $('#txtCContactNo').val();
-
-    customerObj.id = customerId;
-    customerObj.name = customerName;
-    customerObj.address = customerAddress;
-    customerObj.contact = customerContact;
-
-    customerArr.push(customerObj);
+    saveCustomer($('#txtCInputCustomerID').val(), $('#txtCCustomerName').val(), $('#txtCAddress').val(), $('#txtCContactNo').val());
 
     loadAllCustomers();
 
@@ -26,6 +13,28 @@ $('#btnCSave').click(function () {
 $('#btnCGetAll').click(function () {
     loadAllCustomers();
 });
+
+function saveCustomer(id, name, address, contact){
+
+    customerObj = new Object({
+        id : id,
+        name : name,
+        address : address,
+        contact : contact
+    });
+
+    customerArr.push(customerObj);
+
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Customer Saved Successfully',
+        showConfirmButton: false,
+        timer: 1800
+    })
+
+    clearFields();
+}
 
 function loadAllCustomers(){
     $('#tblCustomer').empty();
@@ -44,9 +53,16 @@ function bindRowClickEvents() {
         let address = $(this).children(':eq(2)').text();
         let contact = $(this).children(':eq(3)').text();
 
-        $('#txtCInputCustomerID').text(id);
-        $('#txtCCustomerName').text(name);
-        $('#txtCAddress').text(address);
-        $('#txtCContactNo').text(contact);
+        $('#txtCInputCustomerID').val(id);
+        $('#txtCCustomerName').val(name);
+        $('#txtCAddress').val(address);
+        $('#txtCContactNo').val(contact);
     });
+}
+
+function clearFields(){
+    $('#txtCInputCustomerID').val("");
+    $('#txtCCustomerName').val("");
+    $('#txtCAddress').val("");
+    $('#txtCContactNo').val("");
 }
