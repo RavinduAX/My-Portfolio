@@ -29,9 +29,9 @@ $('#navBtnOrder').click(function (){
     $('#secOrder').css('display','block');
 });
 
-//----------customer details
-// search_customer
-$('#btnDSearch').click(function () {
+/*----------customer details*/
+// search-customer
+$('#btnDCSearch').click(function () {
     let typedN = $('#txtDInputTelNo').val();
     let customer = searchCustomer(typedN)
     if(customer != null){
@@ -45,7 +45,7 @@ $('#btnDSearch').click(function () {
         )
     }
 });
-// clear_fields
+// clear-fields
 $('#btnDCNew').click(function () {
     $('#txtDInputTelNo').val("");
     $('#txtDCustID').val("");
@@ -59,3 +59,23 @@ function searchCustomer(contact){
     }
     return null;
 }
+
+/*----------purchase details*/
+//search-item
+$('#btnDISearch').click(function () {
+    let typedCode = $('#txtDInputItemCode').val();
+    let item = searchItem(typedCode);
+    if(item != null){
+        $('#txtDItemName').val(item.name);
+        $('#txtDPrice').val(item.price);
+        $('#txtDQtyOnHand').val(item.qty);
+    }
+});
+//clear-fields
+$('#btnDINew').click(function () {
+    $('#txtDInputItemCode').val("");
+    $('#txtDItemName').val("");
+    $('#txtDPrice').val("");
+    $('#txtDQtyOnHand').val("");
+    $('#txtDInputOrderQty').val("");
+});
