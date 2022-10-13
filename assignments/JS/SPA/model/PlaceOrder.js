@@ -1,8 +1,11 @@
 var placeOrderObj = {
     oId:"",
-    date:"",
-    cusId:"",
+    cId:"",
     iCode:"",
+    price:"",
     qty:"",
-    total:""
+    total:"",
+    subTotal:"",
+    oDate:"",
+    iName:""
 }

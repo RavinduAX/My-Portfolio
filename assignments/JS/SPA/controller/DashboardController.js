@@ -69,6 +69,12 @@ $('#btnDISearch').click(function () {
         $('#txtDItemName').val(item.name);
         $('#txtDPrice').val(item.price);
         $('#txtDQtyOnHand').val(item.qty);
+    }else{
+        Swal.fire(
+            'Error',
+            'There is no Item available for ' + typedCode,
+            'error'
+        )
     }
 });
 //clear-fields
@@ -78,4 +84,8 @@ $('#btnDINew').click(function () {
     $('#txtDPrice').val("");
     $('#txtDQtyOnHand').val("");
     $('#txtDInputOrderQty').val("");
+});
+//add-items
+$('#btnDIAddItem').click(function () {
+
 });
