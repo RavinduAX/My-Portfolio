@@ -32,14 +32,14 @@ $('#btnCDelete').click(function () {
                     'Your file has been deleted.',
                     'success'
                 )
-                setTextFieldValues("", "", "", "");
+                clearFields();
             }else{
                 Swal.fire(
                     'Error',
                     'NO customer to delete, Re-Check customer ID',
                     'error'
                 )
-                setTextFieldValues("", "", "", "");
+                clearFields();
             }
         }
     })
@@ -58,6 +58,36 @@ $('#btnCSearch').click(function () {
         )
         setTextFieldValues("", "", "", "");
     }
+});
+
+$('#btnCUpdate').click(function () {
+    let updatedID = $('#txtCInputCustomerID').val();
+    Swal.fire({
+        title: 'Do you want to save the changes?',
+        showDenyButton: true,
+        // showCancelButton: true,
+        confirmButtonText: 'Save',
+        denyButtonText: `Don't save`,
+    }).then((result) => {
+        if (result.isConfirmed) {
+            if(updateCustomer(updatedID)){
+                Swal.fire(
+                    'Updated!',
+                    'Customer updated successfully.',
+                    'success'
+                )
+                clearFields();
+            }else{
+                Swal.fire(
+                    'Error',
+                    'NO customer to update, Re-Check customer ID',
+                    'error'
+                )
+                clearFields();
+            }
+        }
+    })
+
 });
 
 function saveCustomer(id, name, address, contact){
@@ -101,6 +131,19 @@ function searchCustomer(id){
         }
     }
     return null;
+}
+
+function updateCustomer(id){
+    let customer = searchCustomer(id);
+    if(customer != null){
+        customer.name = $('#txtCCustomerName').val();
+        customer.address = $('#txtCAddress').val();
+        customer.contact = $('#txtCContactNo').val();
+        loadAllCustomers();
+        return true;
+    }else {
+        return false;
+    }
 }
 
 function loadAllCustomers(){
