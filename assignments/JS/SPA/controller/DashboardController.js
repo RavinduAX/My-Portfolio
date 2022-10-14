@@ -106,6 +106,18 @@ $('#btnDIAddItem').click(function () {
     loadToTable();
 });
 
+$('#btnPurchase').click(function () {
+    let total = $('#txtTotal').val();
+    let cash = $('#txtInputCash').val();
+    let discount = $('#txtInputDiscount').val();
+
+    let subTotal = calculateSubTotal(total,discount);
+    $('#txtSubTotal').val(subTotal);
+
+    let balance = calculateBalance(cash, subTotal);
+    $('#txtBalance').val(balance);
+});
+
 function addToCart(orderId,customerId,itemCode,price,qty,total,subTotal,orderDate,itemName){
     placeOrderObj = new Object({
         oId : orderId,
@@ -131,3 +143,12 @@ function loadToTable(){
     }
 }
 
+function calculateSubTotal(total,discount){
+    let tempDis = total * (discount/100);
+    let subTotal = total-tempDis;
+    return subTotal;
+}
+function calculateBalance(cash, subTotal){
+    let balance = cash - subTotal;
+    return balance;
+}
