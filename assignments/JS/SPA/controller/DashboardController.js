@@ -105,19 +105,6 @@ $('#btnDIAddItem').click(function () {
 
     loadToTable();
 });
-
-$('#btnPurchase').click(function () {
-    let total = $('#txtTotal').val();
-    let cash = $('#txtInputCash').val();
-    let discount = $('#txtInputDiscount').val();
-
-    let subTotal = calculateSubTotal(total,discount);
-    $('#txtSubTotal').val(subTotal);
-
-    let balance = calculateBalance(cash, subTotal);
-    $('#txtBalance').val(balance);
-});
-
 function addToCart(orderId,customerId,itemCode,price,qty,total,subTotal,orderDate,itemName){
     placeOrderObj = new Object({
         oId : orderId,
@@ -142,7 +129,27 @@ function loadToTable(){
         $('#tblPurchaseOrder').append(row);
     }
 }
+//make bill calculations
+$('#btnPurchase').click(function () {
+    let total = $('#txtTotal').val();
+    let cash = $('#txtInputCash').val();
+    let discount = $('#txtInputDiscount').val();
 
+    let subTotal = calculateSubTotal(total,discount);
+    $('#txtSubTotal').val(subTotal);
+
+    let balance = calculateBalance(cash, subTotal);
+    $('#txtBalance').val(balance);
+
+    //send full order data to orderArray
+    let tempArr = [];
+    tempArr = placeOrderArr.slice();
+    orderObj = new Object({
+        po : tempArr
+    });
+    orderArr.push(orderObj);
+    console.log(orderArr);
+});
 function calculateSubTotal(total,discount){
     let tempDis = total * (discount/100);
     let subTotal = total-tempDis;
@@ -152,3 +159,35 @@ function calculateBalance(cash, subTotal){
     let balance = cash - subTotal;
     return balance;
 }
+
+$('#btnDone').click(function () {
+    $('#txtDInputTelNo').val("");
+    $('#txtDCustID').val("");
+    $('#txtDInputCustName').val("");
+
+    $('#txtDInputItemCode').val("");
+    $('#txtDItemName').val("");
+    $('#txtDPrice').val("");
+    $('#txtDQtyOnHand').val("");
+    $('#txtDInputOrderQty').val("");
+
+    $('#txtTotal').val("");
+    $('#txtInputCash').val("");
+    $('#txtInputDiscount').val("");
+    $('#txtSubTotal').val("");
+    $('#txtBalance').val("");
+
+    //reset array after one purchase
+    while(placeOrderArr.length > 0) {
+        placeOrderArr.pop();
+    }
+
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Purchase Placed Successfully !',
+        showConfirmButton: false,
+        timer: 1800
+    })
+
+});
