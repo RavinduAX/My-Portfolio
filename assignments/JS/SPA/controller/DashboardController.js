@@ -33,7 +33,7 @@ $('#navBtnOrder').click(function (){
 // search-customer
 $('#btnDCSearch').click(function () {
     let typedN = $('#txtDInputTelNo').val();
-    let customer = searchCustomer(typedN)
+    let customer = searchDCustomer(typedN);
     if(customer != null){
         $('#txtDCustID').val(customer.id);
         $('#txtDInputCustName').val(customer.name);
@@ -51,7 +51,8 @@ $('#btnDCNew').click(function () {
     $('#txtDCustID').val("");
     $('#txtDInputCustName').val("");
 });
-function searchCustomer(contact){
+
+function searchDCustomer(contact){
     for (let customer of customerArr) {
         if(customer.contact === contact){
             return customer;

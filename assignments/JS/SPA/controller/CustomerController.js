@@ -187,3 +187,121 @@ function clearCFields(){
     $('#txtCAddress').val("");
     $('#txtCContactNo').val("");
 }
+
+//RegEx
+$('#txtCInputCustomerID').focus();
+
+const cusIDRegEx = /^(C)[0-9]{1,3}$/;
+const cusNameRegEx = /^[A-z ]{5,20}$/;
+const cusAddressRegEx = /^[0-9/A-z. ,]{7,}$/;
+const cusContactRegEx = /^[0-9]{10}$/;
+
+let customerValidations = [];
+customerValidations.push({reg: cusIDRegEx, field: $('#txtCInputCustomerID'),error:'Customer ID Pattern is Wrong : C001'});
+customerValidations.push({reg: cusNameRegEx, field: $('#txtCCustomerName'),error:'Customer Name Pattern is Wrong : A-z 5-20'});
+customerValidations.push({reg: cusAddressRegEx, field: $('#txtCAddress'),error:'Customer Address Pattern is Wrong : A-z 0-9 ,/'});
+customerValidations.push({reg: cusContactRegEx, field: $('#txtCContactNo'),error:'Customer Contact Pattern is Wrong : [0-9] 10 Numbers'});
+
+//disable tab key of all four text fields using grouping selector in CSS
+$("#txtCInputCustomerID,#txtCCustomerName,#txtCAddress,#txtCContactNo").on('keydown', function (event) {
+    if (event.key == "Tab") {
+        event.preventDefault();
+    }
+});
+
+$("#txtCInputCustomerID,#txtCCustomerName,#txtCAddress,#txtCContactNo").on('keyup', function (event) {
+    checkValidity();
+});
+$("#txtCInputCustomerID,#txtCCustomerName,#txtCAddress,#txtCContactNo").on('blur', function (event) {
+    checkValidity();
+});
+
+$("#txtCInputCustomerID").on('keydown', function (event) {
+    if (event.key == "Enter" && check(cusIDRegEx, $("#txtCInputCustomerID"))) {
+        $("#txtCCustomerName").focus();
+    } else {
+        focusText($("#txtCInputCustomerID"));
+    }
+});
+
+$("#txtCCustomerName").on('keydown', function (event) {
+    if (event.key == "Enter" && check(cusNameRegEx, $("#txtCCustomerName"))) {
+        focusText($("#txtCAddress"));
+    }
+});
+
+$("#txtCAddress").on('keydown', function (event) {
+    if (event.key == "Enter" && check(cusAddressRegEx, $("#txtCAddress"))) {
+        focusText($("#txtCContactNo"));
+    }
+});
+
+$("#txtCContactNo").on('keydown', function (event) {
+    if (event.key == "Enter" && check(cusContactRegEx, $("#txtCContactNo"))) {
+        let res = confirm("Do you want to add this customer.?");
+        if (res) {
+            clearAllTexts();
+        }
+    }
+});
+
+function checkValidity() {
+    let errorCount=0;
+    for (let validation of customerValidations) {
+        if (check(validation.reg,validation.field)) {
+            textSuccess(validation.field,"");
+        } else {
+            errorCount=errorCount+1;
+            setTextError(validation.field,validation.error);
+        }
+    }
+    setButtonState(errorCount);
+}
+
+function check(regex, txtField) {
+    let inputValue = txtField.val();
+    return regex.test(inputValue) ? true : false;
+}
+
+function setTextError(txtField,error) {
+    if (txtField.val().length <= 0) {
+        defaultText(txtField,"");
+    } else {
+        txtField.css('border', '2px solid red');
+        txtField.parent().children('span').text(error);
+        txtField.parent().children('span').css('font-size','12px');
+        txtField.parent().children('span').css('color','red');
+    }
+}
+
+function textSuccess(txtField,error) {
+    if (txtField.val().length <= 0) {
+        defaultText(txtField,"");
+    } else {
+        txtField.css('border', '2px solid green');
+        txtField.parent().children('span').text(error);
+    }
+}
+
+function defaultText(txtField,error) {
+    txtField.css("border", "1px solid #ced4da");
+    txtField.parent().children('span').text(error);
+}
+
+function focusText(txtField) {
+    txtField.focus();
+}
+
+function setButtonState(value){
+    if (value>0){
+        $("#btnCSave").attr('disabled',true);
+    }else{
+        $("#btnCSave").attr('disabled',false);
+    }
+}
+
+function clearAllTexts() {
+    $("#txtCInputCustomerID").focus();
+    $("#txtCInputCustomerID,#txtCCustomerName,#txtCAddress,#txtCContactNo").val("");
+    checkValidity();
+}
