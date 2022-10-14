@@ -325,7 +325,7 @@
             <div class="modal-content col-auto p-0" style="width: 407px">
                 <div class="modal-header bg-primary" style="height: 36px">
                     <h5 class="modal-title text-white">Order Details</h5>
-                    <button class="btn btn-success pt-0" style="height: 32px; width: 75px; border-radius: 45px"><i>+New</i></button>
+                    <button id="btnONew" type="button" class="btn btn-success pt-0" style="height: 32px; width: 75px; border-radius: 45px"><i>+New</i></button>
                 </div>
                 <div class="modal-body border border-dark">
                     <div class="d-flex" style="margin-left: 25px; margin-top: 20px">
@@ -333,7 +333,7 @@
                             <label for="txtOInputCustomerID" class="form-label mb-0">CustomerID / Name</label>
                             <input type="text" class="form-control" id="txtOInputCustomerID" style="width: 200px; height: 30px; margin-right: 25px">
                         </div>
-                        <button type="button" class="btn btn-secondary p-0" style="border-radius: 15px; color: white; width: 130px; height: 32px; margin-top: 23px">Search</button>
+                        <button id="btnOSearch" type="button" class="btn btn-secondary p-0" style="border-radius: 15px; color: white; width: 130px; height: 32px; margin-top: 23px">Search</button>
                     </div>
                     <hr>
 
@@ -371,9 +371,9 @@
                     </div>
 
                     <div class="d-flex justify-content-evenly" style="margin-left: 25px; margin-bottom: 40px; width: 355px">
-                        <button type="button" class="btn btn-dark pt-0 pb-1" style="border-radius: 45px; width: 100px; height: 35px">Get All</button>
-                        <button type="button" class="btn btn-danger pt-0 pb-1" style="border-radius: 45px; width: 125px; height: 35px">Delete</button>
-                        <button type="button" class="btn btn-warning pt-0 pb-1" style="border-radius: 45px; width: 125px; height: 35px">Update</button>
+                        <button id="btnOGetAll" type="button" class="btn btn-dark pt-0 pb-1" style="border-radius: 45px; width: 100px; height: 35px">Get All</button>
+                        <button id="btnODelete" type="button" class="btn btn-danger pt-0 pb-1" style="border-radius: 45px; width: 125px; height: 35px">Delete</button>
+                        <button id="btnOUpdate" type="button" class="btn btn-warning pt-0 pb-1" style="border-radius: 45px; width: 125px; height: 35px">Update</button>
 
                     </div>
 
@@ -382,7 +382,7 @@
         </section>
         <!--table-->
         <section style="width: 872px; height: 490px; overflow-y: scroll">
-            <table class="table table-hover table-bordered" id="tblOrder">
+            <table class="table table-hover table-bordered">
                 <thead style="background-color: #FF5252">
                 <tr>
                     <th scope="col">Order ID</th>
@@ -394,7 +394,7 @@
                     <th scope="col">Sub Total</th>
                 </tr>
                 </thead>
-                <tbody class="table-group-divider">
+                <tbody class="table-group-divider" id="tblOrder">
 
                 </tbody>
             </table>
