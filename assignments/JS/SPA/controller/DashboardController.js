@@ -29,6 +29,11 @@ $('#navBtnOrder').click(function (){
     $('#secOrder').css('display','block');
 });
 
+// set Date
+const d = new Date();
+let date = d.toLocaleString();
+$('#txtDDateTime').val(date);
+
 /*----------customer details*/
 // search-customer
 $('#btnDCSearch').click(function () {
