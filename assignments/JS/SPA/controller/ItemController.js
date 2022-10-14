@@ -186,3 +186,121 @@ function clearIFields(){
     $('#txtIInputPrice').val("");
     $('#txtIInputQty').val("");
 }
+
+//RegEx
+$('#txtIInputItemCode').focus();
+
+const itemCodeRegEx = /^(I)[0-9]{1,3}$/;
+const itemNameRegEx = /^[A-z ]{1,20}$/;
+const itemPriceRegEx = /^[0-9]{1,6}$/;
+const itemQtyRegEx = /^[0-9]{1,4}$/;
+
+let itemValidations = [];
+itemValidations.push({reg: itemCodeRegEx, field: $('#txtIInputItemCode'),error:'Item Code Pattern is Wrong : I001'});
+itemValidations.push({reg: itemNameRegEx, field: $('#txtIInputItemName'),error:'Item Name Pattern is Wrong : A-z 5-20'});
+itemValidations.push({reg: itemPriceRegEx, field: $('#txtIInputPrice'),error:'Item Price Pattern is Wrong : 0-9'});
+itemValidations.push({reg: itemQtyRegEx, field: $('#txtIInputQty'),error:'Item Qty Pattern is Wrong : [0-9]  max : 4 Numbers'});
+
+//disable tab key of all four text fields using grouping selector in CSS
+$("#txtIInputItemCode,#txtIInputItemName,#txtIInputPrice,#txtIInputQty").on('keydown', function (event) {
+    if (event.key == "Tab") {
+        event.preventDefault();
+    }
+});
+
+$("#txtIInputItemCode,#txtIInputItemName,#txtIInputPrice,#txtIInputQty").on('keyup', function (event) {
+    checkValidity();
+});
+$("#txtIInputItemCode,#txtIInputItemName,#txtIInputPrice,#txtIInputQty").on('blur', function (event) {
+    checkValidity();
+});
+
+$("#txtIInputItemCode").on('keydown', function (event) {
+    if (event.key == "Enter" && check(itemCodeRegEx, $("#txtIInputItemCode"))) {
+        $("#txtIInputItemName").focus();
+    } else {
+        focusText($("#txtIInputItemCode"));
+    }
+});
+
+$("#txtIInputItemName").on('keydown', function (event) {
+    if (event.key == "Enter" && check(itemNameRegEx, $("#txtIInputItemName"))) {
+        focusText($("#txtIInputPrice"));
+    }
+});
+
+$("#txtIInputPrice").on('keydown', function (event) {
+    if (event.key == "Enter" && check(itemPriceRegEx, $("#txtIInputPrice"))) {
+        focusText($("#txtIInputQty"));
+    }
+});
+
+$("#txtIInputQty").on('keydown', function (event) {
+    if (event.key == "Enter" && check(itemQtyRegEx, $("#txtIInputQty"))) {
+        let res = confirm("Do you want to add this Item.?");
+        if (res) {
+            clearAllTexts();
+        }
+    }
+});
+
+function checkValidity() {
+    let errorCount=0;
+    for (let validation of itemValidations) {
+        if (check(validation.reg,validation.field)) {
+            textSuccess(validation.field,"");
+        } else {
+            errorCount=errorCount+1;
+            setTextError(validation.field,validation.error);
+        }
+    }
+    setButtonState(errorCount);
+}
+
+function check(regex, txtField) {
+    let inputValue = txtField.val();
+    return regex.test(inputValue) ? true : false;
+}
+
+function setTextError(txtField,error) {
+    if (txtField.val().length <= 0) {
+        defaultText(txtField,"");
+    } else {
+        txtField.css('border', '2px solid red');
+        txtField.parent().children('span').text(error);
+        txtField.parent().children('span').css('font-size','12px');
+        txtField.parent().children('span').css('color','red');
+    }
+}
+
+function textSuccess(txtField,error) {
+    if (txtField.val().length <= 0) {
+        defaultText(txtField,"");
+    } else {
+        txtField.css('border', '2px solid green');
+        txtField.parent().children('span').text(error);
+    }
+}
+
+function defaultText(txtField,error) {
+    txtField.css("border", "1px solid #ced4da");
+    txtField.parent().children('span').text(error);
+}
+
+function focusText(txtField) {
+    txtField.focus();
+}
+
+function setButtonState(value){
+    if (value>0){
+        $("#btnISave").attr('disabled',true);
+    }else{
+        $("#btnISave").attr('disabled',false);
+    }
+}
+
+function clearAllTexts() {
+    $("#txtIInputItemCode").focus();
+    $("#txtIInputItemCode,#txtIInputItemName,#txtIInputPrice,#txtIInputQty").val("");
+    checkValidity();
+}
