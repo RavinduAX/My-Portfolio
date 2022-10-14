@@ -102,15 +102,17 @@ $('#btnDIAddItem').click(function () {
     loadToTable();
 });
 function addToCart(orderId,customerId,itemCode,price,qty,total,subTotal,orderDate,itemName){
-    placeOrderObj.oId = orderId;
-    placeOrderObj.cId = customerId;
-    placeOrderObj.iCode = itemCode;
-    placeOrderObj.price = price;
-    placeOrderObj.qty = qty;
-    placeOrderObj.total = total;
-    placeOrderObj.subTotal = subTotal;
-    placeOrderObj.oDate = orderDate;
-    placeOrderObj.iName = itemName;
+    placeOrderObj = new Object({
+        oId : orderId,
+        cId : customerId,
+        iCode : itemCode,
+        price : price,
+        qty : qty,
+        total : total,
+        subTotal : subTotal,
+        oDate : orderDate,
+        iName : itemName
+    });
 
     placeOrderArr.push(placeOrderObj);
 
