@@ -23,6 +23,9 @@
 
 <body>
 
+<div id="loader">
+</div>
+
 <header>
     <div><img alt="" src="assets/images/Logo.png"></div> <!--profile logo-->
     <nav>
@@ -242,5 +245,13 @@
 
 </footer>
 
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+<script>
+    $(window).on('load',function () {
+        console.log('Window on load');
+
+        $('#loader').fadeOut(1000);
+    });
+</script>
 </body>
 </html>
