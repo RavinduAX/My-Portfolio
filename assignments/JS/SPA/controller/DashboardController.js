@@ -86,6 +86,7 @@ $('#btnDINew').click(function () {
     $('#txtDInputOrderQty').val("");
 });
 //add-items
+let dTotal = 0;
 $('#btnDIAddItem').click(function () {
     let orderId = $('#txtDOrderID').val();
     let customerId = $('#txtDCustID').val();
@@ -97,10 +98,14 @@ $('#btnDIAddItem').click(function () {
     let orderDate = $('#txtDDateTime').val();
     let itemName = $('#txtDItemName').val();
 
+    dTotal = dTotal + total;
+    $('#txtTotal').val(dTotal);
+
     addToCart(orderId,customerId,itemCode,price,qty,total,subTotal,orderDate,itemName);
 
     loadToTable();
 });
+
 function addToCart(orderId,customerId,itemCode,price,qty,total,subTotal,orderDate,itemName){
     placeOrderObj = new Object({
         oId : orderId,
@@ -117,7 +122,6 @@ function addToCart(orderId,customerId,itemCode,price,qty,total,subTotal,orderDat
     placeOrderArr.push(placeOrderObj);
 
 }
-
 function loadToTable(){
     $('#tblPurchaseOrder').empty();
 
@@ -126,3 +130,4 @@ function loadToTable(){
         $('#tblPurchaseOrder').append(row);
     }
 }
+
