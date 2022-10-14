@@ -99,9 +99,7 @@ $('#btnDIAddItem').click(function () {
 
     addToCart(orderId,customerId,itemCode,price,qty,total,subTotal,orderDate,itemName);
 
-
-
-    // loadToTable();
+    loadToTable();
 });
 function addToCart(orderId,customerId,itemCode,price,qty,total,subTotal,orderDate,itemName){
     placeOrderObj.oId = orderId;
@@ -117,10 +115,12 @@ function addToCart(orderId,customerId,itemCode,price,qty,total,subTotal,orderDat
     placeOrderArr.push(placeOrderObj);
 
 }
+
 function loadToTable(){
-    // $('#tblPurchaseOrder').empty();
-    //
-    // for (let pOrder of placeOrderArr) {
-    //
-    // }
+    $('#tblPurchaseOrder').empty();
+
+    for (let pOrder of placeOrderArr) {
+        let row = `<tr><td>${pOrder.iCode}</td><td>${pOrder.iName}</td><td>${pOrder.price}</td><td>${pOrder.qty}</td><td>${pOrder.total}</td></tr>`;
+        $('#tblPurchaseOrder').append(row);
+    }
 }
