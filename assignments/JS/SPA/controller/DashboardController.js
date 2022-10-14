@@ -120,6 +120,12 @@ function addToCart(orderId,customerId,itemCode,price,qty,total,subTotal,orderDat
 
     placeOrderArr.push(placeOrderObj);
 
+    $('#txtDInputItemCode').val("");
+    $('#txtDItemName').val("");
+    $('#txtDPrice').val("");
+    $('#txtDQtyOnHand').val("");
+    $('#txtDInputOrderQty').val("");
+
 }
 function loadToTable(){
     $('#tblPurchaseOrder').empty();
@@ -181,6 +187,8 @@ $('#btnDone').click(function () {
     while(placeOrderArr.length > 0) {
         placeOrderArr.pop();
     }
+    dTotal=0;
+    $('#tblPurchaseOrder').empty();
 
     Swal.fire({
         position: 'center',
