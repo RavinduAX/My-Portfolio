@@ -78,7 +78,52 @@
 
 <script src="assets/jquery-3.6.1.min.js"></script>
 <script>
+    var knightRider = {
+        count: 0,
+        tempArr: [],
+        forwardClr: ['white', 'white', 'white', 'white', 'white', 'white', '#F4C2C2', '#FF6961', '#FF5C5C', '#FF1C00', '#FF0800', '#FF0000'],
+        backwardClr: ['white', 'white', 'white', 'white', 'white', 'white', '#FF0000', '#FF0800', '#FF1C00', '#FF5C5C', '#FF6961', '#F4C2C2'],
 
+        animateLeft: function () {
+            var lastColor = this.tempArr.pop();
+            this.tempArr.unshift(lastColor);
+        },
+        animateRight: function () {
+            var firstColor = this.tempArr.shift();
+            this.tempArr.push(firstColor);
+        },
+        animate: function () {
+            this.count++;
+            if (this.count <= this.forwardClr.length) {
+                this.tempArr = this.forwardClr;
+                this.animateLeft();
+            } else {
+                if (this.count >= this.forwardClr.length * 2) {
+                    this.count = 0;
+                }
+                this.tempArr = this.backwardClr;
+                this.animateRight();
+            }
+        }
+    }
+
+    createDivs();
+    function createDivs() {
+        $('#container').empty();
+        for (let i = 0; i < (knightRider.tempArr.length) / 2; i++) {
+            $('#container').append(`<div style="background-color: ${knightRider.tempArr[i]}"></div>`);
+        }
+        knightRider.animate();
+    }
+
+    var timer;
+
+    $('#btnStart').click(function () {
+        timer = setInterval(createDivs, 90);
+    });
+    $('#btnEnd').click(function () {
+        clearInterval(timer);
+    });
 </script>
 </body>
 </html>
