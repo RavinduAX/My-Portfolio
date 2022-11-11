@@ -82,7 +82,28 @@
 
 <script src="assets/jquery-3.6.1.min.js"></script>
 <script>
+    var colors = ['red', 'green', 'blue', 'yellow', 'pink', 'purple'];
+    var timer;
 
+    setColor();
+    function setColor() {
+        $('#container').empty();
+        for (let i = 0; i < colors.length; i++) {
+            $('#container').append(`<div style="background:${colors[i]}"</div>`);
+        }
+        nextColor();
+    }
+    function nextColor() {
+        var lastColor = colors.pop();
+        colors.unshift(lastColor);
+    }
+
+    $('#btnStart').click(function () {
+        timer = setInterval(setColor, 750);
+    });
+    $('#btnEnd').click(function () {
+        clearInterval(timer);
+    });
 </script>
 </body>
 </html>
