@@ -5,7 +5,64 @@
     <title>KnightRider</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <style>
+        h2 {
+            color: red;
+            text-align: center;
+        }
 
+        body {
+            background-color: black;
+            font-style: ubuntu;
+        }
+
+        #container{
+            width: max-content;
+            height: max-content;
+            position: absolute;
+            top: 0; bottom: 0;
+            left: 0; right: 0;
+            margin: auto;
+            border-top: 3px solid white;
+            border-bottom: 3px solid white;
+            display: flex;
+        }
+        #container>div{
+            background-color: white;
+            border-radius: 15px;
+            width: 100px;
+            height: 45px;
+            margin: 15px;
+        }
+        #btnDiv{
+            width: max-content;
+            height: max-content;
+            position: absolute;
+            left: 0; right: 0;
+            margin: auto;
+            bottom: 175px;
+        }
+        button {
+            width: 125px;
+            height: 50px;
+            color: white;
+            border-radius: 15px;
+            font-weight: 600;
+        }
+
+        #btnStart {
+            border: 5px solid forestgreen;
+            color: forestgreen;
+            font-size: medium;
+            background-color: black;
+            margin-right: 40px;
+        }
+
+        #btnEnd {
+            border: 5px solid red;
+            color: red;
+            font-size: medium;
+            background-color: black;
+        }
     </style>
 </head>
 <body>
