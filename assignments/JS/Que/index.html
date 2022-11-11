@@ -5,7 +5,69 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Que</title>
     <style>
+        body {
+            background-color: black;
+        }
 
+        div {
+            width: 100px;
+            height: 50px;
+            border-radius: 15px;
+            margin-right: 5px;
+        }
+
+        #container {
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            display: flex;
+            width: max-content;
+            height: max-content;
+        }
+
+        button {
+            width: 100px;
+            height: 50px;
+            color: white;
+            border-radius: 15px;
+            font-weight: 600;
+        }
+
+        #btnStart {
+            border: 5px solid forestgreen;
+            color: forestgreen;
+            font-size: medium;
+            background-color: black;
+            margin-right: 40px;
+        }
+
+        #btnEnd {
+            border: 5px solid red;
+            color: red;
+            font-size: medium;
+            background-color: black;
+        }
+
+        #container>div:first-child {
+            position: relative;
+            bottom: 55px;
+        }
+
+        #container>div:last-child {
+            position: relative;
+            top: 55px;
+        }
+        #btnSection{
+            width: max-content;
+            height: max-content;
+            position: absolute;
+            left: 0; right: 0;
+            margin: auto;
+            bottom: 175px;
+        }
     </style>
 </head>
 <body>
