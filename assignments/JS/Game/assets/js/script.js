@@ -73,7 +73,6 @@ function moveZombies(zombie) {
     zombie.css('left', zomLeft - 10);
 }
 
-
 $(window).click(function (event) {
     //shoot zombies
     if (event.target.className === 'zombie') {
@@ -104,8 +103,10 @@ function checkGameStatus(){
     }
 }
 
+//clear intervals
 function clearTimers(){
     clearInterval(zombieTimer1);
     clearInterval(zombieTimer2);
     clearInterval(zombieTimer3);
 }
+
