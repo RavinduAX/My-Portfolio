@@ -62,3 +62,10 @@ function moveZombies(zombie) {
     zombie.css('left', zomLeft - 10);
 }
 
+$(window).click(function (event) {
+    //shoot zombies
+    if(event.target.className === 'zombie'){
+        let zomId = $("#" + event.target.id); // identify targeted zombie by id
+        zomId.css("display", "none");
+    }
+});
