@@ -21,7 +21,7 @@ $(window).mousemove(function (event) {
 
 $("#btnStart").click(function () {
     console.log("Started");
-    generateZombies();
+    setInterval(generateZombies, 1000);
 });
 
 //generate zombies
@@ -33,4 +33,13 @@ function generateZombies() {
     let randomNo = Math.floor(Math.random() * 2) + 1; //generate random number
     zombie.attr("src", "assets/images/gif/zomR" + randomNo + ".gif"); //set gifs
     $("#areaL1").append(zombie); //add element to body
+
+    setInterval(()=>{
+        moveZombies(zombie);
+    },100);
+}
+//move zombie
+function moveZombies(zombie){
+    let zomLeft = parseInt(zombie.css('left'));
+    zombie.css('left', zomLeft - 10);
 }
