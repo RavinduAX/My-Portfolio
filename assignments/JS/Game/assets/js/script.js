@@ -5,7 +5,7 @@ const bullets = $('#bullets');
 var idNo = 1;
 var zombieTimer = 0
 var scoreCount = 0;
-var bulletCount = 20;
+var bulletCount = 21;
 
 // move gun & crosshair with mousemove
 $(window).mousemove(function (event) {
@@ -37,10 +37,10 @@ $("#btnStart").click(function () {
         let random = (Math.floor(Math.random() * 5) + 1) * 1000;
         if (tempRandom != random) {
             randomTimer = random;
-            console.log("random - "+randomTimer);
-        }else if (tempRandom == random){
+            console.log("random - " + randomTimer);
+        } else if (tempRandom == random) {
             generateTimer = random;
-            console.log("generate - "+generateTimer);
+            console.log("generate - " + generateTimer);
         }
         tempRandom = random;
 
@@ -72,14 +72,16 @@ function moveZombies(zombie) {
 
 $(window).click(function (event) {
     //shoot zombies
-    if(event.target.className === 'zombie'){
+    if (event.target.className === 'zombie') {
         let zomId = $("#" + event.target.id); // identify targeted zombie by id
         zomId.css("display", "none");
 
         scoreCount++;   //count score
-        score.text('0'+scoreCount); //display score
+        score.text('0' + scoreCount); //display score
 
-        bulletCount--;  //count bullets
-        bullets.text(bulletCount);    //display bullets
     }
+
+    bulletCount--;  //count bullets
+    bullets.text(bulletCount);    //display bullets
+
 });
