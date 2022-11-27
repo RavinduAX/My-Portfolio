@@ -3,7 +3,7 @@ const gun = $("#gun");
 var idNo = 1;
 var zombieTimer = 0
 
-//move gun & crosshair with mousemove
+// move gun & crosshair with mousemove
 $(window).mousemove(function (event) {
     let yAxis = event.pageY;
     let xAxis = event.pageX;
@@ -20,6 +20,7 @@ $(window).mousemove(function (event) {
     }
 });
 
+//start game
 var tempRandom = 0;
 $("#btnStart").click(function () {
     console.log('Clicked');
@@ -60,3 +61,4 @@ function moveZombies(zombie) {
     let zomLeft = parseInt(zombie.css('left'));
     zombie.css('left', zomLeft - 10);
 }
+
