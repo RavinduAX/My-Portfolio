@@ -1,7 +1,9 @@
 const crosshair = $("#crosshair");
 const gun = $("#gun");
+const score = $('#score');
 var idNo = 1;
 var zombieTimer = 0
+var scoreCount = 0;
 
 // move gun & crosshair with mousemove
 $(window).mousemove(function (event) {
@@ -24,6 +26,7 @@ $(window).mousemove(function (event) {
 var tempRandom = 0;
 $("#btnStart").click(function () {
     console.log('Clicked');
+    score.text('00');   //to confirm the program start
     let randomTimer = 1000;
     let generateTimer = 2750;
     zombieTimer = setInterval(() => {
@@ -62,10 +65,13 @@ function moveZombies(zombie) {
     zombie.css('left', zomLeft - 10);
 }
 
+
 $(window).click(function (event) {
     //shoot zombies
     if(event.target.className === 'zombie'){
         let zomId = $("#" + event.target.id); // identify targeted zombie by id
         zomId.css("display", "none");
+        scoreCount++;   //count score
+        score.text('0'+scoreCount); //display score
     }
 });
