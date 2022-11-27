@@ -1,6 +1,7 @@
 const crosshair = $("#crosshair");
 const gun = $("#gun");
 var idNo = 1;
+var zombieTimer = 0
 
 //move gun & crosshair with mousemove
 $(window).mousemove(function (event) {
@@ -19,9 +20,24 @@ $(window).mousemove(function (event) {
     }
 });
 
+var tempRandom = 0;
 $("#btnStart").click(function () {
-    console.log("Started");
-    setInterval(generateZombies, 1000);
+    console.log('Clicked');
+    let randomTimer = 1000;
+    let generateTimer = 2750;
+    zombieTimer = setInterval(() => {
+        let random = (Math.floor(Math.random() * 5) + 1) * 1000;
+        if (tempRandom != random) {
+            randomTimer = random;
+            console.log("random - "+randomTimer);
+        }else if (tempRandom == random){
+            generateTimer = random;
+            console.log("generate - "+generateTimer);
+        }
+        tempRandom = random;
+
+        setTimeout(generateZombies, randomTimer);
+    }, generateTimer);
 });
 
 //generate zombies
@@ -34,12 +50,13 @@ function generateZombies() {
     zombie.attr("src", "assets/images/gif/zomR" + randomNo + ".gif"); //set gifs
     $("#areaL1").append(zombie); //add element to body
 
-    setInterval(()=>{
+    setInterval(() => {
         moveZombies(zombie);
-    },100);
+    }, 100);
 }
+
 //move zombie
-function moveZombies(zombie){
+function moveZombies(zombie) {
     let zomLeft = parseInt(zombie.css('left'));
     zombie.css('left', zomLeft - 10);
 }
