@@ -3,7 +3,11 @@ const gun = $("#gun");
 const score = $('#score');
 const bullets = $('#bullets');
 var idNo = 1;
-var zombieTimer = 0
+
+var zombieTimer1 = 0
+var zombieTimer2 = 0
+var zombieTimer3 = 0
+
 var scoreCount = 0;
 var bulletCount = 21;
 
@@ -33,7 +37,7 @@ $("#btnStart").click(function () {
     let randomTimer = 1000;
     let generateTimer = 2750;
 
-    zombieTimer = setInterval(() => {
+    zombieTimer1 = setInterval(() => {
         let random = (Math.floor(Math.random() * 5) + 1) * 1000;
         if (tempRandom != random) {
             randomTimer = random;
@@ -44,7 +48,7 @@ $("#btnStart").click(function () {
         }
         tempRandom = random;
 
-        setTimeout(generateZombies, randomTimer);
+        zombieTimer2 = setTimeout(generateZombies, randomTimer);
     }, generateTimer);
 });
 
@@ -58,7 +62,7 @@ function generateZombies() {
     zombie.attr("src", "assets/images/gif/zomR" + randomNo + ".gif"); //set gifs
     $("#areaL1").append(zombie); //add element to body
 
-    setInterval(() => {
+    zombieTimer3 = setInterval(() => {
         moveZombies(zombie);
     }, 100);
 }
@@ -78,10 +82,30 @@ $(window).click(function (event) {
 
         scoreCount++;   //count score
         score.text('0' + scoreCount); //display score
-
     }
 
     bulletCount--;  //count bullets
     bullets.text(bulletCount);    //display bullets
 
+    checkGameStatus();
+
 });
+//check win or lose
+function checkGameStatus(){
+    //check lose by bullet count
+    if(bulletCount === 0 && scoreCount !== 15){
+        clearTimers();
+        alert('GAME OVER ---> YOU LOSE');
+    }
+    //check win by score
+    if(scoreCount === 15 && bulletCount >= 0){
+        clearTimers();
+        alert('GAME OVER ---> YOU WIN');
+    }
+}
+
+function clearTimers(){
+    clearInterval(zombieTimer1);
+    clearInterval(zombieTimer2);
+    clearInterval(zombieTimer3);
+}
