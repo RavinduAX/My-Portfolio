@@ -118,4 +118,5 @@ function clearTimers(){
 $('#btnStartGame').click(function () {
     $('#containerMenu').css('display','none');
     $('#containerL1').css('display','block');
+
 });
