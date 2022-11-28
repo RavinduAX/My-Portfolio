@@ -33,28 +33,28 @@ $(window).mousemove(function (event) {
 });
 
 //start game
-var tempRandom = 0;
-$("#btnStart").click(function () {
-    console.log('Clicked');
-    score.text('00');   //to confirm the program start
-    bullets.text(bulletCount);  //display bullet count on start
-    let randomTimer = 1000;
-    let generateTimer = 2750;
-
-    zombieTimer1 = setInterval(() => {
-        let random = (Math.floor(Math.random() * 5) + 1) * 1000;
-        if (tempRandom != random) {
-            randomTimer = random;
-            console.log("random - " + randomTimer);
-        } else if (tempRandom == random) {
-            generateTimer = random;
-            console.log("generate - " + generateTimer);
-        }
-        tempRandom = random;
-
-        zombieTimer2 = setTimeout(generateZombies, randomTimer);
-    }, generateTimer);
-});
+// var tempRandom = 0;
+// $("#btnStart").click(function () {
+//     console.log('Clicked');
+//     score.text('00');   //to confirm the program start
+//     bullets.text(bulletCount);  //display bullet count on start
+//     let randomTimer = 1000;
+//     let generateTimer = 2750;
+//
+//     zombieTimer1 = setInterval(() => {
+//         let random = (Math.floor(Math.random() * 5) + 1) * 1000;
+//         if (tempRandom != random) {
+//             randomTimer = random;
+//             console.log("random - " + randomTimer);
+//         } else if (tempRandom == random) {
+//             generateTimer = random;
+//             console.log("generate - " + generateTimer);
+//         }
+//         tempRandom = random;
+//
+//         zombieTimer2 = setTimeout(generateZombies, randomTimer);
+//     }, generateTimer);
+// });
 
 //generate zombies
 function generateZombies() {
@@ -118,5 +118,29 @@ function clearTimers(){
 $('#btnStartGame').click(function () {
     $('#containerMenu').css('display','none');
     $('#containerL1').css('display','block');
-
+    startGame();
 });
+
+//start game
+var tempRandom = 0;
+function startGame(){
+    console.log('Clicked');
+    score.text('00');   //to confirm the program start
+    bullets.text(bulletCount);  //display bullet count on start
+    let randomTimer = 1000;
+    let generateTimer = 2750;
+
+    zombieTimer1 = setInterval(() => {
+        let random = (Math.floor(Math.random() * 5) + 1) * 1000;
+        if (tempRandom != random) {
+            randomTimer = random;
+            console.log("random - " + randomTimer);
+        } else if (tempRandom == random) {
+            generateTimer = random;
+            console.log("generate - " + generateTimer);
+        }
+        tempRandom = random;
+
+        zombieTimer2 = setTimeout(generateZombies, randomTimer);
+    }, generateTimer);
+}
