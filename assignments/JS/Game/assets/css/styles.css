@@ -171,9 +171,12 @@
 #mainPoster button{
     width: 310px;
     height: 105px;
-    background-color: red;
+    background-color: green;
     font-size: 60px;
     border-radius: 45px;
     position: relative;
     left: 204px;
+}
+#mainPoster button:hover{
+    background-color: red;
 }

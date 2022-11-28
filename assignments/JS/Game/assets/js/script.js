@@ -1,3 +1,7 @@
+$('#containerMenu').css('display','block');
+$('#containerL1').css('display','none');
+
+//=====LEVEL 1===========================
 const crosshair = $("#crosshair");
 const gun = $("#gun");
 const score = $('#score');
@@ -110,3 +114,8 @@ function clearTimers(){
     clearInterval(zombieTimer3);
 }
 
+//=====Main Page======================
+$('#btnStartGame').click(function () {
+    $('#containerMenu').css('display','none');
+    $('#containerL1').css('display','block');
+});
