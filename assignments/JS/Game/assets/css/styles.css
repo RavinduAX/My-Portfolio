@@ -1,3 +1,4 @@
+
 * {
     overflow: hidden;
     font-family: "Ubuntu", sans-serif;
@@ -148,4 +149,31 @@
     margin: auto;
     border: 0;
     border-radius: 45px;
+}
+
+#mainPoster{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../images/img/menu.jpg");
+}
+#mainPoster h1, #mainPoster button{
+    font-family: 'Rubik Marker Hatch', cursive;
+    color: white;
+}
+#mainPoster > div{
+    position: absolute;
+    top: 160px;
+    left: 130px;
+}
+#mainPoster h1{
+    font-size: 85px;
+}
+#mainPoster button{
+    width: 310px;
+    height: 105px;
+    background-color: red;
+    font-size: 60px;
+    border-radius: 45px;
+    position: relative;
+    left: 204px;
 }
