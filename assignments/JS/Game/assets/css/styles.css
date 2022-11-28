@@ -20,6 +20,11 @@
     position: relative;
     top: 20px;
 }
+#areaL1 > h1{
+    color: red;
+    position: relative;
+    left: 40%;
+}
 #outpost {
     width: 280px;
     height: 305px;
