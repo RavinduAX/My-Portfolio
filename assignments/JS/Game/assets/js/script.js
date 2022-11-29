@@ -23,11 +23,11 @@ $(window).mousemove(function (event) {
     if (yAxis > 36 && yAxis < 514) {
         crosshair.css("top", yAxis);
     }
-    if (xAxis > 230) {
+    if (xAxis > 30) {
         crosshair.css("left", xAxis);
     }
 
-    if (1250 > xAxis && xAxis > 232) {
+    if (1250 > xAxis && xAxis > 0) {
         gun.css("left", xAxis);
     }
 });
@@ -134,13 +134,23 @@ function startGame(){
         let random = (Math.floor(Math.random() * 5) + 1) * 1000;
         if (tempRandom != random) {
             randomTimer = random;
-            console.log("random - " + randomTimer);
+            // console.log("random - " + randomTimer);
         } else if (tempRandom == random) {
             generateTimer = random;
-            console.log("generate - " + generateTimer);
+            // console.log("generate - " + generateTimer);
         }
         tempRandom = random;
 
         zombieTimer2 = setTimeout(generateZombies, randomTimer);
     }, generateTimer);
 }
+
+//=====LEVEL 2============================
+$("#btnStart").click(function () {
+    clearTimers();
+    // $('#outpost').css('left',600);
+    var img = "assets/images/img/bgL2.jpg";
+    $('#areaL1').css('background-image', "url("+img+")");
+    $('#level').text('Level 2');
+
+});
