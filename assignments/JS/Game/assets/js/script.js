@@ -15,6 +15,9 @@ var zombieTimer3 = 0
 var zombieTimer4 = 0
 var zombieTimer5 = 0
 
+var zombieTimer6 = 0
+var zombieTimer7 = 0
+
 var scoreCount = 0;
 var bulletCount = 21;
 
@@ -73,6 +76,7 @@ function startGame(){
         if (tempRandom != random) {
             randomTimer = random;
             // console.log("random - " + randomTimer);
+            console.log("random - " + tempRandom);
         } else if (tempRandom == random) {
             generateTimer = random;
             // console.log("generate - " + generateTimer);
@@ -139,6 +143,18 @@ function clearTimers(){
     clearInterval(zombieTimer1);
     clearInterval(zombieTimer2);
     clearInterval(zombieTimer3);
+
+    clearInterval(zombieTimer6);
+    clearInterval(zombieTimer7);
+}
+
+function clearTimers2(){
+    clearInterval(zombieTimer1);
+    clearInterval(zombieTimer2);
+    clearInterval(zombieTimer3);
+
+    clearInterval(zombieTimer4);
+    clearInterval(zombieTimer5);
 }
 
 //=====Main Page======================
@@ -146,6 +162,7 @@ $('#btnStartGame').click(function () {
     $('#containerMenu').css('display','none');
     $('#containerL1').css('display','block');
     startGame();
+    leftZombie();
 });
 
 
@@ -156,18 +173,19 @@ $("#btnStart").click(function () {
     $('#areaL1').css('background-image', "url("+img+")");
     $('#level').text('Level 2');
     startGame();    //generate left zombies
-
+    upZombie();
 });
 
 function upZombie(){
-    zombieTimer4 = setInterval(generateUpZombie, tempRandom);
+    zombieTimer4 = setInterval(generateUpZombie, 5000);
 }
 
 function generateUpZombie(){
+
     const zombie = $('<img>'); //create element
     zombie.addClass('zombie'); //add cls for styles
     zombie.attr("id", `zombie${idNo}`); //add id
-    let zomTop = zombie.css('top', 100);
+    zombie.css('top', 75);
     idNo++;
     // let randomNo = Math.floor(Math.random() * 2) + 1; //generate random number
     zombie.attr("src", "assets/images/gif/zomUp.gif"); //set gifs
@@ -180,7 +198,32 @@ function generateUpZombie(){
 
 function moveUpZombies(zombie){
         let zomLeft = parseInt(zombie.css('left'));
-        zombie.css('left', zomLeft - 20);
+        zombie.css('left', zomLeft - 10);
+}
+
+function leftZombie(){
+    zombieTimer6 = setInterval(generateLeftZombie, 3500);
+}
+
+function generateLeftZombie(){
+
+    const zombie = $('<img>'); //create element
+    zombie.addClass('zombie'); //add cls for styles
+    zombie.attr("id", `zombie${idNo}`); //add id
+    zombie.css('left', 0);
+    idNo++;
+    // let randomNo = Math.floor(Math.random() * 2) + 1; //generate random number
+    zombie.attr("src", "assets/images/gif/zomL2.gif"); //set gifs
+    $("#areaL1").append(zombie); //add element to body
+
+    zombieTimer7 = setInterval(() => {
+        moveLeftZombies(zombie);
+    }, 100);
+}
+
+function moveLeftZombies(zombie){
+    let zomLeft = parseInt(zombie.css('left'));
+    zombie.css('left', zomLeft + 10);
 }
 
 
