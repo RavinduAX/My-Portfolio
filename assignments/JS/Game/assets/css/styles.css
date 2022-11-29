@@ -26,12 +26,12 @@
     left: 40%;
 }
 #outpost {
-    width: 280px;
-    height: 305px;
+    width: 306px;
+    height: 350px;
     position: absolute;
     /* right: 0; */
-    left: 35px;
-    top: 145px;
+    left: -23px;
+    top: 116px;
     bottom: 0;
     margin: auto;
 }
