@@ -167,8 +167,9 @@
 }
 #mainPoster > div{
     position: absolute;
-    top: 160px;
+    top: 130px;
     left: 130px;
+    height: 400px;
 }
 #mainPoster h1{
     font-size: 85px;
@@ -180,8 +181,21 @@
     font-size: 60px;
     border-radius: 45px;
     position: relative;
-    left: 204px;
+    left: 320px;
+    top: 24px;
 }
 #mainPoster button:hover{
     background-color: red;
+}
+#mainPoster img{
+    width: 220px;
+    height: 150px;
+    position: absolute;
+    left: 12px;
+    bottom: 37px;
+}
+
+#mainPoster img:hover{
+    transform: scale(1.1);
+    transition-duration: 2s;
 }
