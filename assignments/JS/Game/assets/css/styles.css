@@ -191,3 +191,64 @@
     transform: scale(1.1);
     transition-duration: 2s;
 }
+
+/*game status*/
+#statusBox {
+    background-color: #282C34;
+    width: 692px;
+    height: 454px;
+    border-radius: 20px;
+    text-align: center;
+    z-index: 700;
+    position: relative;
+    left: 344px;
+    bottom: 63px;
+}
+
+#statusText {
+    color: white;
+    font-size: 64px;
+    margin: 0;
+    position: relative;
+    top: 10px;
+}
+
+#statusImg {
+    width: 527px;
+    height: 212px;
+    position: relative;
+    top: 28px;
+    border-radius: 10px;
+}
+
+#btnDiv {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 57px;
+}
+
+#btnDiv>button {
+    border: 0;
+    width: 173px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+#btnMainMenu {
+    color: white;
+    background-color: mediumblue;
+    font-size: 23px;
+}
+
+#btnReplay {
+    color: white;
+    background-color: darkred;
+    font-size: 23px;
+}
+
+#btnNextLevel {
+    color: white;
+    background-color: darkgreen;
+    font-size: 23px;
+}

@@ -1,5 +1,6 @@
 $('#containerMenu').css('display','block');
 $('#containerL1').css('display','none');
+$('#statusBox').css('display','none');
 
 //=====LEVEL 1===========================
 const crosshair = $("#crosshair");
@@ -132,7 +133,9 @@ function checkGameStatus(){
     if(levelCheck === 'Level 1'){
         if(bulletCount === 0 && scoreCount !== 10){
             clearTimers();
-            alert('GAME OVER ---> YOU LOSE');
+            // alert('GAME OVER ---> YOU LOSE');
+            $('#statusBox').css('display','block');
+            $('#areaL1').append($('#statusBox'));
         }
         if(scoreCount === 10 && bulletCount >= 0){
             clearTimers();
@@ -183,6 +186,7 @@ function clearTimers2(){
 $('#btnStartGame').click(function () {
     $('#containerMenu').css('display','none');
     $('#containerL1').css('display','block');
+    $('#statusBox').css('display','none');
     startGame();
     leftZombie();
 });
