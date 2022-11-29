@@ -12,6 +12,9 @@ var zombieTimer1 = 0
 var zombieTimer2 = 0
 var zombieTimer3 = 0
 
+var zombieTimer4 = 0
+var zombieTimer5 = 0
+
 var scoreCount = 0;
 var bulletCount = 21;
 
@@ -55,6 +58,30 @@ $(window).mousemove(function (event) {
 //         zombieTimer2 = setTimeout(generateZombies, randomTimer);
 //     }, generateTimer);
 // });
+
+//start game
+var tempRandom = 2000;
+function startGame(){
+    console.log('Clicked');
+    score.text('00');   //to confirm the program start
+    bullets.text(bulletCount);  //display bullet count on start
+    let randomTimer = 1000;
+    let generateTimer = 2750;
+
+    zombieTimer1 = setInterval(() => {
+        let random = (Math.floor(Math.random() * 5) + 1) * 1000;
+        if (tempRandom != random) {
+            randomTimer = random;
+            // console.log("random - " + randomTimer);
+        } else if (tempRandom == random) {
+            generateTimer = random;
+            // console.log("generate - " + generateTimer);
+        }
+        tempRandom = random;
+
+        zombieTimer2 = setTimeout(generateZombies, randomTimer);
+    }, generateTimer);
+}
 
 //generate zombies
 function generateZombies() {
@@ -121,36 +148,45 @@ $('#btnStartGame').click(function () {
     startGame();
 });
 
-//start game
-var tempRandom = 0;
-function startGame(){
-    console.log('Clicked');
-    score.text('00');   //to confirm the program start
-    bullets.text(bulletCount);  //display bullet count on start
-    let randomTimer = 1000;
-    let generateTimer = 2750;
-
-    zombieTimer1 = setInterval(() => {
-        let random = (Math.floor(Math.random() * 5) + 1) * 1000;
-        if (tempRandom != random) {
-            randomTimer = random;
-            // console.log("random - " + randomTimer);
-        } else if (tempRandom == random) {
-            generateTimer = random;
-            // console.log("generate - " + generateTimer);
-        }
-        tempRandom = random;
-
-        zombieTimer2 = setTimeout(generateZombies, randomTimer);
-    }, generateTimer);
-}
 
 //=====LEVEL 2============================
 $("#btnStart").click(function () {
     clearTimers();
-    // $('#outpost').css('left',600);
     var img = "assets/images/img/bgL2.jpg";
     $('#areaL1').css('background-image', "url("+img+")");
     $('#level').text('Level 2');
+    startGame();    //generate left zombies
 
 });
+
+function upZombie(){
+    zombieTimer4 = setInterval(generateUpZombie, tempRandom);
+}
+
+function generateUpZombie(){
+    const zombie = $('<img>'); //create element
+    zombie.addClass('zombie'); //add cls for styles
+    zombie.attr("id", `zombie${idNo}`); //add id
+    let zomTop = zombie.css('top', 100);
+    idNo++;
+    // let randomNo = Math.floor(Math.random() * 2) + 1; //generate random number
+    zombie.attr("src", "assets/images/gif/zomUp.gif"); //set gifs
+    $("#areaL1").append(zombie); //add element to body
+
+    zombieTimer5 = setInterval(() => {
+        moveUpZombies(zombie);
+    }, 100);
+}
+
+function moveUpZombies(zombie){
+        let zomLeft = parseInt(zombie.css('left'));
+        zombie.css('left', zomLeft - 20);
+}
+
+
+
+
+
+
+
+
