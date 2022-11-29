@@ -141,11 +141,11 @@ function checkGameStatus(){
     }
     if(levelCheck === 'Level 2'){
         if(bulletCount === 0 && scoreCount !== 15){
-            clearTimers();
+            clearTimers2();
             alert('GAME OVER ---> YOU LOSE');
         }
         if(scoreCount === 15 && bulletCount >= 0){
-            clearTimers();
+            clearTimers2();
             alert('GAME OVER ---> YOU WIN');
         }
     }
@@ -196,8 +196,9 @@ $("#btnStart").click(function () {
     var img = "assets/images/img/bgL2.jpg";
     $('#areaL1').css('background-image', "url("+img+")");
     $('#level').text('Level 2');
+    $('#lvlDesc').text('Kill 15 Zombies 🎯');
     startGame();    //generate left zombies
-    upZombie();
+    upZombie();     //generate up zombies
 });
 
 function upZombie(){
