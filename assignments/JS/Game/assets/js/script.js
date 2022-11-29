@@ -186,10 +186,6 @@ $('#btnStartGame').click(function () {
 
 
 //=====LEVEL 2============================
-// $("#btnStart").click(function () {
-//
-// });
-
 function lvlTwo(){
     clearTimers();
     scoreCount = 0;
@@ -253,7 +249,7 @@ function moveLeftZombies(zombie) {
 }
 
 
-//statusbox buttons
+//status box buttons
 $('#btnMainMenu').click(function () {
     $('#containerMenu').css('display', 'block');
     $('#containerL1').css('display', 'none');
