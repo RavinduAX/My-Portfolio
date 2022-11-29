@@ -1,6 +1,6 @@
-$('#containerMenu').css('display','block');
-$('#containerL1').css('display','none');
-$('#statusBox').css('display','none');
+$('#containerMenu').css('display', 'block');
+$('#containerL1').css('display', 'none');
+$('#statusBox').css('display', 'none');
 
 //=====LEVEL 1===========================
 const crosshair = $("#crosshair");
@@ -65,7 +65,8 @@ $(window).mousemove(function (event) {
 
 //start game
 var tempRandom = 2000;
-function startGame(){
+
+function startGame() {
     console.log('Clicked');
     score.text('00');   //to confirm the program start
     bullets.text(bulletCount);  //display bullet count on start
@@ -127,44 +128,57 @@ $(window).click(function (event) {
 });
 
 //check win or lose
-function checkGameStatus(){
+var stBox = $('#statusBox');
+var areaL = $('#areaL1');
+var sText = $('#statusText');
+var sImage = $('#statusImg');
+var nextBtn = $('#btnNextLevel');
+
+function checkGameStatus() {
     //check lose by bullet count
     let levelCheck = $('#level').text();
-    if(levelCheck === 'Level 1'){
-        if(bulletCount === 0 && scoreCount !== 10){
+    if (levelCheck === 'Level 1') {
+        if (bulletCount === 0 && scoreCount !== 10) {
             clearTimers();
             // alert('GAME OVER ---> YOU LOSE');
-            $('#statusBox').css('display','block');
-            $('#areaL1').append($('#statusBox'));
+            stBox.css('display', 'block');
+            areaL.append(stBox);
+            sText.text('Infected 💀');
+            sImage.attr('src', 'assets/images/img/loseImg.jpg');
+            nextBtn.css('display', 'none');
         }
-        if(scoreCount === 10 && bulletCount >= 0){
+        if (scoreCount === 10 && bulletCount >= 0) {
             clearTimers();
-            alert('GAME OVER ---> YOU WIN');
+            // alert('GAME OVER ---> YOU WIN');
+            stBox.css('display', 'block');
+            areaL.append(stBox);
+            sText.text('Survived 🏆');
+            sImage.attr('src', 'assets/images/img/winImg.jpg');
         }
     }
-    if(levelCheck === 'Level 2'){
-        if(bulletCount === 0 && scoreCount !== 15){
+    if (levelCheck === 'Level 2') {
+        if (bulletCount === 0 && scoreCount !== 15) {
             clearTimers2();
-            alert('GAME OVER ---> YOU LOSE');
+            // alert('GAME OVER ---> YOU LOSE');
+            stBox.css('display', 'block');
+            areaL.append(stBox);
+            sText.text('Infected 💀');
+            sImage.attr('src', 'assets/images/img/loseImg.jpg');
+            nextBtn.css('display', 'none');
         }
-        if(scoreCount === 15 && bulletCount >= 0){
+        if (scoreCount === 15 && bulletCount >= 0) {
             clearTimers2();
-            alert('GAME OVER ---> YOU WIN');
+            // alert('GAME OVER ---> YOU WIN');
+            stBox.css('display', 'block');
+            areaL.append(stBox);
+            sText.text('Survived 🏆');
+            sImage.attr('src', 'assets/images/img/winImg.jpg');
         }
     }
-    // if(bulletCount === 0 && scoreCount !== 15){
-    //     clearTimers();
-    //     alert('GAME OVER ---> YOU LOSE');
-    // }
-    // //check win by score
-    // if(scoreCount === 15 && bulletCount >= 0){
-    //     clearTimers();
-    //     alert('GAME OVER ---> YOU WIN');
-    // }
 }
 
 //clear intervals
-function clearTimers(){
+function clearTimers() {
     clearInterval(zombieTimer1);
     clearInterval(zombieTimer2);
     clearInterval(zombieTimer3);
@@ -173,7 +187,7 @@ function clearTimers(){
     clearInterval(zombieTimer7);
 }
 
-function clearTimers2(){
+function clearTimers2() {
     clearInterval(zombieTimer1);
     clearInterval(zombieTimer2);
     clearInterval(zombieTimer3);
@@ -184,9 +198,9 @@ function clearTimers2(){
 
 //=====Main Page======================
 $('#btnStartGame').click(function () {
-    $('#containerMenu').css('display','none');
-    $('#containerL1').css('display','block');
-    $('#statusBox').css('display','none');
+    $('#containerMenu').css('display', 'none');
+    $('#containerL1').css('display', 'block');
+    $('#statusBox').css('display', 'none');
     startGame();
     leftZombie();
 });
@@ -198,18 +212,18 @@ $("#btnStart").click(function () {
     scoreCount = 0;
     bulletCount = 21;
     var img = "assets/images/img/bgL2.jpg";
-    $('#areaL1').css('background-image', "url("+img+")");
+    $('#areaL1').css('background-image', "url(" + img + ")");
     $('#level').text('Level 2');
     $('#lvlDesc').text('Kill 15 Zombies 🎯');
     startGame();    //generate left zombies
     upZombie();     //generate up zombies
 });
 
-function upZombie(){
+function upZombie() {
     zombieTimer4 = setInterval(generateUpZombie, 5000);
 }
 
-function generateUpZombie(){
+function generateUpZombie() {
 
     const zombie = $('<img>'); //create element
     zombie.addClass('zombie'); //add cls for styles
@@ -225,16 +239,16 @@ function generateUpZombie(){
     }, 100);
 }
 
-function moveUpZombies(zombie){
-        let zomLeft = parseInt(zombie.css('left'));
-        zombie.css('left', zomLeft - 10);
+function moveUpZombies(zombie) {
+    let zomLeft = parseInt(zombie.css('left'));
+    zombie.css('left', zomLeft - 10);
 }
 
-function leftZombie(){
+function leftZombie() {
     zombieTimer6 = setInterval(generateLeftZombie, 3500);
 }
 
-function generateLeftZombie(){
+function generateLeftZombie() {
 
     const zombie = $('<img>'); //create element
     zombie.addClass('zombie'); //add cls for styles
@@ -250,7 +264,7 @@ function generateLeftZombie(){
     }, 100);
 }
 
-function moveLeftZombies(zombie){
+function moveLeftZombies(zombie) {
     let zomLeft = parseInt(zombie.css('left'));
     zombie.css('left', zomLeft + 10);
 }
