@@ -124,18 +124,40 @@ $(window).click(function (event) {
     checkGameStatus();
 
 });
+
 //check win or lose
 function checkGameStatus(){
     //check lose by bullet count
-    if(bulletCount === 0 && scoreCount !== 15){
-        clearTimers();
-        alert('GAME OVER ---> YOU LOSE');
+    let levelCheck = $('#level').text();
+    if(levelCheck === 'Level 1'){
+        if(bulletCount === 0 && scoreCount !== 10){
+            clearTimers();
+            alert('GAME OVER ---> YOU LOSE');
+        }
+        if(scoreCount === 10 && bulletCount >= 0){
+            clearTimers();
+            alert('GAME OVER ---> YOU WIN');
+        }
     }
-    //check win by score
-    if(scoreCount === 15 && bulletCount >= 0){
-        clearTimers();
-        alert('GAME OVER ---> YOU WIN');
+    if(levelCheck === 'Level 2'){
+        if(bulletCount === 0 && scoreCount !== 15){
+            clearTimers();
+            alert('GAME OVER ---> YOU LOSE');
+        }
+        if(scoreCount === 15 && bulletCount >= 0){
+            clearTimers();
+            alert('GAME OVER ---> YOU WIN');
+        }
     }
+    // if(bulletCount === 0 && scoreCount !== 15){
+    //     clearTimers();
+    //     alert('GAME OVER ---> YOU LOSE');
+    // }
+    // //check win by score
+    // if(scoreCount === 15 && bulletCount >= 0){
+    //     clearTimers();
+    //     alert('GAME OVER ---> YOU WIN');
+    // }
 }
 
 //clear intervals
@@ -169,6 +191,8 @@ $('#btnStartGame').click(function () {
 //=====LEVEL 2============================
 $("#btnStart").click(function () {
     clearTimers();
+    scoreCount = 0;
+    bulletCount = 21;
     var img = "assets/images/img/bgL2.jpg";
     $('#areaL1').css('background-image', "url("+img+")");
     $('#level').text('Level 2');
