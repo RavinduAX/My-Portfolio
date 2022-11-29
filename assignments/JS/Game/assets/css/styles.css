@@ -237,18 +237,23 @@
 
 #btnMainMenu {
     color: white;
-    background-color: mediumblue;
+    background-color: #4834d4;
     font-size: 23px;
 }
 
 #btnReplay {
     color: white;
-    background-color: darkred;
+    background-color: #F79F1F;
     font-size: 23px;
 }
 
 #btnNextLevel {
     color: white;
-    background-color: darkgreen;
+    background-color: #20bf6b;
     font-size: 23px;
+}
+
+#btnDiv button:hover{
+    background-color: red;
+    transition-duration: 1s;
 }

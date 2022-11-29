@@ -40,35 +40,12 @@ $(window).mousemove(function (event) {
 });
 
 //start game
-// var tempRandom = 0;
-// $("#btnStart").click(function () {
-//     console.log('Clicked');
-//     score.text('00');   //to confirm the program start
-//     bullets.text(bulletCount);  //display bullet count on start
-//     let randomTimer = 1000;
-//     let generateTimer = 2750;
-//
-//     zombieTimer1 = setInterval(() => {
-//         let random = (Math.floor(Math.random() * 5) + 1) * 1000;
-//         if (tempRandom != random) {
-//             randomTimer = random;
-//             console.log("random - " + randomTimer);
-//         } else if (tempRandom == random) {
-//             generateTimer = random;
-//             console.log("generate - " + generateTimer);
-//         }
-//         tempRandom = random;
-//
-//         zombieTimer2 = setTimeout(generateZombies, randomTimer);
-//     }, generateTimer);
-// });
-
-//start game
 var tempRandom = 2000;
 
 function startGame() {
     console.log('Clicked');
     score.text('00');   //to confirm the program start
+    bulletCount = 21;
     bullets.text(bulletCount);  //display bullet count on start
     let randomTimer = 1000;
     let generateTimer = 2750;
@@ -207,7 +184,11 @@ $('#btnStartGame').click(function () {
 
 
 //=====LEVEL 2============================
-$("#btnStart").click(function () {
+// $("#btnStart").click(function () {
+//
+// });
+
+function lvlTwo(){
     clearTimers();
     scoreCount = 0;
     bulletCount = 21;
@@ -217,7 +198,7 @@ $("#btnStart").click(function () {
     $('#lvlDesc').text('Kill 15 Zombies 🎯');
     startGame();    //generate left zombies
     upZombie();     //generate up zombies
-});
+}
 
 function upZombie() {
     zombieTimer4 = setInterval(generateUpZombie, 5000);
@@ -268,6 +249,32 @@ function moveLeftZombies(zombie) {
     let zomLeft = parseInt(zombie.css('left'));
     zombie.css('left', zomLeft + 10);
 }
+
+
+//statusbox buttons
+$('#btnMainMenu').click(function () {
+    $('#containerMenu').css('display', 'block');
+    $('#containerL1').css('display', 'none');
+    $('#statusBox').css('display', 'none');
+    location.reload();
+});
+$('#btnReplay').click(function () {
+    $('#containerMenu').css('display', 'none');
+    $('#containerL1').css('display', 'block');
+    $('#statusBox').css('display', 'none');
+
+    startGame();
+});
+$('#btnNextLevel').click(function () {
+    $('#containerMenu').css('display', 'none');
+    $('#containerL1').css('display', 'block');
+    $('#statusBox').css('display', 'none');
+
+    lvlTwo();
+});
+
+
+
 
 
 
